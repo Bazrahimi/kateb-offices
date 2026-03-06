@@ -1,4 +1,3 @@
-my-app/app-structure.txt
 app
 ├── _lib
 │   ├── cloudinary

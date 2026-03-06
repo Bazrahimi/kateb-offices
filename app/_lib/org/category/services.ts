@@ -1,77 +1,64 @@
-// app/_lib/org/category/servicesPage.ts
 import type { ServicesPage } from "../definitions";
 
-import { acrylicRendering } from "./subCategories/acrylicRendering";
-import { cementRendering } from "./subCategories/cementRendering";
-import { concreteRender } from "./subCategories/concreteRender";
-import { crackRepairs } from "./subCategories/crackRepairs";
-import { polystyreneCladding } from "./subCategories/polystyreneCladding";
-import { hebelCladding } from "./subCategories/hebelCladding";
+import { administrativeSupport } from "./subCategories/administrativeSupport";
+import { coworkingSpaces } from "./subCategories/coworkingSpaces";
+import { meetingRooms } from "./subCategories/meetingRooms";
+import { privateOffices } from "./subCategories/privateOffices";
+import { virtualOffices } from "./subCategories/virtualOffices";
 
 export const SERVICES_PAGE = {
-  acrylicRendering: {
-    slug: "acrylic-rendering-services",
-    label: "Acrylic Rendering Services",
-    image: { kind: "svg", text: "Acrylic Rendering Services" },
-    labelFarsi: "رندر اکریلیک",
+  privateOffices: {
+    slug: "private-offices-dandenong",
+    label: "Private Offices",
+    image: { kind: "svg", text: "Private Offices" },
+    labelFarsi: "دفتر خصوصی",
     description: [
-      "Fast, flexible acrylic render finishes for residential and commercial projects.",
+      "Fully furnished private office spaces in central Dandenong with flexible terms, natural light, and professional amenities.",
     ] as const,
-    subcategories: acrylicRendering,
+    subcategories: privateOffices,
   },
 
-  cementRendering: {
-    slug: "cement-rendering-services",
-    label: "Cement Rendering Services",
-    image: { kind: "svg", text: "Cement Rendering Services" },
-    labelFarsi: "رندر سیمانی",
+  coworkingSpaces: {
+    slug: "coworking-spaces-dandenong",
+    label: "Coworking Spaces",
+    image: { kind: "svg", text: "Coworking Spaces" },
+    labelFarsi: "فضای کار اشتراکی",
     description: [
-      "Durable cement rendering for weatherproof, modern exterior finishes.",
+      "Flexible coworking space designed for freelancers, small teams, and growing businesses who want a central and professional workspace.",
     ] as const,
-    subcategories: cementRendering,
+    subcategories: coworkingSpaces,
   },
 
-  concreteRender: {
-    slug: "concrete-render-services",
-    label: "Concrete Render Services",
-    image: { kind: "svg", text: "Concrete Render Services" },
-    labelFarsi: "رندر بتنی",
+  meetingRooms: {
+    slug: "meeting-rooms-dandenong",
+    label: "Meeting Rooms",
+    image: { kind: "svg", text: "Meeting Rooms" },
+    labelFarsi: "اتاق جلسات",
     description: [
-      "Smooth concrete finishes for modern interiors and feature walls.",
+      "Professional meeting and conference rooms for presentations, client meetings, interviews, and team training sessions.",
     ] as const,
-    subcategories: concreteRender,
+    subcategories: meetingRooms,
   },
 
-  crackRepairs: {
-    slug: "crack-repair-services",
-    label: "Crack Repair Services",
-    image: { kind: "svg", text: "Crack Repair Services" },
-    labelFarsi: "تعمیر ترک",
+  virtualOffices: {
+    slug: "virtual-office-dandenong",
+    label: "Virtual Offices",
+    image: { kind: "svg", text: "Virtual Offices" },
+    labelFarsi: "دفتر مجازی",
     description: [
-      "Wall crack diagnosis and repairs to restore durability and appearance.",
+      "Professional business address and mail handling services for businesses needing a credible presence without full-time office space.",
     ] as const,
-    subcategories: crackRepairs,
+    subcategories: virtualOffices,
   },
 
-  polystyreneCladding: {
-    slug: "polystyrene-cladding-services",
-    label: "Polystyrene Cladding Services",
-    image: { kind: "svg", text: "Polystyrene Cladding Services" },
-    labelFarsi: "کلادینگ پلی‌استایرن",
+  administrativeSupport: {
+    slug: "administrative-support-services",
+    label: "Administrative Support",
+    image: { kind: "svg", text: "Administrative Support" },
+    labelFarsi: "پشتیبانی اداری",
     description: [
-      "Insulated foam cladding systems rendered for strength and modern curb appeal.",
+      "Reception, mail handling, call support, and day-to-day office assistance to help businesses operate smoothly.",
     ] as const,
-    subcategories: polystyreneCladding,
-  },
-
-  hebelCladding: {
-    slug: "hebel-cladding-services",
-    label: "Hebel Cladding Services",
-    image: { kind: "svg", text: "Hebel Cladding Services" },
-    labelFarsi: "کلادینگ هبل",
-    description: [
-      "Hebel (AAC) panel installation and finishing for efficient, fire-rated walls.",
-    ] as const,
-    subcategories: hebelCladding,
+    subcategories: administrativeSupport,
   },
 } as const satisfies Record<string, ServicesPage>;
