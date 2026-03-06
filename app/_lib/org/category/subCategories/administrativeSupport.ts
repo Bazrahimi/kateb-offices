@@ -1,3 +1,5 @@
+import { ServiceSubCategory } from "../../definitions";
+
 export const administrativeSupport = {
   overview: {
     label: "Administrative Support Overview",
@@ -60,4 +62,4 @@ export const administrativeSupport = {
       "Creates a more reliable client-facing environment",
     ] as const,
   },
-} as const;
+} as const satisfies ServiceSubCategory;

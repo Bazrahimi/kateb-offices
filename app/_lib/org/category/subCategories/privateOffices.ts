@@ -81,5 +81,4 @@ export const privateOffices = {
       "Cost-effective workspace solution",
     ] as const,
   },
-  // TODO: lookup in this directory and make all object satisfies ServiceSubCategory
 } as const satisfies ServiceSubCategory;

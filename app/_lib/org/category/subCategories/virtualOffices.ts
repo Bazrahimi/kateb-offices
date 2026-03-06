@@ -1,3 +1,5 @@
+import { ServiceSubCategory } from "../../definitions";
+
 export const virtualOffices = {
   overview: {
     label: "Virtual Office Overview",
@@ -60,4 +62,4 @@ export const virtualOffices = {
       "Simple and flexible solution",
     ] as const,
   },
-} as const;
+} as const satisfies ServiceSubCategory;

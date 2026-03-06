@@ -6,7 +6,7 @@ import { LeafImage } from "./definitions";
 import { ORG_ICONS } from "./icons";
 import { ORG_INDUSTRY_SECTORS } from "./serviceArea";
 
-const ORG_DOMAIN = "brothersrendering.com.au" as const;
+const ORG_DOMAIN = "kateboffices.com.au" as const;
 const orgName = "Brothers Rendering Services Pty Ltd";
 
 const getBaseUrl = (): string => {
@@ -27,8 +27,8 @@ export const ORG_PROFILE = {
   email: "info@canconstruction.com.au",
   baseUrl: getBaseUrl(),
   phone: "+61 420 910 786",
-  address: "35 Westpool Dr, Hallam VIC 3803",
-  abn: "24 612 814 294",
+  address: "Level 2/311 Lonsdale St, Dandenong VIC 3175",
+  abn: "40 663 656 095",
   logo: "/images/logo-transparent-hd.png",
   logoUrl: {
     kind: "url",

@@ -43,7 +43,7 @@ export default function HomeHero({ className }: Props) {
       )}
       aria-label={`${op.orgName} hero`}
     >
-      <HeroBackground heroImgUrl={op.heroImgUrl} orgName={op.orgName} />
+      <HeroBackground  orgName={op.orgName} />
 
       {/* Content */}
       <div className="relative z-10">

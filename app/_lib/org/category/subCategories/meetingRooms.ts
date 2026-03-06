@@ -1,3 +1,5 @@
+import { ServiceSubCategory } from "../../definitions";
+
 export const meetingRooms = {
   overview: {
     label: "Meeting Rooms Overview",
@@ -61,4 +63,4 @@ export const meetingRooms = {
       "Natural light and modern interiors",
     ] as const,
   },
-} as const;
+} as const satisfies ServiceSubCategory;
