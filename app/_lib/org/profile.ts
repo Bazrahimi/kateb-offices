@@ -3,13 +3,13 @@
 import { CtaKey } from "../content/cta";
 import { OtherLanguageKey } from "../languages/multiculturalStatement";
 import { LeafImage } from "./definitions";
-import { ORG_ICONS } from "./icons";
+import { images } from "./assets";
 import { ORG_INDUSTRY_SECTORS } from "./serviceArea";
 
 const ORG_DOMAIN = "kateboffices.com.au" as const;
-const orgName = "Brothers Rendering Services Pty Ltd";
+const orgName = "Kateb Offices";
 
-const getBaseUrl = (): string => {
+export const getBaseUrl = (): string => {
   if (process.env.NODE_ENV === "development") return "http://localhost:3000";
   return `https://${ORG_DOMAIN}`;
 };
@@ -34,7 +34,7 @@ export const ORG_PROFILE = {
     kind: "url",
     src: "business-f/building/brothers-rendering/brother-render-hero-image_klfiqy.png",
   } as LeafImage,
-  logoFullUrl: `${getBaseUrl()}${ORG_ICONS.apple}`,
+  logoFullUrl: `${getBaseUrl()}${images.icon.apple}`,
   heroImgUrl: "/images/brother-hero.jpg",
   cta: "freeQuote" as CtaKey,
 } as const;

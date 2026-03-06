@@ -2,7 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import { PublicRoutes } from "../routes/publicRoutes";
 import { getHomeServiceKeywords, getServiceSubcategoryKeywordsBySlug } from "./category/serviceLookup";
-import { ORG_ICONS } from "./icons";
+import { images } from "./assets";
 import { ORG_PROFILE as op } from "./profile";
 import { SERVICE_AREA } from "./serviceArea";
 
@@ -46,8 +46,8 @@ export const ROOT_SEO: RootSeoConfig = {
   themeColor: "#030501",
   manifestPath: "/manifest.webmanifest",
   icons: {
-    icon: ORG_ICONS.icon,
-    apple: ORG_ICONS.apple,
+    icon: images.icon.icon,
+    apple: images.icon.apple,
   },
   defaultOgImagePath: "/images/og_image.png",
   robots: {

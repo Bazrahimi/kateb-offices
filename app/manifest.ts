@@ -1,8 +1,9 @@
 // app/manifest.ts
-import { ORG_ICONS } from "@/app/_lib/org/icons";
+
 import { ROOT_SEO } from "@/app/_lib/org/layoutAndSeo";
 import { ORG_PROFILE as op } from "@/app/_lib/org/profile";
 import type { MetadataRoute } from "next";
+import { images } from "./_lib/org/assets";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -19,12 +20,12 @@ export default function manifest(): MetadataRoute.Manifest {
     // Add separate icon entries for "any" and "maskable".
        icons: [
       {
-        src: ORG_ICONS.apple,
+        src:images.icon.apple,
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: ORG_ICONS.apple,
+        src: images.icon.apple,
         sizes: "512x512",
         type: "image/png",
       },
