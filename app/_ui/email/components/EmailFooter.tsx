@@ -1,5 +1,5 @@
-import { images } from "@/app/_lib/org/assets";
 import { getBaseUrl, ORG_PROFILE } from "@/app/_lib/org/profile";
+import { publicAssets } from "@/app/_lib/org/publicAssets";
 
 import { Img, Section } from "@react-email/components";
 // app/_lib/email/components/EmailFooter.tsx
@@ -24,7 +24,7 @@ export default function EmailFooter() {
       }}
     >
       <Img
-        src={`${getBaseUrl()}${images.icon.apple}`}
+        src={`${getBaseUrl()}${publicAssets.icons.apple}`}
         alt={`${ORG_PROFILE.orgName} logo`}
         width={48}
         height={48}

@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 // import AccountMenu from "./AccountMenu";
 import { ORG_PROFILE } from "@/app/_lib/org/profile";
+import { publicAssets } from "@/app/_lib/org/publicAssets";
 import NavLinks from "./NavLinks";
-import { images } from "@/app/_lib/org/assets";
 
 // Reusable styles
 // const navLinkBase =
@@ -31,7 +31,7 @@ const Navbar = () => {
           className="inline-flex items-center gap-2"
         >
           <Image
-            src={images.icon.icon}
+            src={publicAssets.icons.icon}
             alt={`${ORG_PROFILE.orgName} Logo`}
             width={28}
             height={28}

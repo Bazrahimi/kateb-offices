@@ -1,9 +1,9 @@
 // app/_lib/org/layoutAndSeo.ts
 import type { Metadata, Viewport } from "next";
 import { PublicRoutes } from "../routes/publicRoutes";
-import { images } from "./assets";
 import { getHomeServiceKeywords } from "./category/serviceLookup";
 import { getBaseUrl, ORG_PROFILE as op } from "./profile";
+import { publicAssets } from "./publicAssets";
 import { SERVICE_AREA } from "./serviceArea";
 
 export type RootSeoConfig = {
@@ -46,8 +46,8 @@ export const ROOT_SEO: RootSeoConfig = {
   themeColor: "#030501",
   manifestPath: "/manifest.webmanifest",
   icons: {
-    icon: images.icon.icon,
-    apple: images.icon.apple,
+    icon: publicAssets.icons.icon,
+    apple: publicAssets.icons.apple,
   },
   defaultOgImagePath: "/images/og_image.png",
   robots: {
