@@ -1,0 +1,176 @@
+my-app/app-structure.txt
+app
+├── _lib
+│   ├── cloudinary
+│   │   └── cloudinary.ts
+│   ├── content
+│   │   └── cta.ts
+│   ├── email
+│   │   ├── SendToAdmin.tsx
+│   │   ├── emailClient.ts
+│   │   └── sendUserConfirmation.tsx
+│   ├── env
+│   │   ├── public.ts
+│   │   └── server.ts
+│   ├── languages
+│   │   └── multiculturalStatement.ts
+│   ├── org
+│   │   ├── category
+│   │   │   ├── assets.ts
+│   │   │   ├── serviceLookup.ts
+│   │   │   ├── services.ts
+│   │   │   └── subCategories
+│   │   │       ├── acrylicRendering.ts
+│   │   │       ├── cementRendering.ts
+│   │   │       ├── concreteRender.ts
+│   │   │       ├── crackRepairs.ts
+│   │   │       ├── hebelCladding.ts
+│   │   │       └── polystyreneCladding.ts
+│   │   ├── definitions.ts
+│   │   ├── font.ts
+│   │   ├── icons.ts
+│   │   ├── layoutAndSeo.ts
+│   │   ├── orgPages
+│   │   │   ├── aboutUs.ts
+│   │   │   └── contactUs.ts
+│   │   ├── profile.ts
+│   │   └── serviceArea.ts
+│   ├── routes
+│   │   └── publicRoutes.ts
+│   └── utils
+│       ├── actionHelper.ts
+│       ├── assets.ts
+│       ├── cn.ts
+│       └── slug.ts
+├── _ui
+│   ├── MultiLanguageCapacity
+│   │   └── OtherLanguageCard.tsx
+│   ├── button
+│   │   ├── ActionButton.tsx
+│   │   └── Button.tsx
+│   ├── carousels
+│   │   ├── CarouselSkeleton.tsx
+│   │   ├── ServiceLeavesCarousel.tsx
+│   │   ├── components
+│   │   │   ├── CarouselImage.tsx
+│   │   │   ├── CarouselNav.tsx
+│   │   │   ├── CarouselSlide.tsx
+│   │   │   └── CarouselSlideContent.tsx
+│   │   ├── hook
+│   │   │   ├── useCarouselNav.ts
+│   │   │   └── useMounted.ts
+│   │   └── index.ts
+│   ├── content
+│   │   ├── List.tsx
+│   │   ├── MultiLanguageCapacity.tsx
+│   │   ├── OtherLanguagesSnapshot.tsx
+│   │   ├── ServiceCTA.tsx
+│   │   └── otherLanguages
+│   │       └── ServicesOtherLanguages.tsx
+│   ├── email
+│   │   ├── components
+│   │   │   ├── EmailFooter.tsx
+│   │   │   └── PoweredByKateb.tsx
+│   │   ├── layout
+│   │   │   └── EmailLayout.tsx
+│   │   └── templates
+│   │       └── NewEnquiry.tsx
+│   ├── form
+│   │   ├── Checkbox.tsx
+│   │   ├── FieldError.tsx
+│   │   ├── FormErrorsMessage.tsx
+│   │   ├── Input.tsx
+│   │   ├── Select.tsx
+│   │   └── Textarea.tsx
+│   ├── hero
+│   │   ├── HomeHero.tsx
+│   │   ├── HomeHeroSkeleton.tsx
+│   │   └── components
+│   │       ├── HeroBackground.tsx
+│   │       ├── HeroCta.tsx
+│   │       ├── HeroHeadAndDesc.tsx
+│   │       ├── HeroLink.tsx
+│   │       ├── HeroLogoVisualCard.tsx
+│   │       ├── HeroMicroNav.tsx
+│   │       ├── HeroServiceBadge.tsx
+│   │       └── MultilingualSupport.tsx
+│   ├── image
+│   │   ├── ImageShimer.tsx
+│   │   └── svgFromText.ts
+│   ├── layout
+│   │   ├── PageIntro.tsx
+│   │   ├── Section.tsx
+│   │   ├── footer
+│   │   │   ├── Acknowledgement.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── GetInTouch.tsx
+│   │   │   ├── OrganisationInfo.tsx
+│   │   │   ├── PoweredByKateb.tsx
+│   │   │   ├── QuickLinks.tsx
+│   │   │   └── SocialLinks.tsx
+│   │   └── navbar
+│   │       ├── NavLinks.tsx
+│   │       ├── Navbar.tsx
+│   │       ├── OtherLanguages.tsx
+│   │       ├── ServiceMenu.tsx
+│   │       └── useDropdownMenu.ts
+│   ├── services
+│   │   ├── ServiceSectionSkeleton.tsx
+│   │   └── ServicesSection.tsx
+│   ├── typography
+│   │   ├── Header.tsx
+│   │   └── paragraph.tsx
+│   └── utils
+│       └── Delayed.tsx
+├── about-us
+│   ├── _ui
+│   │   ├── AboutTextSections.tsx
+│   │   ├── AboutValues.tsx
+│   │   └── TeamGrid.tsx
+│   └── page.tsx
+├── contact-us
+│   ├── _lib
+│   │   ├── action.ts
+│   │   ├── constant.ts
+│   │   ├── handleEnquiryEmail.ts
+│   │   └── schema.ts
+│   ├── _ui
+│   │   ├── ContactDetails.tsx
+│   │   ├── ContactFAQ.tsx
+│   │   ├── ContactForm.tsx
+│   │   ├── ContactIntro.tsx
+│   │   ├── ContactMap.tsx
+│   │   ├── ContactSuccess.tsx
+│   │   ├── OpeningHours.tsx
+│   │   └── ServiceArea.tsx
+│   └── page.tsx
+├── error.tsx
+├── favicon.ico
+├── free-consultation
+│   └── page.tsx
+├── globals.css
+├── languages
+│   └── [otherLangs]
+│       ├── _ui
+│       │   └── SubcategoriesOtherLangs.tsx
+│       └── page.tsx
+├── layout.tsx
+├── loading.tsx
+├── manifest.ts
+├── not-found.tsx
+├── page.tsx
+├── robots.ts
+├── services
+│   ├── [slug]
+│   │   ├── _ui
+│   │   │   ├── ServiceDetails.tsx
+│   │   │   ├── ServiceLeafCard.tsx
+│   │   │   ├── ServiceLeafCardSkeleton.tsx
+│   │   │   └── ServiceLeafImage.tsx
+│   │   └── page.tsx
+│   ├── _ui
+│   │   └── ServicesHero.tsx
+│   └── page.tsx
+└── sitemap.ts
+
+48 directories, 125 files
