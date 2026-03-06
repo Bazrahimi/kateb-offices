@@ -49,7 +49,7 @@ export const ROOT_SEO: RootSeoConfig = {
     icon: publicAssets.icons.icon,
     apple: publicAssets.icons.apple,
   },
-  defaultOgImagePath: "/images/og_image.png",
+  defaultOgImagePath: publicAssets.images.ogImage,
   robots: {
     index: true,
     follow: true,
