@@ -1,6 +1,5 @@
 // app/manifest.ts
 
-import { ROOT_SEO } from "@/app/_lib/org/layoutAndSeo";
 import { ORG_PROFILE as op } from "@/app/_lib/org/profile";
 import type { MetadataRoute } from "next";
 import { publicAssets } from "./_lib/org/publicAssets";
@@ -13,8 +12,8 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: "/",
     scope: "/",
     display: "standalone",
-    background_color: "#1ba174",
-    theme_color: ROOT_SEO.themeColor,
+    theme_color: op.primaryColor,
+    background_color: op.secondaryColor,
 
     // ✅ IMPORTANT: Next's typings do NOT allow "any maskable" as one string.
     // Add separate icon entries for "any" and "maskable".
