@@ -6,7 +6,6 @@ import HeroMicroNav from "./components/HeroMicroNav";
 import { HeroServiceBadge } from "./components/HeroServiceBadge";
 import MultilingualSupport from "./components/MultilingualSupport";
 
-
 import { CTA } from "@/app/_lib/content/cta";
 // import { ORG_PROFILE as op } from "@/app/_lib/org/profile";
 import {
@@ -14,8 +13,8 @@ import {
   PublicRoutes,
 } from "@/app/_lib/routes/publicRoutes";
 import { cn } from "@/app/_lib/utils/cn";
-import HeroLogoVisualCard from "./components/HeroLogoVisualCard";
 import HeroBackground from "./components/HeroBackground";
+import HeroLogoVisualCard from "./components/HeroLogoVisualCard";
 
 type Props = {
   className?: string;
@@ -44,7 +43,7 @@ export default function HomeHero({ className }: Props) {
       )}
       aria-label={`${op.orgName} hero`}
     >
-      <HeroBackground  orgName={op.orgName} />
+      <HeroBackground orgName={op.orgName} />
 
       {/* Content */}
       <div className="relative z-10">
@@ -69,7 +68,6 @@ export default function HomeHero({ className }: Props) {
           {/* RIGHT */}
           <div className="lg:col-span-5">
             <HeroLogoVisualCard
-              heroImgUrl={op.logoUrl}
               orgName={op.orgName}
               ctaLabel={activeCta.label}
             />
@@ -80,7 +78,11 @@ export default function HomeHero({ className }: Props) {
         <div className="border-t border-white/10">
           <HeroMicroNav items={HERO_SERVICE_CATEGORY_LINKS} />
 
-          <HeroCta quoteHref={quoteHref} label={activeCta.label} phone={op.phone} />
+          <HeroCta
+            quoteHref={quoteHref}
+            label={activeCta.label}
+            phone={op.phone}
+          />
         </div>
       </div>
     </section>

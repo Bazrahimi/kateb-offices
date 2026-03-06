@@ -1,9 +1,9 @@
 // app/_lib/org/layoutAndSeo.ts
 import type { Metadata, Viewport } from "next";
 import { PublicRoutes } from "../routes/publicRoutes";
-import { getHomeServiceKeywords, getServiceSubcategoryKeywordsBySlug } from "./category/serviceLookup";
 import { images } from "./assets";
-import { ORG_PROFILE as op } from "./profile";
+import { getHomeServiceKeywords } from "./category/serviceLookup";
+import { getBaseUrl, ORG_PROFILE as op } from "./profile";
 import { SERVICE_AREA } from "./serviceArea";
 
 export type RootSeoConfig = {
@@ -63,8 +63,7 @@ export const ROOT_SEO: RootSeoConfig = {
  * - "images/og.png"  => "https://site.com/images/og.png"
  */
 export function absoluteUrl(path: string): string {
-  const clean = path.startsWith("/") ? path : `/${path}`;
-  return `${op.baseUrl}${clean}`;
+  return `${getBaseUrl()}${path}`;
 }
 
 /**
@@ -86,7 +85,7 @@ export function buildMetadata(page: PageSeo): Metadata {
   const ogImage = absoluteUrl(page.ogImagePath ?? ROOT_SEO.defaultOgImagePath);
 
   return {
-    metadataBase: new URL(op.baseUrl),
+    metadataBase: new URL(getBaseUrl()),
 
     title: page.title,
 
@@ -196,7 +195,7 @@ export const SEO_PAGES = {
   contact: (): PageSeo => ({
     canonicalPathname: PublicRoutes.contact(),
     title: `Contact ${op.orgName}`,
-     description: `Request a free quote or free consultation or send an enquiry to ${op.orgName}. We service South East Melbourne and surrounding suburbs.`,
+    description: `Request a free quote or free consultation or send an enquiry to ${op.orgName}. We service South East Melbourne and surrounding suburbs.`,
     keywords: [
       op.orgName,
       `Contact ${op.orgName}`,
@@ -204,7 +203,6 @@ export const SEO_PAGES = {
       "rendering",
       SERVICE_AREA.primaryRegion,
       ...(SERVICE_AREA.featuredSuburbs ?? []),
-  
     ],
   }),
 

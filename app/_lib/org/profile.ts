@@ -2,8 +2,6 @@
 
 import { CtaKey } from "../content/cta";
 import { OtherLanguageKey } from "../languages/multiculturalStatement";
-import { LeafImage } from "./definitions";
-import { images } from "./assets";
 import { ORG_INDUSTRY_SECTORS } from "./serviceArea";
 
 const ORG_DOMAIN = "kateboffices.com.au" as const;
@@ -25,16 +23,9 @@ export const ORG_PROFILE = {
   otherLangKeys: [] as OtherLanguageKey[],
   domain: ORG_DOMAIN,
   email: "info@canconstruction.com.au",
-  baseUrl: getBaseUrl(),
   phone: "+61 420 910 786",
   address: "Level 2/311 Lonsdale St, Dandenong VIC 3175",
   abn: "40 663 656 095",
-  logo: "/images/logo-transparent-hd.png",
-  logoUrl: {
-    kind: "url",
-    src: "business-f/building/brothers-rendering/brother-render-hero-image_klfiqy.png",
-  } as LeafImage,
-  logoFullUrl: `${getBaseUrl()}${images.icon.apple}`,
-  heroImgUrl: "/images/brother-hero.jpg",
+
   cta: "freeQuote" as CtaKey,
 } as const;
