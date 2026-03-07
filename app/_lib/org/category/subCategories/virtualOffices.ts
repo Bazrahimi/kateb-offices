@@ -4,7 +4,7 @@ export const virtualOffices = {
   overview: {
     label: "Virtual Office Overview",
     labelFarsi: "معرفی دفتر مجازی",
-        image: { kind: "url", src: "private-room_amp7ny.png" },
+        image: { kind: "url", src: "virtual_vi9jum.png" },
   
     description: [
       "Virtual office services give businesses a professional presence in Dandenong without the need for full-time physical office space.",
@@ -20,7 +20,7 @@ export const virtualOffices = {
   idealFor: {
     label: "Who Virtual Offices Suit",
     labelFarsi: "مناسب برای چه کسانی",
-    image: { kind: "url", src: "administration_cydnvn.png" },
+      image: { kind: "url", src: "coworking-space_khioi8.png" },
     description: [
       "Virtual offices are a practical option for businesses wanting flexibility and credibility.",
     ],

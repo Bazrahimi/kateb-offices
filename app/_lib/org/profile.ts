@@ -14,13 +14,13 @@ export const getBaseUrl = (): string => {
 
 export const ORG_PROFILE = {
   orgName: orgName,
-  orgNameFarsi: "",
+  orgNameFarsi: "دفاتر کاتب",
   industry: ORG_INDUSTRY_SECTORS.BUILDING.industry,
   subSector: ORG_INDUSTRY_SECTORS.BUILDING.Sectors.rendering,
   description:
     "Residential and commercial rendering and cladding in the south eastern suburbs of Melbourne",
   // languages: ["EN", "HZ", "FA"] as const satisfies readonly LanguageKey[],
-  otherLangKeys: [] as OtherLanguageKey[],
+  otherLangKeys: ["HZ", "FA"] as OtherLanguageKey[],
   domain: ORG_DOMAIN,
   email: "reception@kateboffices.com",
   phone: "+61 401 922 760",

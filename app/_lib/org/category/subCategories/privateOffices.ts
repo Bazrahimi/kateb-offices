@@ -18,7 +18,7 @@ export const privateOffices = {
   idealFor: {
     label: "Who Private Offices Suit",
     labelFarsi: "مناسب برای چه کسانی",
-    image: { kind: "url", src: "professional_acvgbm.png" },
+    image: { kind: "url", src: "private-offices2_wqfz5q.png" },
     description: [
       "Private offices are ideal for businesses that need privacy, professionalism, and a ready-to-use workspace.",
     ],
@@ -53,7 +53,8 @@ export const privateOffices = {
   locationBenefits: {
     label: "Location Benefits",
     labelFarsi: "مزایای موقعیت مکانی",
-    image: { kind: "svg", text: "Location Benefits" },
+  
+    image: { kind: "url", src: "location_w8lwt5.png" },
     description: [
       "The workspace is positioned for convenience, with strong transport access and nearby retail and dining options.",
     ],
@@ -69,7 +70,7 @@ export const privateOffices = {
   whyChooseUs: {
     label: "Why Choose Kateb Offices",
     labelFarsi: "چرا کاتب آفس",
-    image: { kind: "url", src: "administration_cydnvn.png" },
+    image: { kind: "url", src: "open_area2_swc8ma.png" },
     description: [
       "Kateb Offices combines convenience, presentation, and flexibility for businesses looking for a practical and polished workspace.",
     ],

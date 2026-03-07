@@ -10,7 +10,7 @@ export const SERVICES_PAGE = {
   privateOffices: {
     slug: "private-offices-dandenong",
     label: "Private Offices",
-    image: { kind: "url", src: "private-office_u17uat.png" },
+    image: { kind: "url", src: "private-offices_hvvqux.png" },
     labelFarsi: "دفتر خصوصی",
     description: [
       "Fully furnished private office spaces in central Dandenong with flexible terms, natural light, and professional amenities.",
@@ -21,7 +21,7 @@ export const SERVICES_PAGE = {
   coworkingSpaces: {
     slug: "coworking-spaces-dandenong",
     label: "Coworking Spaces",
-    image: { kind: "url", src: "hardesk_srxh6j.png" },
+    image: { kind: "url", src: "co-working_uv5zcp.png" },
     labelFarsi: "فضای کار اشتراکی",
     description: [
       "Flexible coworking space designed for freelancers, small teams, and growing businesses who want a central and professional workspace.",
@@ -43,7 +43,7 @@ export const SERVICES_PAGE = {
   virtualOffices: {
     slug: "virtual-office-dandenong",
     label: "Virtual Offices",
-  image: { kind: "url", src: "hardesk1_esg2dd.png" },
+  image: { kind: "url", src: "waiting_area_cnsymo.png" },
     labelFarsi: "دفتر مجازی",
     description: [
       "Premium serviced offices in central Dandenong featuring high-speed internet, fully furnished private offices, meeting rooms, kitchen facilities, and professional business support. Located just minutes from Dandenong Station and the vibrant Thomas Street dining precinct, Kateb Offices provides the ideal workspace for modern businesses and growing teams.",

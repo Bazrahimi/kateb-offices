@@ -4,7 +4,6 @@ import MultiLanguageCapacity from "./_ui/content/MultiLanguageCapacity";
 
 import dynamic from "next/dynamic";
 import ServiceSection from "./_ui/services/ServicesSection";
-import ServiceArea from "./contact-us/_ui/ServiceArea";
 
 import { Suspense } from "react";
 import OtherLanguagesSnapshot from "./_ui/content/OtherLanguagesSnapshot";
@@ -24,12 +23,19 @@ export default function HomePage() {
   return (
     <main className="space-y-10">
       <Suspense fallback={<HomeHeroSkeleton />}>
-        <HomeHero />
+        <HomeHero className="w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]" />
       </Suspense>
 
-      <div>
+      {/* <div>
         <ServiceArea />
-      </div>
+      </div> */}
+
+      {Object.entries(SERVICES_PAGE).map(([key, service]) => (
+        <Suspense key={key} fallback={<ServiceSectionSkeleton />}>
+          <ServiceSection service={service} />
+        </Suspense>
+      ))}
+
       {op.otherLangKeys.length ? (
         <div>
           <MultiLanguageCapacity
@@ -39,12 +45,6 @@ export default function HomePage() {
           <OtherLanguagesSnapshot />
         </div>
       ) : null}
-
-      {Object.entries(SERVICES_PAGE).map(([key, service]) => (
-        <Suspense key={key} fallback={<ServiceSectionSkeleton />}>
-          <ServiceSection service={service} />
-        </Suspense>
-      ))}
 
       <ContactFormLazy showMotion />
     </main>
