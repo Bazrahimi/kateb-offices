@@ -27,7 +27,7 @@ export default function ServiceLeafCard({ leaf, index, leafId }: Props) {
         <div className="grid gap-3 sm:gap-6 sm:grid-cols-12 sm:items-start mb-5 sm:mb-10">
           {/* Row 1 — Title + Summary (always full width) */}
           <header className="sm:col-span-12 space-y-3">
-            <Header as="h2">{leaf.label}</Header>
+            {/* <Header as="h2">{leaf.label}</Header> */}
 
             {leaf.description &&
               leaf.description.map((t, i) => (

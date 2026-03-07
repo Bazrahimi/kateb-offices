@@ -7,7 +7,7 @@ type CarouselImageProps = {
 };
 
 const CarouselImage = ({ image, alt }: CarouselImageProps) => {
-  return <ServiceLeafImage image={image} alt={alt} aspect="aspect-[4/3]" />;
+  return <ServiceLeafImage image={image} alt={alt} aspect="aspect-[16/10]" />;
 };
 
 export default CarouselImage;

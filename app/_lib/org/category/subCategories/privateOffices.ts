@@ -3,7 +3,7 @@ export const privateOffices = {
   overview: {
     label: "Private Offices Overview",
     labelFarsi: "معرفی دفاتر خصوصی",
-    image: { kind: "svg", text: "Private Offices Overview" },
+    image: { kind: "url", src: "private-office_u17uat.png" },
     description: [
       "Kateb Offices offers fully furnished private office spaces in the heart of Dandenong for professionals, startups, and growing teams.",
     ],
@@ -18,7 +18,7 @@ export const privateOffices = {
   idealFor: {
     label: "Who Private Offices Suit",
     labelFarsi: "مناسب برای چه کسانی",
-    image: { kind: "svg", text: "Who Private Offices Suit" },
+    image: { kind: "url", src: "professional_acvgbm.png" },
     description: [
       "Private offices are ideal for businesses that need privacy, professionalism, and a ready-to-use workspace.",
     ],
@@ -34,7 +34,7 @@ export const privateOffices = {
   includedFeatures: {
     label: "What's Included",
     labelFarsi: "امکانات شامل",
-    image: { kind: "svg", text: "Included Features" },
+    image: { kind: "url", src: "kitchen_nn6ttg.png" },
     description: [
       "Our offices are designed to reduce setup hassle and provide a complete business-ready environment.",
     ],
@@ -69,7 +69,7 @@ export const privateOffices = {
   whyChooseUs: {
     label: "Why Choose Kateb Offices",
     labelFarsi: "چرا کاتب آفس",
-    image: { kind: "svg", text: "Why Choose Kateb Offices" },
+    image: { kind: "url", src: "administration_cydnvn.png" },
     description: [
       "Kateb Offices combines convenience, presentation, and flexibility for businesses looking for a practical and polished workspace.",
     ],

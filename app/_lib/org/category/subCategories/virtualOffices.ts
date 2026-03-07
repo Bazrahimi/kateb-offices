@@ -4,7 +4,8 @@ export const virtualOffices = {
   overview: {
     label: "Virtual Office Overview",
     labelFarsi: "معرفی دفتر مجازی",
-    image: { kind: "svg", text: "Virtual Office Overview" },
+        image: { kind: "url", src: "private-room_amp7ny.png" },
+  
     description: [
       "Virtual office services give businesses a professional presence in Dandenong without the need for full-time physical office space.",
     ],
@@ -19,7 +20,7 @@ export const virtualOffices = {
   idealFor: {
     label: "Who Virtual Offices Suit",
     labelFarsi: "مناسب برای چه کسانی",
-    image: { kind: "svg", text: "Who Virtual Offices Suit" },
+    image: { kind: "url", src: "administration_cydnvn.png" },
     description: [
       "Virtual offices are a practical option for businesses wanting flexibility and credibility.",
     ],
@@ -35,7 +36,7 @@ export const virtualOffices = {
   keyBenefits: {
     label: "Key Benefits",
     labelFarsi: "مزایای اصلی",
-    image: { kind: "svg", text: "Key Benefits" },
+    image: { kind: "url", src: "private-room_amp7ny.png" },
     description: [
       "A virtual office supports your brand image while keeping operating costs lower than a dedicated office.",
     ],
@@ -51,7 +52,7 @@ export const virtualOffices = {
   whyKateb: {
     label: "Why Choose Kateb Offices for Virtual Office Services",
     labelFarsi: "چرا دفتر مجازی کاتب",
-    image: { kind: "svg", text: "Why Choose Kateb Virtual Office" },
+    image: { kind: "url", src: "reception_yl183o.png" },
     description: [
       "Kateb Offices combines a central address, professional support, and practical flexibility for businesses that do not need a permanent physical office.",
     ],

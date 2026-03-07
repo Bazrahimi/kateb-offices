@@ -4,7 +4,7 @@ export const meetingRooms = {
   overview: {
     label: "Meeting Rooms Overview",
     labelFarsi: "معرفی اتاق جلسات",
-    image: { kind: "svg", text: "Meeting Rooms Overview" },
+    image: { kind: "url", src: "meeting-room_lxqgem.png" },
     description: [
       "Our meeting and conference rooms provide a professional space for presentations, interviews, team sessions, and client meetings.",
     ],
@@ -19,7 +19,7 @@ export const meetingRooms = {
   suitableFor: {
     label: "Suitable Uses",
     labelFarsi: "کاربردهای مناسب",
-    image: { kind: "svg", text: "Suitable Uses" },
+    image: { kind: "url", src: "conference-room_iphq8c.png" },
     description: [
       "Meeting rooms can be used across a range of business activities where a polished setting matters.",
     ],
@@ -36,7 +36,7 @@ export const meetingRooms = {
   supportServices: {
     label: "Meeting Support Services",
     labelFarsi: "خدمات پشتیبانی جلسات",
-    image: { kind: "svg", text: "Meeting Support Services" },
+    image: { kind: "url", src: "professional_acvgbm.png" },
     description: [
       "Support services help create a smooth meeting experience for both hosts and guests.",
     ],
@@ -51,7 +51,7 @@ export const meetingRooms = {
   whyChooseOurRooms: {
     label: "Why Use Our Meeting Rooms",
     labelFarsi: "چرا از اتاق جلسات ما استفاده کنید",
-    image: { kind: "svg", text: "Why Use Our Meeting Rooms" },
+    image: { kind: "url", src: "open-area_q4cdaa.png" },
     description: [
       "Our rooms are designed to help businesses present well and meet with confidence.",
     ],

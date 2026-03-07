@@ -2,8 +2,8 @@ const CLD_BASE = "https://res.cloudinary.com/drvh5xeuw/image/upload";
 
 const cld = (path: string | null | undefined, transform: string): string => {
   if (!path) return "";
-  const rel = path.startsWith("/") ? path.slice(1) : path;
-  return `${CLD_BASE}/${transform}/${rel}`;
+
+  return `${CLD_BASE}/${transform}/v1772864393/business-f/advanced/Kateb-offices/${path}`;
 };
 
 export const cldLeafAuto = (path?: string | null) =>

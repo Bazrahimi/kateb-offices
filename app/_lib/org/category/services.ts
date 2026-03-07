@@ -10,7 +10,7 @@ export const SERVICES_PAGE = {
   privateOffices: {
     slug: "private-offices-dandenong",
     label: "Private Offices",
-    image: { kind: "svg", text: "Private Offices" },
+    image: { kind: "url", src: "private-office_u17uat.png" },
     labelFarsi: "دفتر خصوصی",
     description: [
       "Fully furnished private office spaces in central Dandenong with flexible terms, natural light, and professional amenities.",
@@ -21,7 +21,7 @@ export const SERVICES_PAGE = {
   coworkingSpaces: {
     slug: "coworking-spaces-dandenong",
     label: "Coworking Spaces",
-    image: { kind: "svg", text: "Coworking Spaces" },
+    image: { kind: "url", src: "hardesk_srxh6j.png" },
     labelFarsi: "فضای کار اشتراکی",
     description: [
       "Flexible coworking space designed for freelancers, small teams, and growing businesses who want a central and professional workspace.",
@@ -32,7 +32,7 @@ export const SERVICES_PAGE = {
   meetingRooms: {
     slug: "meeting-rooms-dandenong",
     label: "Meeting Rooms",
-    image: { kind: "svg", text: "Meeting Rooms" },
+    image: { kind: "url", src: "meeting-room_lxqgem.png" },
     labelFarsi: "اتاق جلسات",
     description: [
       "Professional meeting and conference rooms for presentations, client meetings, interviews, and team training sessions.",
@@ -43,7 +43,7 @@ export const SERVICES_PAGE = {
   virtualOffices: {
     slug: "virtual-office-dandenong",
     label: "Virtual Offices",
-    image: { kind: "svg", text: "Virtual Offices" },
+  image: { kind: "url", src: "hardesk1_esg2dd.png" },
     labelFarsi: "دفتر مجازی",
     description: [
       "Premium serviced offices in central Dandenong featuring high-speed internet, fully furnished private offices, meeting rooms, kitchen facilities, and professional business support. Located just minutes from Dandenong Station and the vibrant Thomas Street dining precinct, Kateb Offices provides the ideal workspace for modern businesses and growing teams.",
@@ -54,7 +54,7 @@ export const SERVICES_PAGE = {
   administrativeSupport: {
     slug: "administrative-support-services",
     label: "Administrative Support",
-    image: { kind: "svg", text: "Administrative Support" },
+    image: { kind: "url", src: "administration_cydnvn.png" },
     labelFarsi: "پشتیبانی اداری",
     description: [
       "Reception, mail handling, call support, and day-to-day office assistance to help businesses operate smoothly.",
