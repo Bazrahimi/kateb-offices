@@ -11,7 +11,7 @@ import { Header } from "../_ui/typography/Header";
 import MultiLanguageCapacity from "../_ui/content/MultiLanguageCapacity";
 import { P } from "../_ui/typography/paragraph";
 import ContactForm from "../contact-us/_ui/ContactForm";
-import ServiceArea from "../contact-us/_ui/ServiceArea";
+// import ServiceArea from "../contact-us/_ui/ServiceArea";
 
 import { Suspense } from "react";
 import PageIntro from "../_ui/layout/PageIntro";
@@ -45,9 +45,9 @@ export default function AboutUsPage() {
         <TeamGrid team={ABOUT_TEAM} />
       </Section>
 
-      <div>
+      {/* <div>
         <ServiceArea />
-      </div>
+      </div> */}
 
       {op.otherLangKeys.length ? (
         <div className="bg-org-secondary-main/15">

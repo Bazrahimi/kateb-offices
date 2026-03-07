@@ -9,7 +9,7 @@ import MultiLanguageCapacity from "../../_ui/content/MultiLanguageCapacity";
 import ContactFAQ from "./ContactFAQ";
 import ContactMap from "./ContactMap";
 import OpeningHours from "./OpeningHours";
-import ServiceArea from "./ServiceArea";
+// import ServiceArea from "./ServiceArea";
 
 const ContactDetails = () => {
   const {
@@ -103,7 +103,7 @@ const ContactDetails = () => {
       )}
 
       <ContactFAQ items={CONTACT_FAQS} />
-      <ServiceArea />
+      {/* <ServiceArea /> */}
       {/* Embedded Map */}
       {address && <ContactMap address={address} />}
     </div>

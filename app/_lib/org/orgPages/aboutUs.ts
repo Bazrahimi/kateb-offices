@@ -1,4 +1,3 @@
-// app/_lib/org/aboutUs.ts
 import { ORG_PROFILE } from "../profile";
 
 export type TeamMember = {
@@ -11,7 +10,7 @@ export type TeamMember = {
 export type TeamSection = {
   id: string;
   title: string;
-  intro: string; // paragraph under the heading
+  intro: string;
   professionalTitles?: readonly string[];
   members: readonly TeamMember[];
 };
@@ -20,25 +19,26 @@ export const ABOUT_TEAM: TeamSection = {
   id: "team",
   title: "Our Team",
   professionalTitles: [
-    "Painters and Decorators",
-    "Solid Plasterers",
-    "Professional Tilers",
+    "Workspace Management",
+    "Client Support",
+    "Office Administration",
   ],
-  intro: `${ORG_PROFILE.orgName} is guided by experienced tradespeople and community leaders.`,
+  intro: `${ORG_PROFILE.orgName} is supported by a professional team focused on creating a flexible, welcoming, and business-ready workspace in the heart of Dandenong.`,
   members: [
     {
-      name: "Dr Zakir Hussain",
-      role: "President",
-      image: "/images/team/zakir-hussain.png",
+      name: "Team Member Placeholder",
+      role: "Centre Manager",
+      image: "/images/team/placeholder.png",
+      bio: "Oversees day-to-day operations and helps ensure members and guests enjoy a smooth and professional workspace experience.",
     },
     {
-      name: "Nadia Nazari",
-      role: "Vice President",
-      image: "/images/team/zakir-hussain.png",
+      name: "Team Member Placeholder",
+      role: "Client Experience Coordinator",
+      image: "/images/team/placeholder.png",
+      bio: "Supports enquiries, tours, and office setup while helping businesses find the right workspace solution.",
     },
   ],
 } as const;
-
 
 export type TextSection = {
   id: string;
@@ -57,8 +57,8 @@ export const ABOUT_INTRODUCTION: TextSection = {
   id: "introduction",
   title: `About ${ORG_PROFILE.orgName}`,
   items: [
-    "Hazara Shamama Association is a community-based, volunteer-led organisation located in Melbourne’s South-Eastern suburbs. We exist to support Australian Hazara community members by creating culturally safe spaces grounded in care, dignity, and belonging.",
-    "Many families in our community have experienced displacement, loss, significant life transitions and language barriers. Hazara Shamama Association responds to these realities with compassion, practical support, and community connection — helping individuals and families feel supported as they rebuild their lives in Australia.",
+    `${ORG_PROFILE.orgName} is a modern serviced office and flexible workspace provider located in central Dandenong. We offer fully furnished private offices, coworking options, meeting rooms, and virtual office solutions designed for professionals, startups, and growing businesses.`,
+    `Positioned on Lonsdale Street in the heart of Dandenong CBD, our workspace combines convenience, presentation, and flexibility. With high-speed internet, meeting facilities, kitchen amenities, and easy access to public transport, we provide a professional environment where businesses can work, meet, and grow with confidence.`,
   ],
 } as const;
 
@@ -67,28 +67,35 @@ export const ABOUT_SECTIONS: readonly TextSection[] = [
     id: "purpose",
     title: "Our Purpose",
     items: [
-      "Our purpose is to strengthen the wellbeing of Hazara community and families by providing culturally informed support, connection, and guidance. We aim to reduce isolation, improve access to services, and support families to navigate life in Australia with confidence and dignity.",
+      "Our purpose is to provide flexible, professional, and well-located workspace solutions that help businesses operate efficiently and present confidently. We aim to remove the hassle of traditional office setup by offering ready-to-use spaces with practical support and essential amenities included.",
     ],
   },
   {
     id: "vision",
     title: "Our Vision",
     items: [
-      "We envision a community where Hazara families feel safe, respected, and empowered—where children grow up supported, and families are connected to one another and to the wider Australian community. We also envision a future in which the Hazara community is recognised for its distinct cultural heritage and history, rather than being defined under identities or names that carry trauma for many Hazara people.",
+      "We envision Kateb Offices as a trusted workspace destination in Dandenong where professionals, entrepreneurs, and growing teams can work in a modern environment that supports productivity, collaboration, and business growth.",
     ],
   },
   {
     id: "what-we-do",
     title: "What We Do",
     items: [
-      "Hazara Shamama Association delivers and supports initiatives including community gatherings, women-focused programs, family support activities, information sessions, and referrals to trusted local services.",
+      "Kateb Offices provides fully furnished private offices, coworking spaces, meeting rooms, virtual office services, and administrative support. Our goal is to give businesses the flexibility to choose the workspace solution that fits their current needs while maintaining a professional image in a central CBD location.",
+    ],
+  },
+  {
+    id: "location",
+    title: "Why Dandenong",
+    items: [
+      "Our location at 311 Lonsdale Street places businesses in the heart of Dandenong CBD, within walking distance of Dandenong Station, local bus stops, Thomas Street dining, banks, cafés, and retail services. This makes Kateb Offices a convenient and practical base for both daily work and client meetings.",
     ],
   },
   {
     id: "governance",
     title: "Governance and Business Structure",
     items: [
-      `${ORG_PROFILE.orgName} is a Pty Ltd with an ABN registered for GST. ABN: ${ORG_PROFILE.abn}.`,
+      `${ORG_PROFILE.orgName} operates as a business workspace provider. ABN: ${ORG_PROFILE.abn}.`,
     ],
   },
 ] as const;
@@ -98,8 +105,8 @@ export const ABOUT_VALUES: ValuesSection = {
   title: "Our Values",
   icon: "check",
   items: [
-    "Responding to community need with empathy and respect.",
-    "Honouring the lived experiences of individuals and families.",
-    "Creating spaces where people feel understood and respected.",
+    "Providing a professional and welcoming environment for every business.",
+    "Supporting flexibility, convenience, and practical day-to-day operations.",
+    "Creating workspaces that help businesses present well and operate with confidence.",
   ],
 } as const;
