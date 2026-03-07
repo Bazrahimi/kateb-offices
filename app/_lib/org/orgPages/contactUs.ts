@@ -46,7 +46,7 @@ export const CONTACT_FAQS: readonly FAQItem[] = [
 
 
 export const SOCIAL_MEDIA = {
-  facebook: "www.faceboo.com",
+  facebook: "https://www.facebook.com/profile.php?id=100088555071597",
   instagram: "www",
   tiktok: "", // leave empty or undefined if not used
 } as const;

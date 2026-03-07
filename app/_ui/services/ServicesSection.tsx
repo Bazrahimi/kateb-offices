@@ -67,7 +67,7 @@ export default function ServiceSection({ service, className }: Props) {
         <ServiceLeavesCarousel
           slug={service.slug}
           subcategories={service.subcategories}
-          heading={`What We Offer in ${service.label}`}
+          heading="Our 365 rated services"
           className="border-0 bg-transparent p-0 shadow-none backdrop-blur-0"
         />
       </div>

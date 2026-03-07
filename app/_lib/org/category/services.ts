@@ -46,7 +46,7 @@ export const SERVICES_PAGE = {
     image: { kind: "svg", text: "Virtual Offices" },
     labelFarsi: "دفتر مجازی",
     description: [
-      "Professional business address and mail handling services for businesses needing a credible presence without full-time office space.",
+      "Premium serviced offices in central Dandenong featuring high-speed internet, fully furnished private offices, meeting rooms, kitchen facilities, and professional business support. Located just minutes from Dandenong Station and the vibrant Thomas Street dining precinct, Kateb Offices provides the ideal workspace for modern businesses and growing teams.",
     ] as const,
     subcategories: virtualOffices,
   },

@@ -1,4 +1,10 @@
 export const CTA = {
+  freeTour: {
+    label: "Free Tour",
+    labelFarsi: "تور رایگان",
+    message: "Hi, I’d like a free tour of your office amenities: ",
+    messageFarsi: "سلام، می‌خواهم یک بازدید رایگان از امکانات دفتر شما داشته باشم: ",
+  },
   freeQuote: {
     label: "Free Quote",
     labelFarsi: "قیمت‌دهی مجانی",

@@ -15,15 +15,15 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  /* Primary */
-  --color-org-primary-light: #5a5e50;
-  --color-org-primary-main: #030501;
-  --color-org-primary-dark: #010300;
+  /* Primary — Blue (from the logo head / center) */
+  --color-org-primary-light: #3b6ea5;
+  --color-org-primary-main: #234f84;
+  --color-org-primary-dark: #162f52;
 
-  /* Secondary */
-  --color-org-secondary-light: #17e39f;
-  --color-org-secondary-main: #1ba174;
-  --color-org-secondary-dark: #12664a;
+  /* Secondary — Purple (lighter version) */
+  --color-org-secondary-light: #c08be3;
+  --color-org-secondary-main: #9c5ed6;
+  --color-org-secondary-dark: #6f38a8;
 }
 
 /* @media (prefers-color-scheme: dark) {

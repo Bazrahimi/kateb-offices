@@ -50,7 +50,7 @@ export default function HomeHero({ className }: Props) {
         <div className="grid gap-10 p-6 sm:p-10 lg:grid-cols-12 lg:items-center">
           {/* LEFT */}
           <div className="lg:col-span-7 space-y-6">
-            <HeroServiceBadge />
+            {/* <HeroServiceBadge /> */}
 
             {/* Glass copy card */}
             <div className="space-y-5 rounded-3xl border border-white/10 bg-gray-50 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.25)] backdrop-blur-md sm:p-7">

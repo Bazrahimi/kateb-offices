@@ -22,11 +22,11 @@ export const ORG_PROFILE = {
   // languages: ["EN", "HZ", "FA"] as const satisfies readonly LanguageKey[],
   otherLangKeys: [] as OtherLanguageKey[],
   domain: ORG_DOMAIN,
-  email: "info@canconstruction.com.au",
-  phone: "+61 420 910 786",
+  email: "reception@kateboffices.com",
+  phone: "+61 401 922 760",
   address: "Level 2/311 Lonsdale St, Dandenong VIC 3175",
   abn: "40 663 656 095",
-  cta: "freeQuote" as CtaKey,
+  cta: "freeTour" as CtaKey,
   primaryColor: "#030501",
   secondaryColor: "#1ba174"
 } as const;
