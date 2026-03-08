@@ -39,7 +39,7 @@ export default function ServiceSection({ service, className }: Props) {
         </div>
 
         {/* Text */}
-        <div className="lg:col-span-7 space-y-3 ">
+        <div className="lg:col-span-7 space-y-2 ">
           <P className="text-gray-100">
             {/* description is readonly string[] */}
             {service.description}
@@ -48,13 +48,13 @@ export default function ServiceSection({ service, className }: Props) {
       </div>
 
       {/* Carousel */}
-      <div className="p-3 md:p-6 pb-6 sm:px-8 sm:pb-8">
-        <ServiceLeavesCarousel
-          slug={service.slug}
-          subcategories={service.subcategories}
-          className="border-0 bg-transparent p-0 shadow-none backdrop-blur-0"
-        />
-      </div>
+
+      <ServiceLeavesCarousel
+        slug={service.slug}
+        subcategories={service.subcategories}
+        className="border-0 bg-transparent p-0 shadow-none backdrop-blur-0"
+      />
+
       <Button
         as="link"
         href={PublicRoutes.service(service.slug)}

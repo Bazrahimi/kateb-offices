@@ -42,7 +42,7 @@ export default function ServiceLeavesCarousel({
       )}
     >
       {/* ✅ fix: min-h needs px */}
-      <div className="relative mt-4 min-h-[360px]">
+      <div className="relative  min-h-[360px]">
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           loop={entries.length > 3}

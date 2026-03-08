@@ -66,7 +66,7 @@ const List = ({
 
           <P
             className={cn(
-              "text-gray-600 rounded-xl bg-gray-100 px-3 border border-gray-50",
+              "text-gray-600 rounded-xl bg-gray-100 px-1 border border-gray-50",
               textClassName,
             )}
           >
