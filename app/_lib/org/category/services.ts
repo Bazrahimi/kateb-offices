@@ -26,19 +26,19 @@ export const SERVICES_PAGE = {
     image: { kind: "url", src: "co-working_uv5zcp.png" },
     labelFarsi: "فضای کار اشتراکی",
     description: [
-      "Flexible coworking space designed for freelancers, small teams, and growing businesses who want a central and professional workspace.",
+      `${op.orgName} also offers a modern co-working environment designed for flexibility and collaboration. Our space includes a large 84-square-metre open office area ideal for teams working together in one shared workspace, as well as 52 dedicated hot-desk zone for professionals who need a flexible workstation. The area is fully furnished with ergonomic desks and chairs, high-speed internet, and access to shared amenities, creating a comfortable and productive environment for freelancers, startups, and growing teams.`,
     ] as const,
     subcategories: coworkingSpaces,
   },
 
   meetingRooms: {
-    slug: "meeting-rooms-dandenong",
-    label: "Meeting Rooms",
+    slug: "meeting-and-conference-rooms-dandenong",
+    label: "Meeting & Conference Rooms",
     image: { kind: "url", src: "meeting-room_lxqgem.png" },
 
     labelFarsi: "اتاق جلسات",
     description: [
-      "Professional meeting and conference rooms for presentations, client meetings, interviews, and team training sessions.",
+      `${op.orgName} provides two fully equipped meeting spaces designed for professional gatherings and events. Our 8-person meeting room is ideal for small team meetings, client discussions, and private presentations, while the 25-person conference room is perfect for group meetings, workshops, and short-term training courses. Both rooms include modern presentation and video-conferencing facilities and can be booked for short or extended sessions, making it easy to host professional meetings whenever needed.`,
     ] as const,
     subcategories: meetingRooms,
   },

@@ -1,24 +1,25 @@
 import { ServiceSubCategory } from "../../definitions";
 export const privateOffices = {
   overview: {
-    label: "Private Offices Overview",
+    label: "External Offices",
     labelFarsi: "معرفی دفاتر خصوصی",
-    image: { kind: "url", src: "private-office_u17uat.png" },
+    image: { kind: "url", src: "private-offices_external.png" },
     description: [
-      "Kateb Offices offers fully furnished private office spaces in the heart of Dandenong for professionals, startups, and growing teams.",
+      "Our external window offices offer bright, fully equipped workspaces for teams of 4–8 people, professionally furnished and ready for immediate use. Tenants benefit from high-speed triple-redundant internet, phone and mail handling services, and fully configured meeting rooms for teleconferencing and videoconferencing, all within a modern, professional office environment designed for productivity.",
     ],
     items: [
       "Central Dandenong location",
       "Fully furnished office suites",
       "Flexible rental terms",
       "Suitable for teams from 1 to 23 desks",
+      "Designated underground car-park"
     ] as const,
   },
 
   idealFor: {
-    label: "Who Private Offices Suit",
+    label: "Internal Offices",
     labelFarsi: "مناسب برای چه کسانی",
-    image: { kind: "url", src: "private-offices2_wqfz5q.png" },
+    image: { kind: "url", src: "internal-office_fkqz04.png" },
     description: [
       "Private offices are ideal for businesses that need privacy, professionalism, and a ready-to-use workspace.",
     ],
@@ -47,13 +48,15 @@ export const privateOffices = {
       "Reception support",
       "Mail handling",
       "Printing facilities",
+      "sound proof privacy room",
+      "Zen Relaxation Room"
     ] as const,
   },
 
   locationBenefits: {
     label: "Location Benefits",
     labelFarsi: "مزایای موقعیت مکانی",
-  
+
     image: { kind: "url", src: "location_w8lwt5.png" },
     description: [
       "The workspace is positioned for convenience, with strong transport access and nearby retail and dining options.",

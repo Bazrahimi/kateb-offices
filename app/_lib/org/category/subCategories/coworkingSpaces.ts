@@ -34,7 +34,7 @@ export const coworkingSpaces = {
   benefits: {
     label: "Coworking Benefits",
     labelFarsi: "مزایای فضای کار اشتراکی",
-    image: { kind: "url", src: "flower_mwqo1d.png" },
+    image: { kind: "url", src: "open-area_q4cdaa.png" },
     description: [
       "Coworking gives businesses access to professional facilities while keeping costs and commitments lower.",
     ],
@@ -55,12 +55,14 @@ export const coworkingSpaces = {
       "Members benefit from practical day-to-day amenities that support a productive work routine.",
     ],
     items: [
-      "High-speed internet",
+     
       "Shared kitchen",
       "Breakout areas",
       "Meeting room access",
       "Reception presence",
       "Office cleaning",
+       "triple redundant High Speed internet",
+       "Sound Proof Privacy Room"
     ] as const,
   },
 } as const satisfies ServiceSubCategory;

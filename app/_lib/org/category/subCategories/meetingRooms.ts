@@ -12,7 +12,11 @@ export const meetingRooms = {
       "Professional presentation environment",
       "Suitable for formal and informal meetings",
       "Central Dandenong location",
-      "Modern and welcoming setting",
+      "Fully equipped Video Conferencing facility",
+      "Client Interviews",
+      "Workshops",
+      "Training Sessions",
+      "Team Meetings",
     ] as const,
   },
 
