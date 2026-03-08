@@ -131,7 +131,7 @@ const Form = ({ header, subHeader, message }: Props) => {
           overlay
           fullWidth
         >
-          Send Message
+          Submit
         </ActionButton>
 
         <P className="text-center text-xs text-gray-500">

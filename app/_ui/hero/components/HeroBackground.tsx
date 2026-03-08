@@ -31,15 +31,15 @@ export default function HeroBackground({ orgName }: Props) {
         }}
       /> */}
 
-      <div
+      {/* <div
         className="absolute inset-0"
         aria-hidden="true"
         style={{
           background:
             "linear-gradient(90deg, rgba(4,15,31,0.45) 0%, rgba(4,15,31,0.25) 20%, rgba(4,15,31,0.12) 35%, rgba(4,15,31,0) 55%)",
         }}
-      />
-
+      /> */}
+{/* 
       <div
         className="absolute inset-x-0 bottom-0 h-44"
         aria-hidden="true"
@@ -47,7 +47,7 @@ export default function HeroBackground({ orgName }: Props) {
           background:
             "linear-gradient(to top, rgba(4,15,31,0.92), rgba(4,15,31,0))",
         }}
-      />
+      /> */}
 
       {/* <div
         className="absolute inset-0 opacity-[0.10] mix-blend-soft-light"
