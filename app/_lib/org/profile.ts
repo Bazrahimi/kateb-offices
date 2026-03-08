@@ -19,9 +19,9 @@ export const ORG_PROFILE = {
     tagline:
       "Flexible workspaces for modern businesses in the heart of Dandenong.",
     highlights: [
-      "Private offices and coworking spaces designed for productivity and growth",
-      "Fully equipped meeting and conference rooms for teams and client presentations",
-      "Virtual office solutions and administrative support to run your business smoothly",
+      // "Private offices and coworking spaces designed for productivity and growth",
+      // "Fully equipped meeting and conference rooms for teams and client presentations",
+      // "Virtual office solutions and administrative support to run your business smoothly",
     ],
   },
   industry: ORG_INDUSTRY_SECTORS.BUILDING.industry,
