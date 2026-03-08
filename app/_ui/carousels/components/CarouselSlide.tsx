@@ -31,7 +31,7 @@ export default function CarouselSlide({ leaf, leafId, serviceSlug }: Props) {
         <div className="flex-1">
           <CarouselSlideContent
             label={leaf.label}
-            description={[...leaf.description]}
+            items={[...leaf.items]}
           />
         </div>
       </article>
