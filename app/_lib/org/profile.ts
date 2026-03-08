@@ -20,7 +20,7 @@ export const ORG_PROFILE = {
   description:
     "Residential and commercial rendering and cladding in the south eastern suburbs of Melbourne",
   // languages: ["EN", "HZ", "FA"] as const satisfies readonly LanguageKey[],
-  otherLangKeys: ["HZ", "FA"] as OtherLanguageKey[],
+  otherLangKeys: [] as OtherLanguageKey[],
   domain: ORG_DOMAIN,
   email: "reception@kateboffices.com",
   phone: "+61 401 922 760",

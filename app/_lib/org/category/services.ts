@@ -1,5 +1,6 @@
 import type { ServicesPage } from "../definitions";
 
+import { ORG_PROFILE as op } from "../profile";
 import { administrativeSupport } from "./subCategories/administrativeSupport";
 import { coworkingSpaces } from "./subCategories/coworkingSpaces";
 import { meetingRooms } from "./subCategories/meetingRooms";
@@ -10,10 +11,11 @@ export const SERVICES_PAGE = {
   privateOffices: {
     slug: "private-offices-dandenong",
     label: "Private Offices",
-    image: { kind: "url", src: "private-offices_hvvqux.png" },
+    image: { kind: "url", src: "private-office_u17uat.png" },
     labelFarsi: "دفتر خصوصی",
     description: [
-      "Fully furnished private office spaces in central Dandenong with flexible terms, natural light, and professional amenities.",
+      `${op.orgName} offers professional private office spaces in the heart of Dandenong, designed for businesses that want a flexible and cost-effective workspace. Our offices are fully furnished and available in internal, external, and corner layouts with window options, suitable for teams of 3–8 people. Tenants enjoy access to shared amenities, reception support, and a professional environment without the high cost of a traditional commercial lease. `,
+      "Enjoy a 365 rated premium office experience, secure encrypted access, seamless accessibility with designated underground carpark",
     ] as const,
     subcategories: privateOffices,
   },
@@ -33,6 +35,7 @@ export const SERVICES_PAGE = {
     slug: "meeting-rooms-dandenong",
     label: "Meeting Rooms",
     image: { kind: "url", src: "meeting-room_lxqgem.png" },
+
     labelFarsi: "اتاق جلسات",
     description: [
       "Professional meeting and conference rooms for presentations, client meetings, interviews, and team training sessions.",
@@ -43,7 +46,7 @@ export const SERVICES_PAGE = {
   virtualOffices: {
     slug: "virtual-office-dandenong",
     label: "Virtual Offices",
-  image: { kind: "url", src: "waiting_area_cnsymo.png" },
+    image: { kind: "url", src: "waiting_area_cnsymo.png" },
     labelFarsi: "دفتر مجازی",
     description: [
       "Premium serviced offices in central Dandenong featuring high-speed internet, fully furnished private offices, meeting rooms, kitchen facilities, and professional business support. Located just minutes from Dandenong Station and the vibrant Thomas Street dining precinct, Kateb Offices provides the ideal workspace for modern businesses and growing teams.",
