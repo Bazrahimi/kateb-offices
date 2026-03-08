@@ -16,7 +16,7 @@ import { Header } from "@/app/_ui/typography/Header";
 type Props = {
   subcategories: ServiceSubCategory;
   className?: string;
-  heading?: string;
+
   slug: string;
 };
 
@@ -24,7 +24,6 @@ export default function ServiceLeavesCarousel({
   subcategories,
   className,
   slug,
-  heading = "Featured Services",
 }: Props) {
   const mounted = useMounted();
   const { prevClass, nextClass, navigation } =
@@ -34,7 +33,7 @@ export default function ServiceLeavesCarousel({
   const entries = Object.entries(subcategories);
   if (entries.length === 0) return null;
 
-  const shouldPaginate = entries.length > 1
+  const shouldPaginate = entries.length > 1;
 
   return (
     <section
@@ -43,11 +42,7 @@ export default function ServiceLeavesCarousel({
         className,
       )}
     >
-      <div className="flex items-center justify-between gap-3 ">
-        <Header as="h2"  size="sm" className="text-gray-50 text-left">
-          {heading}
-        </Header>
-      </div>
+
 
       {/* ✅ fix: min-h needs px */}
       <div className="relative mt-4 min-h-[360px]">
@@ -57,7 +52,7 @@ export default function ServiceLeavesCarousel({
           watchOverflow
           navigation={navigation}
           className="service-carousel pb-14"
-          pagination={ shouldPaginate ? { clickable: true } : false}
+          pagination={shouldPaginate ? { clickable: true } : false}
           spaceBetween={14}
           slidesPerView={1.1}
           breakpoints={{

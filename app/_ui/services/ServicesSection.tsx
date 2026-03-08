@@ -44,17 +44,6 @@ export default function ServiceSection({ service, className }: Props) {
             {/* description is readonly string[] */}
             {service.description}
           </P>
-
-          {/* Optional: small “view all” link */}
-          {/* <Link href={PublicRoutes.service(service.slug)} className="text-sm font-semibold">
-              View all {service.label}
-            </Link> */}
-
-          {/* <ServiceCTA 
-          ctaKey={ORG_PROFILE.cta}
-          serviceLabel={service.label}
-          
-          /> */}
         </div>
       </div>
 
@@ -63,7 +52,6 @@ export default function ServiceSection({ service, className }: Props) {
         <ServiceLeavesCarousel
           slug={service.slug}
           subcategories={service.subcategories}
-          heading="Our Facilities"
           className="border-0 bg-transparent p-0 shadow-none backdrop-blur-0"
         />
       </div>
