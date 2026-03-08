@@ -20,7 +20,7 @@ export default function CarouselSlideContent({
       </Header>
 
       {/* List instead of description */}
-      <div className="mt-2 text-sm text-slate-600">
+      <div className="mt-2 max-h-[250px] text-slate-600">
         <List items={items} />
       </div>
     </div>

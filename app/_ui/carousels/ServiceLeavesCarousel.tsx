@@ -49,7 +49,7 @@ export default function ServiceLeavesCarousel({
           watchOverflow
           navigation={navigation}
           className="service-carousel pb-14"
-          // TODO: give pagination background color "bg-org-secondary"
+  
           pagination={shouldPaginate ? { clickable: true } : false}
           spaceBetween={14}
           slidesPerView={1.1}

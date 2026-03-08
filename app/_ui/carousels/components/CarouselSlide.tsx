@@ -31,7 +31,7 @@ export default function CarouselSlide({ leaf, leafId, serviceSlug }: Props) {
         <div className="flex-1">
           <CarouselSlideContent
             label={leaf.label}
-            items={[...leaf.items]}
+            items={leaf.items.slice(0, 4)}
           />
         </div>
       </article>
