@@ -1,6 +1,7 @@
 import { PublicRoutes } from "@/app/_lib/routes/publicRoutes";
 import Link from "next/link";
 
+import BookATour from "./BookATour";
 import Languages from "./OtherLanguages";
 import ServicesMenuClient from "./ServiceMenu";
 
@@ -15,6 +16,7 @@ export default function NavLinks() {
 
       <ServicesMenuClient />
       <Languages className={navLinksClasses} />
+      <BookATour />
 
       <Link href={PublicRoutes.contact()} className={navLinksClasses}>
         Contact

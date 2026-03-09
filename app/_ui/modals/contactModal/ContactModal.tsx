@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
-import ContactModalContent from "./ContactModalContent";
-import Button from "../../button/Button";
 import { type CtaKey } from "@/app/_lib/content/cta";
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
+import Button from "../../button/Button";
+import ContactModalContent from "./ContactModalContent";
 
 type Props = {
   open: boolean;
@@ -19,12 +19,6 @@ export default function ContactModal({
   ctaKey,
   serviceLabel,
 }: Props) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   useEffect(() => {
     if (!open) return;
 
@@ -41,12 +35,16 @@ export default function ContactModal({
     };
   }, [open, onClose]);
 
-  if (!mounted || !open) return null;
+  if (!open || typeof document === "undefined") return null;
 
   return createPortal(
     <div className="fixed inset-0 z-[500] overflow-y-auto bg-org-primary-main/60 p-4">
       <div className="flex min-h-full items-start justify-center py-6 sm:items-center">
-        <div className="absolute inset-0" onClick={onClose} aria-hidden="true" />
+        <div
+          className="absolute inset-0"
+          onClick={onClose}
+          aria-hidden="true"
+        />
 
         <div className="relative z-10 w-full max-w-2xl rounded-2xl bg-white shadow-xl">
           <Button
@@ -59,10 +57,7 @@ export default function ContactModal({
           </Button>
 
           <div className="bg-org-primary-dark">
-            <ContactModalContent
-              ctaKey={ctaKey}
-              serviceLabel={serviceLabel}
-            />
+            <ContactModalContent ctaKey={ctaKey} serviceLabel={serviceLabel} />
           </div>
         </div>
       </div>
