@@ -53,8 +53,8 @@ export default function ServiceLeafModal({
         />
 
         <div className="relative z-10 w-full max-w-4xl rounded-2xl bg-white shadow-xl">
-          <Button onClick={onClose} aria-label="Close modal" variant="danger">
-            ✕
+          <Button onClick={onClose} aria-label="Close modal" variant="danger" size="sm" fullWidth>
+            Close
           </Button>
 
           <div className="p-4 sm:p-6">

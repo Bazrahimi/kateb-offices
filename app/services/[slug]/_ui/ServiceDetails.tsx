@@ -9,7 +9,7 @@ export default function ServiceDetails({
   subcategories: ServiceSubCategory;
 }) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-1">
       {Object.entries(subcategories).map(([key, leaf], index) => (
         <Suspense key={key} fallback={<ServiceLeafCardSkeleton />}>
           <ServiceLeafCard leaf={leaf} index={index} leafId={key} />

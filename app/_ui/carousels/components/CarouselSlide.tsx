@@ -2,7 +2,6 @@
 
 import type { ServiceLeaf } from "@/app/_lib/org/definitions";
 import { useState } from "react";
-import Button from "../../button/Button";
 import CarouselImage from "./CarouselImage";
 import CarouselSlideContent from "./CarouselSlideContent";
 
@@ -17,7 +16,11 @@ export default function CarouselSlide({ leaf, leafId }: Props) {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="group block h-full w-full text-left cursor-pointer focus:outline-none"
+      >
         <article className="h-full flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
           {/* Image */}
           <div className="overflow-hidden">
@@ -32,7 +35,7 @@ export default function CarouselSlide({ leaf, leafId }: Props) {
             />
           </div>
         </article>
-      </Button>
+      </button>
       <ServiceLeafModal
         open={open}
         onClose={() => setOpen(false)}

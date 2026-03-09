@@ -25,7 +25,7 @@ export const metadata = buildMetadata(SEO_PAGES.about());
 
 export default function AboutUsPage() {
   return (
-    <main className="space-y-5">
+    <main className="">
       <Section id={ABOUT_INTRODUCTION.id}>
         <PageIntro
           heading={ABOUT_INTRODUCTION.title}

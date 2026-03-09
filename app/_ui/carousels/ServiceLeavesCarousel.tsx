@@ -37,7 +37,7 @@ export default function ServiceLeavesCarousel({
   return (
     <section
       className={cn(
-        "rounded-2xl border border-slate-200 bg-white/70 p-5 shadow-sm backdrop-blur sm:p-7",
+        "rounded-2xl border border-slate-200 bg-white/70  shadow-sm backdrop-blur p-0",
         className,
       )}
     >
@@ -51,7 +51,7 @@ export default function ServiceLeavesCarousel({
           className="service-carousel pb-14"
   
           pagination={shouldPaginate ? { clickable: true } : false}
-          spaceBetween={14}
+          spaceBetween={12}
           slidesPerView={1.1}
           breakpoints={{
             640: { slidesPerView: 2.1 },

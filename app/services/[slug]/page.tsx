@@ -43,7 +43,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { service } = found;
 
   return (
-    <main className=" my-5 space-y-8">
+    <main className=" my-5 ">
       <Section id={slug}>
         <PageHeading heading={service.label} subHeading={service.description} />
       </Section>

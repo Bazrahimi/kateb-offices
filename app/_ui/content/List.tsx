@@ -43,7 +43,7 @@ const List = ({
     <ul
       className={cn(
         // ✅ default wrapper (can be overridden)
-        "rounded-3xl bg-gray-200/50 px-3 border border-gray-100 py-10",
+        "rounded-3xl bg-gray-50 px-3 border border-gray-100 py-10",
         ulLayout,
         className,
       )}
@@ -66,7 +66,7 @@ const List = ({
 
           <P
             className={cn(
-              "text-gray-600 rounded-xl bg-gray-100 px-1 border border-gray-50",
+              "text-gray-600 rounded-xl px-1 ",
               textClassName,
             )}
           >

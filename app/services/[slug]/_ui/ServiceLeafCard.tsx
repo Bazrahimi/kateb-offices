@@ -20,17 +20,17 @@ export default function ServiceLeafCard({ leaf, index, leafId }: Props) {
   return (
     <>
       <article
-        className="rounded-2xl border border-gray-200 bg-gray-50 p-5 shadow-sm scroll-mt-24"
+        className="rounded-2xl border border-gray-200 p-5 shadow-sm scroll-mt-24 bg-org-secondary-dark"
         id={leafId}
       >
         <div className="grid gap-3 sm:gap-6 sm:grid-cols-12 sm:items-start mb-5 sm:mb-10">
           {/* Row 1 — Title + Summary (always full width) */}
           <header className="sm:col-span-12 space-y-3">
-            <Header as="h2">{leaf.label}</Header>
+            <Header as="h2" className="text-gray-50">{leaf.label}</Header>
 
             {leaf.description &&
               leaf.description.map((t, i) => (
-                <P key={i} className="indent-6">
+                <P key={i} className="text-gray-200">
                   {t}
                 </P>
               ))}
