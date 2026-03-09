@@ -40,3 +40,16 @@ export type OrgRootSeo = {
     follow: boolean;
   };
 };
+
+export type WorkspaceOffer = {
+  slug: string;
+  label: string;
+  labelFarsi?: string;
+  image: LeafImage;
+  capacityLabel?: string;
+  priceLabel: string;
+  summary: string;
+  href: string;
+};
+
+export type WorkspaceOfferCollection = Record<string, WorkspaceOffer>;

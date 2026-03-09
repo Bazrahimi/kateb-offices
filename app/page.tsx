@@ -12,6 +12,7 @@ import { buildMetadata, SEO_PAGES } from "./_lib/org/layoutAndSeo";
 import HomeHero from "./_ui/hero/HomeHero";
 import HomeHeroSkeleton from "./_ui/hero/HomeHeroSkeleton";
 import ServiceSectionSkeleton from "./_ui/services/ServiceSectionSkeleton";
+import WorkspaceOffersSection from "./_ui/workspace/WorkspaceOffersSection";
 
 const ServiceCtaLazy = dynamic(() => import("./_ui/content/ServiceCTA"), {
   // ssr: false,
@@ -26,6 +27,8 @@ export default function HomePage() {
       <Suspense fallback={<HomeHeroSkeleton />}>
         <HomeHero className="w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]" />
       </Suspense>
+
+      <WorkspaceOffersSection />
 
       {Object.entries(SERVICES_PAGE).map(([key, service]) => (
         <Suspense key={key} fallback={<ServiceSectionSkeleton />}>
