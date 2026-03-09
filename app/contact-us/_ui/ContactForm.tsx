@@ -19,17 +19,8 @@ type Props = {
   message?: string;
 };
 
-const ContactForm = ({ header, subHeader, message }: Props) => (
-  <Form header={header} subHeader={subHeader} message={message} />
-);
-
-export default ContactForm;
-
-const Form = ({ header, subHeader, message }: Props) => {
-  const [state, formAction, isPending] = useActionState(
-    submitEnquiry,
-    undefined,
-  );
+const ContactForm = ({ header, subHeader, message }: Props) => {
+  const [state, formAction, isPending] = useActionState(submitEnquiry, undefined);
 
   const isSuccess = state?.ok === true;
 
@@ -41,14 +32,13 @@ const Form = ({ header, subHeader, message }: Props) => {
     <div className="max-w-lg mx-auto rounded-2xl bg-gray-100 p-6 shadow-lg">
       <form className="space-y-2 relative" action={formAction} noValidate>
         {header && (
-          <Header  as="h3" size="sm">
+          <Header as="h3" size="sm">
             {header}
           </Header>
         )}
 
         {subHeader && <P size="sm">{subHeader}</P>}
 
-        {/* Name */}
         <Input
           id={F.fullName}
           label="Full Name"
@@ -60,8 +50,6 @@ const Form = ({ header, subHeader, message }: Props) => {
           required
           className="bg-white"
         />
-
-        {/* Email */}
 
         <Input
           id={F.email}
@@ -75,7 +63,6 @@ const Form = ({ header, subHeader, message }: Props) => {
           className="bg-white"
         />
 
-        {/* Phone (optional) */}
         <Input
           id={F.contactNumber}
           label="Contact Number"
@@ -98,7 +85,6 @@ const Form = ({ header, subHeader, message }: Props) => {
         />
         <FormErrorsMessage message={state?.message} />
 
-        {/* Submit */}
         <ActionButton
           type="submit"
           isLoading={isPending}
@@ -108,12 +94,9 @@ const Form = ({ header, subHeader, message }: Props) => {
         >
           Submit
         </ActionButton>
-
-        {/* <P className="text-center text-xs text-gray-500">
-          By contacting us, you agree to our community guidelines and privacy
-          policy.
-        </P> */}
       </form>
     </div>
   );
 };
+
+export default ContactForm;

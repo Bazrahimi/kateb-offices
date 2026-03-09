@@ -58,7 +58,7 @@ export default function ContactModal({
             Close
           </Button>
 
-          <div className="p-4 sm:p-6 bg-org-primary-dark">
+          <div className=" bg-org-primary-dark">
             <ContactModalContent
               message={message}
               headingLabel={headingLabel}
