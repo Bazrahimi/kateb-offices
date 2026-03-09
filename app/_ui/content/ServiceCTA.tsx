@@ -5,13 +5,13 @@ import Button from "../button/Button";
 import { Header } from "../typography/Header";
 import { P } from "../typography/paragraph";
 
-import { ctaCall, ctaCallFarsi, getCtaCopy } from "@/app/_lib/content/cta"; // adjust path
+import { CTA } from "@/app/_lib/content/cta";
 
-import type { CtaKey, Locale } from "@/app/_lib/content/cta";
+import type { CtaKey } from "@/app/_lib/content/cta";
 
 type Props = {
   ctaKey: CtaKey;
-  locale?: Locale;
+  locale?: "en" | "fa";
 
   // service label can be bilingual so the component can switch easily
   serviceLabel?: string;
@@ -33,8 +33,8 @@ export default function ServiceCTA({
   className,
   headingOverride,
 }: Props) {
-  const copy = getCtaCopy(ctaKey, locale);
-  const dir = copy.dir;
+  const copy = CTA[ctaKey];
+  const dir: "ltr" | "rtl" = locale === "fa" ? "rtl" : "ltr";
 
   const resolvedServiceLabel =
     locale === "fa"
@@ -44,8 +44,8 @@ export default function ServiceCTA({
   const callout =
     resolvedServiceLabel.trim().length > 0
       ? locale === "fa"
-        ? ctaCallFarsi(ORG_PROFILE.orgNameFarsi, resolvedServiceLabel)
-        : ctaCall(ORG_PROFILE.orgName, resolvedServiceLabel)
+        ? `به ${ORG_PROFILE.orgNameFarsi} بگویید برای ${resolvedServiceLabel} به چه چیزی نیاز دارید، و ما با مراحل بعدیِ روشن پاسخ می‌دهیم.`
+        : `Tell ${ORG_PROFILE.orgName} what you need for ${resolvedServiceLabel}, and we’ll reply with clear next steps.`
       : "";
 
   // Build the message passed to your form (include the service label if you want)
@@ -54,7 +54,7 @@ export default function ServiceCTA({
   const href = {
     pathname: PublicRoutes.freeConsultation(),
     query: {
-      headingLabel: headingOverride ?? copy.label,
+      headingLabel: headingOverride ?? copy.header,
       serviceLabel: resolvedServiceLabel,
       message,
       ctaKey, // helpful later if you want the form to know which CTA was used
@@ -77,7 +77,7 @@ export default function ServiceCTA({
 
       {generalEnquiry && (
         <Header as="h2" size="md" className="text-white">
-          {(headingOverride ?? `Book ${copy.label}`) +
+          {(headingOverride ?? copy.header) +
             (locale === "fa" ? " | پرسش عمومی" : " | General enquiry")}
         </Header>
       )}
@@ -114,7 +114,7 @@ export default function ServiceCTA({
           size="sm"
           className="text-center"
         >
-          {locale === "fa" ? copy.label : `Book ${copy.label}`}
+          {copy.header}
         </Button>
 
         {generalEnquiry && (
