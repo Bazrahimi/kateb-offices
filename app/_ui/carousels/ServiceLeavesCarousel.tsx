@@ -16,13 +16,13 @@ type Props = {
   subcategories: ServiceSubCategory;
   className?: string;
 
-  slug: string;
+
 };
 
 export default function ServiceLeavesCarousel({
   subcategories,
   className,
-  slug,
+
 }: Props) {
   const mounted = useMounted();
   const { prevClass, nextClass, navigation } =
@@ -61,7 +61,7 @@ export default function ServiceLeavesCarousel({
           {entries.map(([leafId, leaf]) => (
             <SwiperSlide key={leafId} className="h-auto">
               <div className="h-full">
-                <CarouselSlide leaf={leaf} leafId={leafId} serviceSlug={slug} />
+                <CarouselSlide leaf={leaf} leafId={leafId}  />
               </div>
             </SwiperSlide>
           ))}

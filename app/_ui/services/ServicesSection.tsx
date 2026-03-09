@@ -50,7 +50,6 @@ export default function ServiceSection({ service, className }: Props) {
       {/* Carousel */}
 
       <ServiceLeavesCarousel
-        slug={service.slug}
         subcategories={service.subcategories}
         className="border-0 bg-transparent p-0 shadow-none backdrop-blur-0"
       />

@@ -1,7 +1,7 @@
 import type { ServiceLeaf } from "@/app/_lib/org/definitions";
 import { cn } from "@/app/_lib/utils/cn";
 import List from "@/app/_ui/content/List";
-// import ServiceCTA from "@/app/_ui/content/ServiceCTA";
+
 import { P } from "@/app/_ui/typography/paragraph";
 import ServiceLeafImage from "./ServiceLeafImage";
 import { Header } from "@/app/_ui/typography/Header";
@@ -15,7 +15,7 @@ type Props = {
 export default function ServiceLeafCard({ leaf, index, leafId }: Props) {
   const hasItems = leaf.items.length > 0;
   const isEven = index % 2 === 0;
-  // const activeCta = CTA_MAP[ORG_PROFILE.cta];
+
 
   return (
     <>
@@ -48,13 +48,6 @@ export default function ServiceLeafCard({ leaf, index, leafId }: Props) {
               <div className="mb-4 h-px w-full bg-slate-200/70" />
               <List items={leaf.items} />
 
-              {/* <div className="mt-5 hidden md:block">
-                <ServiceCTA
-                  ctaKey={ORG_PROFILE.cta}
-                  serviceLabel={leaf.label}
-                  locale="en"
-                />
-              </div> */}
             </section>
           )}
 
@@ -66,13 +59,7 @@ export default function ServiceLeafCard({ leaf, index, leafId }: Props) {
             )}
           >
             <ServiceLeafImage image={leaf.image} alt={leaf.label} />
-            {/* <div className="mt-5 block md:hidden">
-              <ServiceCTA
-                ctaKey={ORG_PROFILE.cta}
-                serviceLabel={leaf.label}
-                locale="en"
-              />
-            </div> */}
+  
           </aside>
         </div>
       </article>
