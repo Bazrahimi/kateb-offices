@@ -18,12 +18,28 @@ export default function NewEnquiry({
       <Text>
         <strong>Name:</strong> {data.fullName}
       </Text>
+      {data.companyName ? (
+        <Text>
+          <strong>Company Name:</strong> {data.companyName}
+        </Text>
+      ) : null}
       <Text>
         <strong>Email:</strong> {data.email}
       </Text>
       <Text>
         <strong>Phone:</strong> {data.contactNumber}
       </Text>
+      {data.preferredDate ? (
+        <Text>
+          <strong>Preferred Date:</strong> {data.preferredDate}
+        </Text>
+      ) : null}
+
+      {data.preferredTime ? (
+        <Text>
+          <strong>Preferred Time:</strong> {data.preferredTime}
+        </Text>
+      ) : null}
 
       {data.qMessage ? (
         <>
@@ -35,9 +51,11 @@ export default function NewEnquiry({
       {dontReplyNote ? (
         <>
           <Hr />
-          <Text style={{ fontSize: "12px", color: "#6b7280", lineHeight: "18px" }}>
-            <strong>Note:</strong> Please do not reply to this email. This inbox is
-            for website enquiries only.
+          <Text
+            style={{ fontSize: "12px", color: "#6b7280", lineHeight: "18px" }}
+          >
+            <strong>Note:</strong> Please do not reply to this email. This inbox
+            is for website enquiries only.
           </Text>
 
           {dontReplyFarsiNote ? (
@@ -50,8 +68,8 @@ export default function NewEnquiry({
                 textAlign: "right",
               }}
             >
-              <strong>یادآوری:</strong> لطفاً به این ایمیل پاسخ ندهید. این ایمیل فقط
-              برای دریافت پیام‌های وبسایت است.
+              <strong>یادآوری:</strong> لطفاً به این ایمیل پاسخ ندهید. این ایمیل
+              فقط برای دریافت پیام‌های وبسایت است.
             </Text>
           ) : null}
         </>

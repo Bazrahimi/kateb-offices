@@ -16,7 +16,7 @@ export const sendAdminEmail = async (data: Enquiry) => {
       from: WEB_ENQUIRY,
       to: [ORG_EMAIL],
       replyTo: data.email || undefined,
-      subject: `New Web Enquiry - ${data.fullName}`,
+      subject: `New ${data.ctaKey} - ${data.fullName}`,
       react: <NewEnquiry data={data} />,
     });
 

@@ -1,5 +1,5 @@
-import { z } from "zod";
 import { ActionState } from "@/app/_lib/utils/actionHelper";
+import { z } from "zod";
 import { ENQUIRY_FIELDS as F } from "./constant";
 
 export const EnquirySchema = z
@@ -7,8 +7,10 @@ export const EnquirySchema = z
     ctaKey: z.enum(["freeTour", "generalContact"]),
 
     [F.fullName]: z.string().min(3, { message: "Please enter your full name" }),
-
-    [F.email]: z.email({ message: "Please enter a valid email address" }).trim(),
+    [F.companyName]: z.string().trim().optional(),
+    [F.email]: z
+      .email({ message: "Please enter a valid email address" })
+      .trim(),
 
     [F.contactNumber]: z
       .string()

@@ -1,5 +1,5 @@
 import { getBaseUrl, ORG_PROFILE } from "@/app/_lib/org/profile";
-import {publicAssets} from "@/app/_lib/org/publicAssets";
+import { publicAssets } from "@/app/_lib/org/publicAssets";
 import EmailFooter from "@/app/_ui/email/components/EmailFooter";
 import {
   Body,
@@ -52,11 +52,14 @@ export default function EmailLayout({
                 {ORG_PROFILE.orgName}
               </Heading>
 
-              {ORG_PROFILE.orgNameFarsi ? (
-                <Text style={styles.brandFarsi}>
-                  {ORG_PROFILE.orgNameFarsi}
-                </Text>
-              ) : null}
+              {ORG_PROFILE.orgNameFarsi &&
+                ORG_PROFILE.otherLangKeys?.some(
+                  (k) => k === "HZ" || k === "FA",
+                ) && (
+                  <Text style={styles.brandFarsi}>
+                    {ORG_PROFILE.orgNameFarsi}
+                  </Text>
+                )}
             </div>
           </Section>
 

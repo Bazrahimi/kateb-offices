@@ -9,6 +9,7 @@ import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import { useActionState } from "react";
 import { CiUser } from "react-icons/ci";
+import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { submitEnquiry } from "../_lib/action";
@@ -61,6 +62,16 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
           type="text"
           Icon={CiUser}
           required
+          className="bg-white"
+        />
+        <Input
+          id={F.companyName}
+          label="Company Name"
+          placeholder="Enter your company name"
+          error={state?.errors?.companyName}
+          defaultValue={state?.data?.companyName}
+          type="text"
+          Icon={HiOutlineBuildingOffice2}
           className="bg-white"
         />
 
