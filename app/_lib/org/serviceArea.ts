@@ -1,10 +1,8 @@
-
-
 export const ORG_INDUSTRY_SECTORS = {
   BUILDING: {
     industry: "Building and Construction",
     defaultScope: "metro",
-    Sectors: {
+    sectors: {
       painting: "Painting and Decorating",
       builder: "Registered Builders",
       rendering: "Solid Plastering and Rendering",
@@ -12,7 +10,7 @@ export const ORG_INDUSTRY_SECTORS = {
   },
 
   PROFESSIONAL: {
-    industry: "Professional",
+    industry: "Professional Services",
     defaultScope: "national",
     sectors: {
       lawyer: "Principal Lawyers",
@@ -24,51 +22,65 @@ export const ORG_INDUSTRY_SECTORS = {
     industry: "Association",
     defaultScope: "state",
     sectors: {
-      ngo: "Non profit organisation",
+      ngo: "Non-profit Organisation",
     },
   },
+
   TECHNOLOGY: {
-    industry: "technology",
+    industry: "Technology",
     defaultScope: "state",
     sectors: {
-      web_development: "Web Application | Software",
+      webDevelopment: "Web Applications and Software",
     },
-  }
+  },
+
+  WORKSPACE: {
+    industry: "Commercial Property and Flexible Workspaces",
+    defaultScope: "metro",
+    sectors: {
+      privateOffices: "Private Offices",
+      coworking: "Coworking Spaces",
+      meetingRooms: "Meeting and Conference Rooms",
+      virtualOffices: "Virtual Offices",
+      adminSupport: "Administrative Support Services",
+    },
+  },
 } as const;
 
 export type OrgIndustrySectorKey = keyof typeof ORG_INDUSTRY_SECTORS;
-export type CoverageScope = (typeof ORG_INDUSTRY_SECTORS)[OrgIndustrySectorKey]["defaultScope"];
+
+export type CoverageScope =
+  (typeof ORG_INDUSTRY_SECTORS)[OrgIndustrySectorKey]["defaultScope"];
 
 export type ServiceArea = {
-  scope: CoverageScope;          // "metro" | "state" | "national"
-  primaryRegion: string;         // "South East Melbourne"
-  state: string;                 // "VIC"
-  country: string;               // "Australia"
-  featuredSuburbs?: string[];    // for SEO pages/sections
-  note?: string;                 // short marketing sentence
+  scope: CoverageScope;
+  primaryRegion: string;
+  state: string;
+  country: string;
+  featuredSuburbs?: string[];
+  note?: string;
 };
 
 export const SERVICE_AREA: ServiceArea = {
-  scope: ORG_INDUSTRY_SECTORS.BUILDING.defaultScope, // or derive from ORG_PROFILE.orgSector
-  primaryRegion: "South East Melbourne",
+  scope: ORG_INDUSTRY_SECTORS.WORKSPACE.defaultScope,
+  primaryRegion: "Dandenong and South East Melbourne",
   state: "VIC",
   country: "Australia",
   featuredSuburbs: [
-    "Cranbourne",
-    "Cranbourne North",
-    "Narre Warren",
-    "Berwick",
     "Dandenong",
     "Noble Park",
     "Springvale",
     "Keysborough",
-    "Pakenham",
+    "Endeavour Hills",
+    "Hallam",
+    "Lynbrook",
+    "Cranbourne",
+    "Berwick",
     "Officer",
   ],
   note:
-    "We provide commercial and residential painting services across Melbourne, with a focus on the South Eastern suburbs.",
+    "We provide flexible private offices, coworking spaces, meeting rooms, conference rooms, virtual office solutions, and administrative support in Dandenong and across Melbourne’s south-east.",
 };
-
 
 export const scopeLabel = (scope: string) => {
   switch (scope) {

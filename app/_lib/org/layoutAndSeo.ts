@@ -165,7 +165,7 @@ const locationKeywords = [
   SERVICE_AREA.country,
 ];
 
-// Central, reuseable SEO configs
+// Central, reusable SEO configs
 export const SEO_PAGES = {
   home: (): PageSeo => ({
     canonicalPathname: PublicRoutes.home(),
@@ -173,20 +173,31 @@ export const SEO_PAGES = {
     description: op.description,
     keywords: [
       op.orgName,
+      "Private Offices Dandenong",
+      "Coworking Spaces Dandenong",
+      "Meeting Rooms Dandenong",
+      "Conference Rooms Dandenong",
+      "Virtual Offices Dandenong",
+      "Administrative Support Dandenong",
       ...locationKeywords,
       ...getHomeServiceKeywords(op.otherLangKeys),
     ],
   }),
+
   about: (): PageSeo => ({
     canonicalPathname: PublicRoutes.about(),
     title: `About ${op.orgName}`,
-    description: `Learn about ${op.orgName}, our experience, values, and the team behind our rendering and cladding work in Melbourne.`,
+    description: `Learn about ${op.orgName}, our values, and how we provide flexible workspaces, private offices, coworking, meeting rooms, and business support in Dandenong.`,
     keywords: [
       op.orgName,
       `About ${op.orgName}`,
-      "Render",
-      "Rendering",
-      "Solid Plastering",
+      "Flexible Workspaces",
+      "Private Offices",
+      "Coworking Spaces",
+      "Meeting Rooms",
+      "Conference Rooms",
+      "Virtual Offices",
+      "Administrative Support",
       ...locationKeywords,
     ],
   }),
@@ -194,18 +205,20 @@ export const SEO_PAGES = {
   contact: (): PageSeo => ({
     canonicalPathname: PublicRoutes.contact(),
     title: `Contact ${op.orgName}`,
-    description: `Request a free quote or free consultation or send an enquiry to ${op.orgName}. We service South East Melbourne and surrounding suburbs.`,
+    description: `Book a tour, enquire about private offices, coworking spaces, meeting rooms, conference rooms, or contact ${op.orgName} for workspace solutions in Dandenong.`,
     keywords: [
       op.orgName,
       `Contact ${op.orgName}`,
-      "Render Quote",
-      "rendering",
+      "Book a Tour",
+      "Office Enquiry",
+      "Meeting Room Booking",
+      "Conference Room Booking",
+      "Coworking Enquiry",
       SERVICE_AREA.primaryRegion,
       ...(SERVICE_AREA.featuredSuburbs ?? []),
     ],
   }),
 
-  // Dynamic helper for services
   service: (input: {
     slug: string;
     label: string;
@@ -216,7 +229,13 @@ export const SEO_PAGES = {
     canonicalPathname: PublicRoutes.service(input.slug),
     title: `${input.label} | ${op.orgName}`,
     description: input.description,
-    keywords: [op.orgName, ...(input.keywords ?? [])],
+    keywords: [
+      op.orgName,
+      input.label,
+      SERVICE_AREA.primaryRegion,
+      ...(SERVICE_AREA.featuredSuburbs ?? []),
+      ...(input.keywords ?? []),
+    ],
     ogImagePath: input.ogImagePath,
   }),
 };

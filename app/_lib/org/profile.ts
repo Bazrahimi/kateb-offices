@@ -24,10 +24,10 @@ export const ORG_PROFILE = {
       // "Virtual office solutions and administrative support to run your business smoothly",
     ],
   },
-  industry: ORG_INDUSTRY_SECTORS.BUILDING.industry,
-  subSector: ORG_INDUSTRY_SECTORS.BUILDING.Sectors.rendering,
+  industry: ORG_INDUSTRY_SECTORS.WORKSPACE.industry,
+  subSector: ORG_INDUSTRY_SECTORS.WORKSPACE.sectors.privateOffices,
   description:
-    "Residential and commercial rendering and cladding in the south eastern suburbs of Melbourne",
+    "Flexible private offices, coworking spaces, meeting rooms, conference rooms, virtual offices, and administrative support services in Dandenong.",
   // languages: ["EN", "HZ", "FA"] as const satisfies readonly LanguageKey[],
   otherLangKeys: [] as OtherLanguageKey[],
   domain: ORG_DOMAIN,
