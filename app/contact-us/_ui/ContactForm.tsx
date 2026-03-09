@@ -1,5 +1,6 @@
 "use client";
 
+import { CTA, type CtaKey } from "@/app/_lib/content/cta";
 import ActionButton from "@/app/_ui/button/ActionButton";
 import FormErrorsMessage from "@/app/_ui/form/FormErrorsMessage";
 import Input from "@/app/_ui/form/Input";
@@ -12,7 +13,6 @@ import { IoIosPhonePortrait } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { submitEnquiry } from "../_lib/action";
 import { ENQUIRY_FIELDS as F } from "../_lib/constant";
-import { CTA, type CtaKey } from "@/app/_lib/content/cta";
 import { ContactSuccessMessage } from "./ContactSuccess";
 
 type Props = {
@@ -21,10 +21,14 @@ type Props = {
 };
 
 const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
-  const [state, formAction, isPending] = useActionState(submitEnquiry, undefined);
+  const [state, formAction, isPending] = useActionState(
+    submitEnquiry,
+    undefined,
+  );
 
   const isSuccess = state?.ok === true;
   const cta = CTA[ctaKey];
+  const isFreeTour = ctaKey === "freeTour";
 
   if (isSuccess) {
     return <ContactSuccessMessage />;
@@ -45,6 +49,8 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
             <strong>Step 2:</strong> {cta.steps[1]}
           </P>
         </div>
+
+        <input type="hidden" name="ctaKey" value={ctaKey} />
 
         <Input
           id={F.fullName}
@@ -80,13 +86,35 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
           Icon={IoIosPhonePortrait}
           className="bg-white"
         />
+        {isFreeTour && (
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Input
+              id={F.preferredDate}
+              label="Preferred Date"
+              type="date"
+              error={state?.errors?.preferredDate}
+              defaultValue={state?.data?.preferredDate}
+              className="bg-white"
+              required
+            />
 
+            <Input
+              id={F.preferredTime}
+              label="Preferred Time"
+              type="time"
+              error={state?.errors?.preferredTime}
+              defaultValue={state?.data?.preferredTime}
+              className="bg-white"
+              required
+            />
+          </div>
+        )}
         <Textarea
           id={F.qMessage}
           label="Message | Query"
           placeholder="Tell us a little about your enquiry..."
           error={state?.errors?.qMessage}
-          defaultValue={state?.data?.qMessage ||  cta.message(serviceLabel)}
+          defaultValue={state?.data?.qMessage || cta.message(serviceLabel)}
           required
           className="bg-white"
         />

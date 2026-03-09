@@ -9,7 +9,14 @@ export type BaseInputProps = {
   id: string;
   label: string;
   placeholder?: string;
-  type: "text" | "number" | "email" | "password" | "tel" | "date";
+  type:
+    | "text"
+    | "number"
+    | "email"
+    | "password"
+    | "tel"
+    | "date"
+    | "time";
   value?: string | number;
   onChange?: (v: string) => void;
   defaultValue?: string | number;
@@ -82,7 +89,9 @@ export const Input = forwardRef<HTMLInputElement, BaseInputProps>(
             ? "numeric"
             : type === "tel"
               ? "tel"
-              : undefined;
+              : type === "time"
+                ? "numeric"
+                : undefined;
 
     // Padding: flip for RTL so text doesn't overlap the icons
     const leftPad = Icon
