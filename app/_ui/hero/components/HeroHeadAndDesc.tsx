@@ -8,13 +8,13 @@ export const HeroHeadAndDesc = () => {
 
   return (
     <>
-      <div className="relative isolate overflow-hidden rounded-b-3xl bg-gradient-to-r from-gray-100 via-white to-gray-200 px-6 py-5 shadow-sm">
-        <span className="pointer-events-none absolute inset-x-4 top-3 h-px bg-gradient-to-r from-transparent via-org-primary-main/35 to-transparent" />
-        <span className="pointer-events-none absolute inset-x-10 bottom-3 h-px bg-gradient-to-r from-transparent via-org-primary-main/35 to-transparent" />
+      <div className="relative isolate overflow-hidden rounded-b-3xl shadow-sm">
+        {/* <span className="pointer-events-none absolute inset-x-4 top-3 h-px bg-gradient-to-r from-transparent via-org-primary-main/35 to-transparent" />
+        <span className="pointer-events-none absolute inset-x-10 bottom-3 h-px bg-gradient-to-r from-transparent via-org-primary-main/35 to-transparent" /> */}
         <Header
           as="h1"
           size="lg"
-          className="mb-1 text-[clamp(1.5rem,3vw,2.5rem)] font-black tracking-[0.08em] text-org-primary-main"
+          className="text-gray-50"
         >
           {op.orgName}
         </Header>
