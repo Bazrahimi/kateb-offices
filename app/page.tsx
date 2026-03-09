@@ -42,7 +42,7 @@ export default function HomePage() {
         </div>
       ) : null}
 
-      <ContactFormLazy showMotion />
+      <ContactFormLazy />
     </main>
   );
 }

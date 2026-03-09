@@ -1,11 +1,8 @@
 // app/(home)/_ui/HomeHero.tsx
 import { ORG_PROFILE as op } from "@/app/_lib/org/profile";
-// import HeroCta from "./components/HeroCta";
 import { HeroHeadAndDesc } from "./components/HeroHeadAndDesc";
 import HeroMicroNav from "./components/HeroMicroNav";
 import MultilingualSupport from "./components/MultilingualSupport";
-
-// import { ORG_PROFILE as op } from "@/app/_lib/org/profile";
 import { getServiceCategoryLinks } from "@/app/_lib/routes/publicRoutes";
 import { cn } from "@/app/_lib/utils/cn";
 import HeroBackground from "./components/HeroBackground";
@@ -52,11 +49,7 @@ export default function HomeHero({ className }: Props) {
         <div className="border-t border-white/10">
           <HeroMicroNav items={HERO_SERVICE_CATEGORY_LINKS} />
 
-          {/* <HeroCta
-            quoteHref={quoteHref}
-            label={activeCta.label}
-            phone={op.phone}
-          /> */}
+ 
         </div>
       </div>
     </section>

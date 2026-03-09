@@ -77,7 +77,7 @@ export default function ServiceCTA({
 
       {generalEnquiry && (
         <Header as="h2" size="md" className="text-white">
-          {(headingOverride ?? copy.label) +
+          {(headingOverride ?? `Book ${copy.label}`) +
             (locale === "fa" ? " | پرسش عمومی" : " | General enquiry")}
         </Header>
       )}
@@ -95,9 +95,9 @@ export default function ServiceCTA({
 
       {generalEnquiry && (
         <>
-          <P className="mt-3 text-center text-slate-100">
+          {/* <P className="mt-3 text-center text-slate-100">
             {locale === "fa" ? "| یا |" : "| OR |"}
-          </P>
+          </P> */}
           <P className="mt-2 text-center text-slate-300">
             {locale === "fa"
               ? `اگر پرسش عمومی دارید با ${ORG_PROFILE.orgName} تماس بگیرید.`
@@ -114,14 +114,14 @@ export default function ServiceCTA({
           size="sm"
           className="text-center"
         >
-          {locale === "fa" ? copy.label : `Get a ${copy.label}`}
+          {locale === "fa" ? copy.label : `Book ${copy.label}`}
         </Button>
 
         {generalEnquiry && (
           <>
-            <P className="text-slate-300 text-center font-bold inline-flex justify-center">
+            {/* <P className="text-slate-300 text-center font-bold inline-flex justify-center">
               {locale === "fa" ? "| یا |" : "| OR |"}
-            </P>
+            </P> */}
             <Button
               as="link"
               href={PublicRoutes.contact()}

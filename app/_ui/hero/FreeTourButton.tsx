@@ -6,11 +6,12 @@ import ContactModal from "../modals/contactModal/ContactModal";
 
 const FreeTourButton = () => {
   const [open, setOpen] = useState(false);
+  const buttonContent = `Book ${CTA.freeTour.label} Now`
 
   return (
     <>
       <Button onClick={() => setOpen(true)}>
-        Book {CTA.freeTour.label}
+        {buttonContent}
       </Button>
 
       <ContactModal
@@ -18,7 +19,7 @@ const FreeTourButton = () => {
         onClose={() => setOpen(false)}
         message={CTA.freeTour.message}
   
-        headingLabel="Book a Tour Now"
+        headingLabel={buttonContent}
       />
     </>
   );

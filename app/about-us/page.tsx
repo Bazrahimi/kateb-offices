@@ -72,7 +72,7 @@ export default function AboutUsPage() {
           to assist you.
         </P>
         <Suspense fallback={null}>
-          <ContactForm showMotion />
+          <ContactForm />
         </Suspense>
       </section>
     </main>

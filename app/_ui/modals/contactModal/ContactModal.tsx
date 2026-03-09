@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import ContactModalContent from "./ContactModalContent";
+import Button from "../../button/Button";
 
 type Props = {
   open: boolean;
@@ -42,21 +43,22 @@ export default function ContactModal({
   if (!mounted || !open) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-[9999] overflow-y-auto bg-slate-900/60 p-4">
-      <div className="flex min-h-full items-start justify-center py-6 sm:items-center">
+    <div className="fixed inset-0 z-[500] overflow-y-auto bg-org-primary-main/60 p-4">
+      <div className="flex min-h-full items-start justify-center py-6 sm:items-center ">
         <div className="absolute inset-0" onClick={onClose} aria-hidden="true" />
 
         <div className="relative z-10 w-full max-w-2xl rounded-2xl bg-white shadow-xl">
-          <button
-            type="button"
+          <Button
+            variant="danger"
             onClick={onClose}
             aria-label="Close modal"
-            className="absolute right-3 top-3 rounded-md px-3 py-2 text-sm text-slate-600 hover:bg-slate-100"
-          >
-            ✕
-          </button>
+            fullWidth
 
-          <div className="p-4 sm:p-6">
+          >
+            Close
+          </Button>
+
+          <div className="p-4 sm:p-6 bg-org-primary-dark">
             <ContactModalContent
               message={message}
               headingLabel={headingLabel}

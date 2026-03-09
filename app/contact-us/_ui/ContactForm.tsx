@@ -5,7 +5,6 @@ import Input from "@/app/_ui/form/Input";
 import Textarea from "@/app/_ui/form/Textarea";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
-import { motion } from "motion/react";
 import { useActionState } from "react";
 import { CiUser } from "react-icons/ci";
 import { IoIosPhonePortrait } from "react-icons/io";
@@ -15,38 +14,14 @@ import { ENQUIRY_FIELDS as F } from "../_lib/constant";
 import { ContactSuccessMessage } from "./ContactSuccess";
 
 type Props = {
-  showMotion?: boolean;
   header?: string;
   subHeader?: string;
   message?: string;
 };
 
-const ContactForm = ({
-  showMotion = false,
-  header,
-  subHeader,
-
-  message,
-}: Props) => {
-  const content = (
-    <Form header={header} subHeader={subHeader} message={message} />
-  );
-
-  if (!showMotion) return content;
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 60 }} // start lower
-      whileInView={{ opacity: 1, y: 0 }} // move to natural position
-      transition={{
-        duration: 0.6,
-        ease: [0.22, 1, 0.36, 1], // smooth professional easing
-      }}
-      viewport={{ once: true, amount: 0.25 }} // trigger when 25% visible
-    >
-      {content}
-    </motion.div>
-  );
-};
+const ContactForm = ({ header, subHeader, message }: Props) => (
+  <Form header={header} subHeader={subHeader} message={message} />
+);
 
 export default ContactForm;
 
@@ -134,10 +109,10 @@ const Form = ({ header, subHeader, message }: Props) => {
           Submit
         </ActionButton>
 
-        <P className="text-center text-xs text-gray-500">
+        {/* <P className="text-center text-xs text-gray-500">
           By contacting us, you agree to our community guidelines and privacy
           policy.
-        </P>
+        </P> */}
       </form>
     </div>
   );
