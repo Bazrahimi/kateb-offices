@@ -10,16 +10,13 @@ const FreeTourButton = () => {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>
-        {cta}
-      </Button>
+      <Button onClick={() => setOpen(true)}>{cta}</Button>
 
       <ContactModal
         open={open}
         onClose={() => setOpen(false)}
-        message={CTA.freeTour.message}
   
-        headingLabel={cta}
+        serviceLabel="services and shared amenities"
       />
     </>
   );

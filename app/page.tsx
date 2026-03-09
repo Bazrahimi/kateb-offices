@@ -12,7 +12,8 @@ import { buildMetadata, SEO_PAGES } from "./_lib/org/layoutAndSeo";
 import HomeHero from "./_ui/hero/HomeHero";
 import HomeHeroSkeleton from "./_ui/hero/HomeHeroSkeleton";
 import ServiceSectionSkeleton from "./_ui/services/ServiceSectionSkeleton";
-const ContactFormLazy = dynamic(() => import("./contact-us/_ui/ContactForm"), {
+
+const ServiceCtaLazy = dynamic(() => import("./_ui/content/ServiceCTA"), {
   // ssr: false,
   loading: () => <div className="max-w-lg mx-auto h-[500px]" />,
 });
@@ -42,7 +43,8 @@ export default function HomePage() {
         </div>
       ) : null}
 
-      <ContactFormLazy />
+      {/* <ContactFormLazy /> */}
+      <ServiceCtaLazy ctaKey="generalContact" serviceLabel="Services"  />
     </main>
   );
 }

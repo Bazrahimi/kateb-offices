@@ -2,11 +2,11 @@
 import { OTHER_LANGUAGES as ol } from "@/app/_lib/languages/multiculturalStatement";
 import { SERVICES_PAGE } from "@/app/_lib/org/category/services";
 import { ORG_PROFILE as op } from "@/app/_lib/org/profile";
+import ServiceCTA from "@/app/_ui/content/ServiceCTA";
 import PageIntro from "@/app/_ui/layout/PageIntro";
 import Section from "@/app/_ui/layout/Section";
 import { notFound } from "next/navigation";
 import SubcategoriesOtherLangs from "./_ui/SubcategoriesOtherLangs";
-import ServiceCTA from "@/app/_ui/content/ServiceCTA";
 
 const OtherLanguagePage = async ({
   params,
@@ -18,9 +18,7 @@ const OtherLanguagePage = async ({
   const decoded = decodeURIComponent(otherLangs);
 
   const otherLangKeys = op.otherLangKeys;
- if (!otherLangKeys) return notFound();
-
-
+  if (!otherLangKeys) return notFound();
 
   return (
     <main className="my-5 space-y-8">
@@ -47,13 +45,7 @@ const OtherLanguagePage = async ({
       </Section>
 
       <Section>
-        <ServiceCTA 
-        ctaKey={op.cta}
-        locale="fa"
-        serviceLabel="test"
-        generalEnquiry
-        
-        />
+        <ServiceCTA ctaKey={op.cta} serviceLabel="test" />
       </Section>
     </main>
   );

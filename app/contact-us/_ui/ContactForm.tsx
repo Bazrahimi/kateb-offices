@@ -1,4 +1,5 @@
 "use client";
+
 import ActionButton from "@/app/_ui/button/ActionButton";
 import FormErrorsMessage from "@/app/_ui/form/FormErrorsMessage";
 import Input from "@/app/_ui/form/Input";
@@ -11,33 +12,39 @@ import { IoIosPhonePortrait } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { submitEnquiry } from "../_lib/action";
 import { ENQUIRY_FIELDS as F } from "../_lib/constant";
+import { CTA, type CtaKey } from "@/app/_lib/content/cta";
 import { ContactSuccessMessage } from "./ContactSuccess";
 
 type Props = {
-  header?: string;
-  subHeader?: string;
-  message?: string;
+  ctaKey: CtaKey;
+  serviceLabel: string;
 };
 
-const ContactForm = ({ header, subHeader, message }: Props) => {
+const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
   const [state, formAction, isPending] = useActionState(submitEnquiry, undefined);
 
   const isSuccess = state?.ok === true;
+  const cta = CTA[ctaKey];
 
   if (isSuccess) {
     return <ContactSuccessMessage />;
   }
 
   return (
-    <div className="max-w-lg mx-auto rounded-2xl bg-gray-100 p-6 shadow-lg">
-      <form className="space-y-2 relative" action={formAction} noValidate>
-        {header && (
-          <Header as="h3" size="sm">
-            {header}
-          </Header>
-        )}
+    <div className="mx-auto max-w-lg rounded-2xl bg-gray-100 p-6 shadow-lg">
+      <form className="relative space-y-2" action={formAction} noValidate>
+        <Header as="h3" size="sm">
+          {cta.header}
+        </Header>
 
-        {subHeader && <P size="sm">{subHeader}</P>}
+        <div className="space-y-1">
+          <P size="sm">
+            <strong>Step 1:</strong> {cta.steps[0]}
+          </P>
+          <P size="sm">
+            <strong>Step 2:</strong> {cta.steps[1]}
+          </P>
+        </div>
 
         <Input
           id={F.fullName}
@@ -79,10 +86,11 @@ const ContactForm = ({ header, subHeader, message }: Props) => {
           label="Message | Query"
           placeholder="Tell us a little about your enquiry..."
           error={state?.errors?.qMessage}
-          defaultValue={state?.data?.qMessage || message}
+          defaultValue={state?.data?.qMessage ||  cta.message(serviceLabel)}
           required
           className="bg-white"
         />
+
         <FormErrorsMessage message={state?.message} />
 
         <ActionButton

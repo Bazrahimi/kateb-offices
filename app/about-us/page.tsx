@@ -72,7 +72,7 @@ export default function AboutUsPage() {
           to assist you.
         </P>
         <Suspense fallback={null}>
-          <ContactForm />
+          <ContactForm ctaKey="generalContact" serviceLabel="Services" />
         </Suspense>
       </section>
     </main>

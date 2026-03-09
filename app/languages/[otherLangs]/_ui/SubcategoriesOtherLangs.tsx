@@ -75,8 +75,7 @@ export default function SubcategoriesOtherLangs({
             </div>
             <ServiceCTA
               ctaKey={ORG_PROFILE.cta}
-              locale="fa"
-              serviceLabelFarsi={heading}
+    
               serviceLabel={heading}
             />
           </div>

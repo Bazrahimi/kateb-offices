@@ -57,12 +57,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
       <Section>
         <Suspense fallback={null}>
-          <ServiceCTA
-            ctaKey={op.cta}
-            locale="en"
-            serviceLabel={service.label}
-            generalEnquiry
-          />
+          <ServiceCTA ctaKey="freeTour" serviceLabel={service.label} />
         </Suspense>
       </Section>
     </main>

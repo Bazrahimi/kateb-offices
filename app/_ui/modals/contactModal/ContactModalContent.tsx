@@ -1,18 +1,18 @@
+import { CtaKey } from "@/app/_lib/content/cta";
 import ContactForm from "@/app/contact-us/_ui/ContactForm";
 
 type Props = {
-  message: string;
-  headingLabel: string;
+  ctaKey: CtaKey;
+  serviceLabel: string;
 };
 
 export default function ContactModalContent({
-  message,
-
-  headingLabel,
+  ctaKey,
+  serviceLabel,
 }: Props) {
   return (
     <div className="mb-5">
-      <ContactForm header={headingLabel} message={message} />
+      <ContactForm ctaKey={ctaKey} serviceLabel={serviceLabel} />
     </div>
   );
 }

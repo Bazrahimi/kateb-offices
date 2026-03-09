@@ -21,8 +21,8 @@ const ContactUsPage = () => {
             <section className="lg:col-span-5 lg:sticky lg:top-24 lg:self-start h-fit">
               <div className="rounded-2xl border border-slate-200 bg-white shadow-xl p-5 sm:p-7">
                 <ContactForm
-                  header="Quick Enquiry Form"
-                  subHeader="Use this form for enquiries, bookings, feedback, or anything else. A member of our team will review your message and respond as soon as possible."
+                 ctaKey="generalContact"
+                 serviceLabel="services"
                 />
               </div>
             </section>

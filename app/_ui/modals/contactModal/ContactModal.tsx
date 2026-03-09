@@ -4,19 +4,19 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import ContactModalContent from "./ContactModalContent";
 import Button from "../../button/Button";
+import { CtaKey } from "@/app/_lib/content/cta";
 
 type Props = {
   open: boolean;
   onClose: () => void;
-  message: string;
-  headingLabel: string;
+
+  serviceLabel: string;
 };
 
 export default function ContactModal({
   open,
   onClose,
-  message,
-  headingLabel,
+serviceLabel,
 }: Props) {
   const [mounted, setMounted] = useState(false);
 
@@ -60,8 +60,8 @@ export default function ContactModal({
 
           <div className=" bg-org-primary-dark">
             <ContactModalContent
-              message={message}
-              headingLabel={headingLabel}
+              ctaKey="freeTour"
+              serviceLabel={serviceLabel}
             />
           </div>
         </div>
