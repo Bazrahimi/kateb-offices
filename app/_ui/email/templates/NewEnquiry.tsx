@@ -42,6 +42,29 @@ export default function NewEnquiry({
         </Text>
       ) : null}
 
+      {data.roomType ? (
+        <Text>
+          <strong>Preferred Room:</strong> {data.roomType}
+        </Text>
+      ) : null}
+
+      {data.attendeeCount ? (
+        <Text>
+          <strong>Attendee Count:</strong> {data.attendeeCount}
+        </Text>
+      ) : null}
+
+      {data.tenantType ? (
+        <Text>
+          <strong>Booking Type:</strong>{" "}
+          {data.tenantType === "existingTenant"
+            ? "Existing tenant"
+            : data.tenantType === "newCustomer"
+              ? "New / casual booking"
+              : data.tenantType}
+        </Text>
+      ) : null}
+
       {data.qMessage ? (
         <>
           <Hr />

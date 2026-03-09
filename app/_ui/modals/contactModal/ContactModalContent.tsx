@@ -1,4 +1,4 @@
-import { CtaKey } from "@/app/_lib/content/cta";
+import { type CtaKey } from "@/app/_lib/content/cta";
 import ContactForm from "@/app/contact-us/_ui/ContactForm";
 
 type Props = {

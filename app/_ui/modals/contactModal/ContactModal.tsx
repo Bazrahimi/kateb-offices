@@ -4,19 +4,20 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import ContactModalContent from "./ContactModalContent";
 import Button from "../../button/Button";
-import { CtaKey } from "@/app/_lib/content/cta";
+import { type CtaKey } from "@/app/_lib/content/cta";
 
 type Props = {
   open: boolean;
   onClose: () => void;
-
+  ctaKey: CtaKey;
   serviceLabel: string;
 };
 
 export default function ContactModal({
   open,
   onClose,
-serviceLabel,
+  ctaKey,
+  serviceLabel,
 }: Props) {
   const [mounted, setMounted] = useState(false);
 
@@ -44,7 +45,7 @@ serviceLabel,
 
   return createPortal(
     <div className="fixed inset-0 z-[500] overflow-y-auto bg-org-primary-main/60 p-4">
-      <div className="flex min-h-full items-start justify-center py-6 sm:items-center ">
+      <div className="flex min-h-full items-start justify-center py-6 sm:items-center">
         <div className="absolute inset-0" onClick={onClose} aria-hidden="true" />
 
         <div className="relative z-10 w-full max-w-2xl rounded-2xl bg-white shadow-xl">
@@ -53,14 +54,13 @@ serviceLabel,
             onClick={onClose}
             aria-label="Close modal"
             fullWidth
-
           >
             Close
           </Button>
 
-          <div className=" bg-org-primary-dark">
+          <div className="bg-org-primary-dark">
             <ContactModalContent
-              ctaKey="freeTour"
+              ctaKey={ctaKey}
               serviceLabel={serviceLabel}
             />
           </div>

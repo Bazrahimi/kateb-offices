@@ -19,9 +19,14 @@ import { ContactSuccessMessage } from "./ContactSuccess";
 type Props = {
   ctaKey: CtaKey;
   serviceLabel: string;
+  bookMeetingRoom?: boolean;
 };
 
-const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
+const ContactForm = ({
+  ctaKey,
+  serviceLabel,
+  bookMeetingRoom = false,
+}: Props) => {
   const [state, formAction, isPending] = useActionState(
     submitEnquiry,
     undefined,
@@ -30,6 +35,7 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
   const isSuccess = state?.ok === true;
   const cta = CTA[ctaKey];
   const isFreeTour = ctaKey === "freeTour";
+  const isRoomBooking = bookMeetingRoom || ctaKey === "bookMeetingRoom";
 
   if (isSuccess) {
     return <ContactSuccessMessage />;
@@ -52,6 +58,11 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
         </div>
 
         <input type="hidden" name="ctaKey" value={ctaKey} />
+        <input
+          type="hidden"
+          name={F.bookMeetingRoom}
+          value={bookMeetingRoom ? "true" : "false"}
+        />
 
         <Input
           id={F.fullName}
@@ -64,6 +75,7 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
           required
           className="bg-white"
         />
+
         <Input
           id={F.companyName}
           label="Company Name"
@@ -78,7 +90,7 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
         <Input
           id={F.email}
           label="Email"
-          placeholder="Enter your Email"
+          placeholder="Enter your email"
           error={state?.errors?.email}
           defaultValue={state?.data?.email}
           type="email"
@@ -90,14 +102,15 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
         <Input
           id={F.contactNumber}
           label="Contact Number"
-          placeholder="Enter your contact Number"
+          placeholder="Enter your contact number"
           error={state?.errors?.contactNumber}
           defaultValue={state?.data?.contactNumber}
           type="text"
           Icon={IoIosPhonePortrait}
           className="bg-white"
         />
-        {isFreeTour && (
+
+        {(isFreeTour || isRoomBooking) && (
           <div className="grid gap-3 sm:grid-cols-2">
             <Input
               id={F.preferredDate}
@@ -120,6 +133,75 @@ const ContactForm = ({ ctaKey, serviceLabel }: Props) => {
             />
           </div>
         )}
+
+        {isRoomBooking && (
+          <>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div>
+                <label
+                  htmlFor={F.roomType}
+                  className="mb-1 block text-sm font-medium text-slate-700"
+                >
+                  Preferred Room
+                </label>
+
+                <select
+                  id={F.roomType}
+                  name={F.roomType}
+                  defaultValue={state?.data?.roomType ?? ""}
+                  className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-slate-400"
+                >
+                  <option value="">No preference / not sure yet</option>
+                  <option value="Hydra">Hydra — 8 person meeting room</option>
+                  <option value="Leo">Leo — 25 person conference room</option>
+                </select>
+
+                {state?.errors?.roomType ? (
+                  <P size="sm" className="mt-1 text-red-600">
+                    {state.errors.roomType}
+                  </P>
+                ) : null}
+              </div>
+
+              <Input
+                id={F.attendeeCount}
+                label="Number of Attendees"
+                placeholder="Enter expected attendees"
+                error={state?.errors?.attendeeCount}
+                defaultValue={state?.data?.attendeeCount}
+                type="number"
+                className="bg-white"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor={F.tenantType}
+                className="mb-1 block text-sm font-medium text-slate-700"
+              >
+                Booking Type
+              </label>
+
+              <select
+                id={F.tenantType}
+                name={F.tenantType}
+                defaultValue={state?.data?.tenantType ?? ""}
+                className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-slate-400"
+              >
+                <option value="">Select one</option>
+                <option value="existingTenant">Existing tenant</option>
+                <option value="newCustomer">New / casual booking</option>
+              </select>
+
+              {state?.errors?.tenantType ? (
+                <P size="sm" className="mt-1 text-red-600">
+                  {state.errors.tenantType}
+                </P>
+              ) : null}
+            </div>
+          </>
+        )}
+
         <Textarea
           id={F.qMessage}
           label="Message | Query"

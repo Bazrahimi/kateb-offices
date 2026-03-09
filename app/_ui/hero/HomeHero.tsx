@@ -6,7 +6,7 @@ import MultilingualSupport from "./components/MultilingualSupport";
 import { getServiceCategoryLinks } from "@/app/_lib/routes/publicRoutes";
 import { cn } from "@/app/_lib/utils/cn";
 import HeroBackground from "./components/HeroBackground";
-import FreeTourButton from "./FreeTourButton";
+import FreeTourButton from "./HeroSectionCta";
 
 type Props = {
   className?: string;

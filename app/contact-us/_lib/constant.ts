@@ -6,4 +6,8 @@ export const ENQUIRY_FIELDS = {
   qMessage: "qMessage",
   preferredDate: "preferredDate",
   preferredTime: "preferredTime",
+  roomType: "roomType",
+  attendeeCount: "attendeeCount",
+  tenantType: "tenantType",
+  bookMeetingRoom: "bookMeetingRoom",
 } as const;
