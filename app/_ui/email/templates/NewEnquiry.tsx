@@ -1,6 +1,7 @@
 import EmailLayout from "@/app/_ui/email/layout/EmailLayout";
 import { Enquiry } from "@/app/contact-us/_lib/schema";
 import { Hr, Text } from "@react-email/components";
+import { formatAuDate } from "@/app/_lib/utils/date";
 
 type Props = {
   data: Enquiry;
@@ -31,7 +32,7 @@ export default function NewEnquiry({
       </Text>
       {data.preferredDate ? (
         <Text>
-          <strong>Preferred Date:</strong> {data.preferredDate}
+          <strong>Preferred Date:</strong> {formatAuDate(data.preferredDate)}
         </Text>
       ) : null}
 
