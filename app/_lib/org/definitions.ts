@@ -21,6 +21,7 @@ export type ServicesPage = {
   description: readonly string[];
   image: LeafImage;
   subcategories: ServiceSubCategory;
+  workspaceFee: WorkspaceOffer,
 };
 
 export type OrgRootSeo = {

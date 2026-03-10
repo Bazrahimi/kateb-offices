@@ -5,6 +5,7 @@ import { coworkingMembership } from "./subCategories/coworkingMembership";
 import { meetingRooms } from "./subCategories/meetingRooms";
 import { privateOffices } from "./subCategories/privateOffices";
 import { virtualOffices } from "./subCategories/virtualOffices";
+import { WORKSPACE_OFFERS as offering } from "./workspaceOffer";
 
 export const SERVICES_PAGE = {
   privateOffices: {
@@ -17,6 +18,7 @@ export const SERVICES_PAGE = {
       "Enjoy a 365 rated premium office experience, secure encrypted access, seamless accessibility with designated underground carpark",
     ] as const,
     subcategories: privateOffices,
+    workspaceFee: offering.privateOffice,
   },
 
   coworkingMembership: {
@@ -28,6 +30,7 @@ export const SERVICES_PAGE = {
       `${op.orgName} also offers a modern co-working environment designed for flexibility and collaboration. Our space includes a large 84-square-metre open office area ideal for teams working together in one shared workspace, as well as 52 dedicated hard-desk zone for professionals who need a flexible workstation. The area is fully furnished with ergonomic desks and chairs, high-speed internet, and access to shared amenities, creating a comfortable and productive environment for freelancers, startups, and growing teams.`,
     ] as const,
     subcategories: coworkingMembership,
+    workspaceFee: offering.coworkingMembership,
   },
 
   meetingRooms: {
@@ -40,6 +43,7 @@ export const SERVICES_PAGE = {
       `${op.orgName} provides two fully equipped meeting spaces designed for professional gatherings and events. Our 8-person meeting room is ideal for small team meetings, client discussions, and private presentations, while the 25-person conference room is perfect for group meetings, workshops, and short-term training courses. Both rooms include modern presentation and video-conferencing facilities and can be booked for short or extended sessions, making it easy to host professional meetings whenever needed.`,
     ] as const,
     subcategories: meetingRooms,
+    workspaceFee: offering.meetingRooms,
   },
 
   virtualOffices: {
@@ -51,6 +55,7 @@ export const SERVICES_PAGE = {
       "Premium serviced offices in central Dandenong featuring high-speed internet, fully furnished private offices, meeting rooms, kitchen facilities, and professional business support. Located just minutes from Dandenong Station and the vibrant Thomas Street dining precinct, Kateb Offices provides the ideal workspace for modern businesses and growing teams.",
     ] as const,
     subcategories: virtualOffices,
+    workspaceFee: offering.virtualOffice,
   },
 
   // administrativeSupport: {
