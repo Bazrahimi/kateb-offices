@@ -1,15 +1,17 @@
 import type { WorkspaceOfferCollection } from "../definitions";
+import { publicAssets } from "../publicAssets";
+const svg = publicAssets.offeringSvg;
 
 export const WORKSPACE_OFFERS = {
   coworkingMembership: {
     slug: "coworking-membership",
     label: "Coworking Membership",
     labelFarsi: "عضویت فضای کار اشتراکی",
-    image: { kind: "url", src: "co-working_uv5zcp.png" },
+    image: svg.coworkingMembership,
     capacityLabel: "1+",
-    priceLabel: "From $62/mo",
+    priceLabel: "From $30/month",
     summary:
-      "Workspace on demand with access to shared amenities and flexible coworking options.",
+      "Flexible workspace access with shared amenities, ideal for freelancers, remote workers, and professionals who need a productive environment without a long-term lease.",
     href: "/services/coworking-spaces-dandenong",
   },
 
@@ -17,11 +19,11 @@ export const WORKSPACE_OFFERS = {
     slug: "dedicated-desk",
     label: "Dedicated Desk",
     labelFarsi: "میز اختصاصی",
-    image: { kind: "url", src: "dedicated-desk.png" },
+    image: svg.dedicatedDesk,
     capacityLabel: "1",
-    priceLabel: "From $650/mo",
+    priceLabel: "From $195/month",
     summary:
-      "Your own permanent workstation in our coworking environment, accessible around the clock.",
+      "A permanent workstation within our coworking space, giving you a consistent desk, secure environment, and 24/7 access to shared facilities.",
     href: "/services/coworking-spaces-dandenong",
   },
 
@@ -29,10 +31,10 @@ export const WORKSPACE_OFFERS = {
     slug: "virtual-office",
     label: "Virtual Office",
     labelFarsi: "دفتر مجازی",
-    image: { kind: "url", src: "waiting_area_cnsymo.png" },
-    priceLabel: "From $62/mo",
+    image: svg.virtualOffice,
+    priceLabel: "From $30/month",
     summary:
-      "Build a professional presence with a business address, call answering, and mail handling.",
+      "Establish a professional business presence with a premium address, mail handling, and optional call answering services without renting a physical office.",
     href: "/services/virtual-office-dandenong",
   },
 
@@ -40,11 +42,11 @@ export const WORKSPACE_OFFERS = {
     slug: "meeting-rooms",
     label: "Meeting Rooms",
     labelFarsi: "اتاق جلسات",
-    image: { kind: "url", src: "meeting-room_lxqgem.png" },
-    capacityLabel: "2–12",
-    priceLabel: "From $10/hr",
+    image: svg.meetingRooms,
+    capacityLabel: "2–25",
+    priceLabel: "From $5/hr",
     summary:
-      "Book professional meeting spaces for client discussions, presentations, and team sessions.",
+      "Professional meeting and conference rooms suitable for client meetings, team discussions, presentations, and workshops.",
     href: "/services/meeting-and-conference-rooms-dandenong",
   },
 
@@ -52,11 +54,11 @@ export const WORKSPACE_OFFERS = {
     slug: "private-office",
     label: "Private Office",
     labelFarsi: "دفتر خصوصی",
-    image: { kind: "url", src: "private-office_u17uat.png" },
-    capacityLabel: "1–50+",
-    priceLabel: "From $1500/mo",
+    image: svg.privateOffice,
+    capacityLabel: "1–12+",
+    priceLabel: "From $1120/month",
     summary:
-      "Private office suites for growing businesses needing security, flexibility, and a professional base.",
+      "Fully furnished private office suites designed for businesses that need privacy, security, and a professional workspace with flexible terms.",
     href: "/services/private-offices-dandenong",
   },
 } as const satisfies WorkspaceOfferCollection;

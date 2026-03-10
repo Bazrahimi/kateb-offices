@@ -45,7 +45,7 @@ export type WorkspaceOffer = {
   slug: string;
   label: string;
   labelFarsi?: string;
-  image: LeafImage;
+  image: string;
   capacityLabel?: string;
   priceLabel: string;
   summary: string;

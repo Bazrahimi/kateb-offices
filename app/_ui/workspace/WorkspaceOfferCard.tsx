@@ -2,7 +2,7 @@ import Link from "next/link";
 import { HiArrowRight, HiOutlineUserGroup } from "react-icons/hi2";
 
 import type { WorkspaceOffer } from "@/app/_lib/org/definitions";
-import ServiceLeafImage from "@/app/services/[slug]/_ui/ServiceLeafImage";
+import Image from "next/image";
 import { Header } from "../typography/Header";
 import { P } from "../typography/paragraph";
 
@@ -16,8 +16,13 @@ export default function WorkspaceOfferCard({ offer }: Props) {
       href={offer.href}
       className="group flex h-full flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg"
     >
-      <div className="mb-5 overflow-hidden rounded-2xl">
-        <ServiceLeafImage image={offer.image} alt={offer.label} aspect="aspect-[16/10]" />
+      <div className="mb-5 overflow-hidden rounded-2xl aspect-[16/10] relative">
+        <Image
+          src={offer.image}
+          alt={offer.label}
+          fill
+          className="object-contain p-4"
+        />
       </div>
 
       <div className="flex flex-1 flex-col">
