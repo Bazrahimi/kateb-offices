@@ -1,8 +1,7 @@
 import type { ServicesPage } from "../definitions";
 
 import { ORG_PROFILE as op } from "../profile";
-import { administrativeSupport } from "./subCategories/administrativeSupport";
-import { coworkingSpaces } from "./subCategories/coworkingSpaces";
+import { coworkingMembership } from "./subCategories/coworkingMembership";
 import { meetingRooms } from "./subCategories/meetingRooms";
 import { privateOffices } from "./subCategories/privateOffices";
 import { virtualOffices } from "./subCategories/virtualOffices";
@@ -20,15 +19,15 @@ export const SERVICES_PAGE = {
     subcategories: privateOffices,
   },
 
-  coworkingSpaces: {
-    slug: "coworking-spaces-dandenong",
+  coworkingMembership: {
+    slug: "coworking-space-membership-dandenong",
     label: "Coworking Spaces",
     image: { kind: "url", src: "co-working_uv5zcp.png" },
     labelFarsi: "فضای کار اشتراکی",
     description: [
-      `${op.orgName} also offers a modern co-working environment designed for flexibility and collaboration. Our space includes a large 84-square-metre open office area ideal for teams working together in one shared workspace, as well as 52 dedicated hot-desk zone for professionals who need a flexible workstation. The area is fully furnished with ergonomic desks and chairs, high-speed internet, and access to shared amenities, creating a comfortable and productive environment for freelancers, startups, and growing teams.`,
+      `${op.orgName} also offers a modern co-working environment designed for flexibility and collaboration. Our space includes a large 84-square-metre open office area ideal for teams working together in one shared workspace, as well as 52 dedicated hard-desk zone for professionals who need a flexible workstation. The area is fully furnished with ergonomic desks and chairs, high-speed internet, and access to shared amenities, creating a comfortable and productive environment for freelancers, startups, and growing teams.`,
     ] as const,
-    subcategories: coworkingSpaces,
+    subcategories: coworkingMembership,
   },
 
   meetingRooms: {
@@ -54,14 +53,14 @@ export const SERVICES_PAGE = {
     subcategories: virtualOffices,
   },
 
-  administrativeSupport: {
-    slug: "administrative-support-services",
-    label: "Administrative Support",
-    image: { kind: "url", src: "administration_cydnvn.png" },
-    labelFarsi: "پشتیبانی اداری",
-    description: [
-      "Reception, mail handling, call support, and day-to-day office assistance to help businesses operate smoothly.",
-    ] as const,
-    subcategories: administrativeSupport,
-  },
+  // administrativeSupport: {
+  //   slug: "administrative-support-services",
+  //   label: "Administrative Support",
+  //   image: { kind: "url", src: "administration_cydnvn.png" },
+  //   labelFarsi: "پشتیبانی اداری",
+  //   description: [
+  //     "Reception, mail handling, call support, and day-to-day office assistance to help businesses operate smoothly.",
+  //   ] as const,
+  //   subcategories: administrativeSupport,
+  // },
 } as const satisfies Record<string, ServicesPage>;

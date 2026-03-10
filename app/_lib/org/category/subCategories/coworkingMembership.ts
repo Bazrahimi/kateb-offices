@@ -1,7 +1,7 @@
 import { ServiceSubCategory } from "../../definitions";
-export const coworkingSpaces = {
+export const coworkingMembership = {
   overview: {
-    label: "Coworking Space Overview",
+    label: "Coworking  Overview",
     labelFarsi: "معرفی فضای کار اشتراکی",
     image: { kind: "url", src: "hardesk_srxh6j.png" },
     description: [
