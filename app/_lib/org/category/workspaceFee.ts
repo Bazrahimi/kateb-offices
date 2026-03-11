@@ -1,15 +1,16 @@
-import type { WorkspaceFee } from "../definitions";
+import { joinWorkspacesRoutes as routes } from "../../routes/joinWorkspacesRoutes";
+import type { CoworkingMembershipJoin, WorkspaceFee } from "../definitions";
 import { publicAssets } from "../publicAssets";
 const svg = publicAssets.offeringSvg;
 
-export const coworkingMembershipFee: WorkspaceFee = {
+export const coworkingMembershipFee: WorkspaceFee<CoworkingMembershipJoin> = {
   image: svg.coworkingMembership,
   capacityLabel: "1+",
   priceLabel: "From $150/month",
   summary:
     "Flexible workspace access with shared amenities, ideal for freelancers, remote workers, and professionals who need a productive environment without a long-term lease.",
   btnContent: "Sign Up",
-  href: "/join-workspaces/coworking-membership",
+  href: routes.coworkingMembership(),
   join: {
     everydayMembership: {
       label: "Everyday Membership",
@@ -31,7 +32,7 @@ export const dedicatedDeskFee: WorkspaceFee = {
   summary:
     "A permanent workstation within our coworking space, giving you a consistent desk, secure environment, and 24/7 access to shared facilities.",
   btnContent: "Sign Up",
-  href: "/join-workspaces/dedicated-desk",
+  href: routes.dedicatedDesk(),
   join: {},
 };
 
@@ -41,7 +42,7 @@ export const virtualOfficeFee: WorkspaceFee = {
   summary:
     "Establish a professional business presence with a premium address, mail handling, and optional call answering services without renting a physical office.",
   btnContent: "Sign Up",
-  href: "/join-workspaces/virtual-offering",
+  href: routes.virtualOffice(),
   join: {},
 };
 
@@ -52,7 +53,7 @@ export const privateOfficeFee: WorkspaceFee = {
   summary:
     "Fully furnished private office suites designed for businesses that need privacy, security, and a professional workspace with flexible terms.",
   btnContent: "See Availability",
-  href: "/join-workspaces/private-office",
+  href: routes.privateOffice(),
   join: {},
 };
 
@@ -63,6 +64,6 @@ export const meetingRoomsFee: WorkspaceFee = {
   summary:
     "Professional meeting and conference rooms suitable for client meetings, team discussions, presentations, and workshops.",
   btnContent: "Sign Up",
-  href: "/join-workspaces/book-meeting-rooms",
+  href: routes.meetingRooms(),
   join: {},
 };

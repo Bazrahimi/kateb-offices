@@ -1,32 +1,23 @@
 import { coworkingMembershipFee } from "@/app/_lib/org/category/workspaceFee";
+import { joinWorkspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
+import Button from "@/app/_ui/button/Button";
+import { Header } from "@/app/_ui/typography/Header";
+import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
 
 export default function Page() {
-  const membership = coworkingMembershipFee.join?.everydayMembership as
-    | {
-        label: string;
-        access: string;
-        price: string;
-        inclusions?: string[];
-      }
-    | undefined;
-
-  if (!membership) {
-    return (
-      <main className="mx-auto max-w-3xl px-4 py-12">
-        <p>No membership information available.</p>
-      </main>
-    );
-  }
+  const membership = coworkingMembershipFee.join?.everydayMembership;
 
   return (
     <main className="min-h-screen bg-slate-100 py-10">
       <div className="mx-auto max-w-md px-4">
         <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+          <Header as="h1" size="sm" className=" text-slate-900">
+            {membership.label}
+          </Header>
           <div className="relative mb-8 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
             <Image
               src={coworkingMembershipFee.image}
-              // TODO: are Property 'label' does not exist on type '{}'.ts(2339) any
               alt={membership.label}
               fill
               className="object-contain p-6"
@@ -34,31 +25,21 @@ export default function Page() {
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-3xl font-bold text-slate-900">
-              {membership.label}
-            </h1>
-
-            <p className="text-xl text-slate-600">{membership.access}</p>
+            <P className=" text-slate-600">{membership.access}</P>
 
             <div className="pt-2">
-              <p className="text-sm uppercase tracking-wide text-slate-500">
-                Price
-              </p>
-              <p className="text-5xl font-bold text-org-primary-main">
+              <P className="uppercase tracking-wide text-slate-500">Price</P>
+              <P className="text-5xl font-bold text-org-primary-main">
                 {membership.price}
-                <span className="ml-2 text-xl font-medium text-slate-600">
+                <span className="ml-2 text-sm font-medium text-slate-600">
                   /month
                 </span>
-              </p>
+              </P>
             </div>
           </div>
 
           {membership.inclusions?.length ? (
             <div className="mt-8">
-              <h2 className="text-xl font-semibold text-slate-900">
-                Inclusions
-              </h2>
-
               <ul className="mt-4 space-y-3">
                 {membership.inclusions.map((item) => (
                   <li
@@ -72,12 +53,15 @@ export default function Page() {
             </div>
           ) : null}
 
-          <a
-            href="#"
-            className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-org-primary-main px-6 py-4 text-lg font-semibold text-white transition hover:opacity-95"
+          <Button
+            as="link"
+            href={`${joinWorkspacesRoutes.application()}?membership=${encodeURIComponent(
+              membership.label,
+            )}`}
+            fullWidth
           >
             {coworkingMembershipFee.btnContent}
-          </a>
+          </Button>
         </div>
       </div>
     </main>

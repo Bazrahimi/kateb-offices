@@ -15,7 +15,6 @@ export const submitEnquiry = async (
     ]),
   ) as Partial<EnquiryForm>;
 
-
   const parsed = EnquirySchema.safeParse(rawData);
 
   if (!parsed.success) {
@@ -26,8 +25,6 @@ export const submitEnquiry = async (
   }
 
   const data = parsed.data;
-
-
 
   const { message } = await handleEnquiryEmails(data);
 

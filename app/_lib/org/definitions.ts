@@ -24,6 +24,29 @@ export type ServicesPage = {
   workspaceFee: WorkspaceFee;
 };
 
+export type WorkspaceJoin = Record<string, unknown>;
+
+export type WorkspaceFee<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
+  image: string;
+  capacityLabel?: string;
+  priceLabel: string;
+  summary: string;
+  btnContent: string;
+  href: string;
+  join: TJoin;
+};
+
+export type CoworkingMembershipJoin = {
+  everydayMembership: {
+    label: string;
+    access: string;
+    price: string;
+    inclusions?: string[];
+  };
+};
+
+
+
 export type OrgRootSeo = {
   ogImagePath: string;
   themeColor: string;
@@ -40,14 +63,4 @@ export type OrgRootSeo = {
     index: boolean;
     follow: boolean;
   };
-};
-
-export type WorkspaceFee = {
-  image: string;
-  capacityLabel?: string;
-  priceLabel: string;
-  summary: string;
-  btnContent: string;
-  href:string;
-  join: Record<string, unknown>;
 };
