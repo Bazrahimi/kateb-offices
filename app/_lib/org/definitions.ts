@@ -50,4 +50,5 @@ export type WorkspaceFee = {
   priceLabel: string;
   summary: string;
   href: string;
+
 };

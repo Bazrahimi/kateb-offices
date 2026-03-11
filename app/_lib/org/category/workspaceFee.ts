@@ -1,6 +1,5 @@
-
-import { publicAssets } from "../publicAssets";
 import type { WorkspaceFee } from "../definitions";
+import { publicAssets } from "../publicAssets";
 const svg = publicAssets.offeringSvg;
 
 export const coworkingMembershipFee: WorkspaceFee = {

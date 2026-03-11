@@ -5,7 +5,7 @@ import { coworkingMembership } from "./subCategories/coworkingMembership";
 import { meetingRooms } from "./subCategories/meetingRooms";
 import { privateOffices } from "./subCategories/privateOffices";
 import { virtualOffices } from "./subCategories/virtualOffices";
-import { meetingRoomsFee, privateOfficeFee, coworkingMembershipFee, virtualOfficeFee } from "./workspaceOffer";
+import { meetingRoomsFee, privateOfficeFee, coworkingMembershipFee, virtualOfficeFee } from "./workspaceFee";
 
 export const SERVICES_PAGE = {
   privateOffices: {
