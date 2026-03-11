@@ -9,6 +9,10 @@ import { useActionState } from "react";
 import { submitApplication } from "../_lib/action";
 import { APPLICATION_FIELDS as F } from "../_lib/constant";
 
+import Select from "@/app/_ui/form/Select";
+
+const AU_STATE = ["VIC", "NSW", "QLD", "SA", "WA", "TAS", "ACT", "NT"] as const;
+
 type Props = {
   membership: string;
 };
@@ -108,39 +112,15 @@ export default function ApplicationForm({ membership }: Props) {
             required
             className="bg-white"
           />
-
-          <div>
-            <label
-              htmlFor={F.state}
-              className="mb-1 block text-sm font-medium text-slate-700"
-            >
-              State
-            </label>
-
-            <select
-              id={F.state}
-              name={F.state}
-              defaultValue={state?.data?.state ?? ""}
-              className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-slate-400"
-              required
-            >
-              <option value="">Select state</option>
-              <option value="VIC">VIC</option>
-              <option value="NSW">NSW</option>
-              <option value="QLD">QLD</option>
-              <option value="SA">SA</option>
-              <option value="WA">WA</option>
-              <option value="TAS">TAS</option>
-              <option value="ACT">ACT</option>
-              <option value="NT">NT</option>
-            </select>
-
-            {state?.errors?.state ? (
-              <P size="sm" className="mt-1 text-red-600">
-                {state.errors.state}
-              </P>
-            ) : null}
-          </div>
+          <Select
+            id={F.state}
+            label="State"
+            options={AU_STATE}
+            placeholder="Select State"
+            defaultValue={state?.data?.state ?? ""}
+            error={state?.errors?.state}
+            required
+          />
 
           <Input
             id={F.postcode}
@@ -233,37 +213,14 @@ export default function ApplicationForm({ membership }: Props) {
             className="bg-white"
           />
 
-          <div>
-            <label
-              htmlFor={F.billingState}
-              className="mb-1 block text-sm font-medium text-slate-700"
-            >
-              Billing State
-            </label>
-
-            <select
-              id={F.billingState}
-              name={F.billingState}
-              defaultValue={state?.data?.billingState ?? ""}
-              className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-slate-400"
-            >
-              <option value="">Select state</option>
-              <option value="VIC">VIC</option>
-              <option value="NSW">NSW</option>
-              <option value="QLD">QLD</option>
-              <option value="SA">SA</option>
-              <option value="WA">WA</option>
-              <option value="TAS">TAS</option>
-              <option value="ACT">ACT</option>
-              <option value="NT">NT</option>
-            </select>
-
-            {state?.errors?.billingState ? (
-              <P size="sm" className="mt-1 text-red-600">
-                {state.errors.billingState}
-              </P>
-            ) : null}
-          </div>
+          <Select
+            id={F.billingState}
+            label="Billing State"
+            options={AU_STATE}
+            placeholder="Select State"
+            defaultValue={state?.data?.billingState ?? ""}
+            error={state?.errors?.billingState}
+          />
 
           <Input
             id={F.billingPostcode}

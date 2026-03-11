@@ -1,59 +1,33 @@
 "use client";
 
 import { cn } from "@/app/_lib/utils/cn";
-import { useEffect, useState } from "react";
 import FieldError from "./FieldError";
-
-export type SelectOption = {
-  value: string;
-  label: string;
-};
 
 type SelectProps = {
   id: string;
   label: string;
-  options: ReadonlyArray<SelectOption>;
-
-  // allow object default (what you want) OR just a value
-  defaultValue: SelectOption;
-
+  options: readonly string[];
+  defaultValue?: string;
   required?: boolean;
   placeholder?: string;
   error?: string[];
   className?: string;
   isRTL?: boolean;
-
-  // optional: if parent wants the full object when it changes
-  onSelectOption?: (opt: SelectOption | null) => void;
+  onSelectValue?: (value: string) => void;
 };
 
 const Select = ({
   id,
   label,
   options,
-  defaultValue,
+  defaultValue = "",
   required = false,
   placeholder = "Select",
   error,
   className,
   isRTL = false,
-  onSelectOption,
+  onSelectValue,
 }: SelectProps) => {
-  const [selectedValue, setSelectedValue] = useState(defaultValue.value);
-  const [selectedLabel, setSelectedLabel] = useState(defaultValue.label);
-
-  useEffect(() => {
-    setSelectedLabel(defaultValue.value);
-    setSelectedLabel(defaultValue.label);
-  }, [defaultValue]);
-
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const nextValue = e.target.value;
-    const next = options.find((o) => o.value === nextValue);
-    setSelectedValue(next?.value ?? "");
-    setSelectedLabel(next?.label ?? "");
-  };
-
   const hasError = !!error?.length;
 
   return (
@@ -72,8 +46,8 @@ const Select = ({
       <select
         id={id}
         name={id}
-        value={selectedValue}
-        onChange={handleChange}
+        defaultValue={defaultValue}
+        onChange={(e) => onSelectValue?.(e.target.value)}
         className={cn(
           "mt-1 block w-full rounded-md border border-gray-200",
           "py-2 pr-10 text-sm sm:text-base outline-1",
@@ -89,14 +63,11 @@ const Select = ({
         <option value="">{placeholder}</option>
 
         {options.map((opt) => (
-          <option key={opt.value} value={opt.value}>
-            {opt.label}
+          <option key={opt} value={opt}>
+            {opt}
           </option>
         ))}
       </select>
-
-      {/* Hidden label for form submission */}
-      <input type="hidden" name={`${id}Label`} value={selectedLabel} />
 
       <FieldError fieldId={id} errors={error} />
     </div>
