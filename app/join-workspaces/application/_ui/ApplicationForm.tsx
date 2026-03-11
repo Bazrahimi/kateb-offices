@@ -117,7 +117,7 @@ export default function ApplicationForm({ membership }: Props) {
             label="State"
             options={AU_STATE}
             placeholder="Select State"
-            defaultValue={state?.data?.state ?? ""}
+            defaultValue={state?.data?.state}
             error={state?.errors?.state}
             required
           />
