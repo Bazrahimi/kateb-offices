@@ -1,8 +1,15 @@
-import Image from "next/image";
 import { coworkingMembershipFee } from "@/app/_lib/org/category/workspaceFee";
+import Image from "next/image";
 
 export default function Page() {
-  const membership = coworkingMembershipFee.join?.everydayMembership;
+  const membership = coworkingMembershipFee.join?.everydayMembership as
+    | {
+        label: string;
+        access: string;
+        price: string;
+        inclusions?: string[];
+      }
+    | undefined;
 
   if (!membership) {
     return (
@@ -19,6 +26,7 @@ export default function Page() {
           <div className="relative mb-8 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
             <Image
               src={coworkingMembershipFee.image}
+              // TODO: are Property 'label' does not exist on type '{}'.ts(2339) any
               alt={membership.label}
               fill
               className="object-contain p-6"
