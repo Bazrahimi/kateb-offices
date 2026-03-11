@@ -5,11 +5,23 @@ const svg = publicAssets.offeringSvg;
 export const coworkingMembershipFee: WorkspaceFee = {
   image: svg.coworkingMembership,
   capacityLabel: "1+",
-  priceLabel: "From $30/month",
+  priceLabel: "From $150/month",
   summary:
     "Flexible workspace access with shared amenities, ideal for freelancers, remote workers, and professionals who need a productive environment without a long-term lease.",
   btnContent: "Sign Up",
-  href: "/join/coworking-membership",
+  href: "/join-workspaces/coworking-membership",
+  join: {
+    everydayMembership: {
+      label: "Everyday Membership",
+      access: "Monday to Friday",
+      price: "$150",
+      inclusions: [
+        "Access to shared amenities",
+        "24/7 access",
+        "Discount (50%) meetings rooms",
+      ],
+    },
+  },
 };
 
 export const dedicatedDeskFee: WorkspaceFee = {
@@ -19,7 +31,8 @@ export const dedicatedDeskFee: WorkspaceFee = {
   summary:
     "A permanent workstation within our coworking space, giving you a consistent desk, secure environment, and 24/7 access to shared facilities.",
   btnContent: "Sign Up",
-  href: "/join/dedicated-desk",
+  href: "/join-workspaces/dedicated-desk",
+  join: {},
 };
 
 export const virtualOfficeFee: WorkspaceFee = {
@@ -28,7 +41,8 @@ export const virtualOfficeFee: WorkspaceFee = {
   summary:
     "Establish a professional business presence with a premium address, mail handling, and optional call answering services without renting a physical office.",
   btnContent: "Sign Up",
-  href: "/join/virtual-offering",
+  href: "/join-workspaces/virtual-offering",
+  join: {},
 };
 
 export const privateOfficeFee: WorkspaceFee = {
@@ -38,7 +52,8 @@ export const privateOfficeFee: WorkspaceFee = {
   summary:
     "Fully furnished private office suites designed for businesses that need privacy, security, and a professional workspace with flexible terms.",
   btnContent: "See Availability",
-  href: "/join/private-office",
+  href: "/join-workspaces/private-office",
+  join: {},
 };
 
 export const meetingRoomsFee: WorkspaceFee = {
@@ -48,6 +63,6 @@ export const meetingRoomsFee: WorkspaceFee = {
   summary:
     "Professional meeting and conference rooms suitable for client meetings, team discussions, presentations, and workshops.",
   btnContent: "Sign Up",
-  href: "/join/book-meeting-rooms",
+  href: "/join-workspaces/book-meeting-rooms",
+  join: {},
 };
-

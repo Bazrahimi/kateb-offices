@@ -49,4 +49,5 @@ export type WorkspaceFee = {
   summary: string;
   btnContent: string;
   href:string;
+  join: Record<string, unknown>;
 };
