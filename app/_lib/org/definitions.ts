@@ -8,12 +8,10 @@ export type ServiceLeaf = {
   description: string[];
   image: LeafImage;
   items: readonly string[];
-
 };
 
 export type ServiceSubCategory = {
   [key: string]: ServiceLeaf;
-   
 };
 
 export type ServicesPage = {
@@ -49,6 +47,6 @@ export type WorkspaceFee = {
   capacityLabel?: string;
   priceLabel: string;
   summary: string;
-  href: string;
-
+  btnContent: string;
+  href:string;
 };
