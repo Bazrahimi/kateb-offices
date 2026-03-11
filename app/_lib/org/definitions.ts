@@ -8,10 +8,12 @@ export type ServiceLeaf = {
   description: string[];
   image: LeafImage;
   items: readonly string[];
+
 };
 
 export type ServiceSubCategory = {
   [key: string]: ServiceLeaf;
+   
 };
 
 export type ServicesPage = {
@@ -21,7 +23,7 @@ export type ServicesPage = {
   description: readonly string[];
   image: LeafImage;
   subcategories: ServiceSubCategory;
-  workspaceFee: WorkspaceOffer,
+  workspaceFee: WorkspaceFee;
 };
 
 export type OrgRootSeo = {
@@ -42,15 +44,10 @@ export type OrgRootSeo = {
   };
 };
 
-export type WorkspaceOffer = {
-  slug: string;
-  label: string;
-  labelFarsi?: string;
+export type WorkspaceFee = {
   image: string;
   capacityLabel?: string;
   priceLabel: string;
   summary: string;
   href: string;
 };
-
-export type WorkspaceOfferCollection = Record<string, WorkspaceOffer>;

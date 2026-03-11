@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { HiArrowRight, HiOutlineUserGroup } from "react-icons/hi2";
 
-import type { WorkspaceOffer } from "@/app/_lib/org/definitions";
+import type { WorkspaceFee } from "@/app/_lib/org/definitions";
 import Image from "next/image";
 import { Header } from "../typography/Header";
 import { P } from "../typography/paragraph";
 
 type Props = {
-  offer: WorkspaceOffer;
+  offer: WorkspaceFee;
 };
 
 export default function WorkspaceOfferCard({ offer }: Props) {
@@ -19,16 +19,14 @@ export default function WorkspaceOfferCard({ offer }: Props) {
       <div className="mb-5 overflow-hidden rounded-2xl aspect-[16/10] relative">
         <Image
           src={offer.image}
-          alt={offer.label}
+          alt={offer.summary}
           fill
           className="object-contain p-4"
         />
       </div>
 
       <div className="flex flex-1 flex-col">
-        <Header as="h3" size="sm" className="text-slate-800">
-          {offer.label}
-        </Header>
+ 
 
         <div className="mt-3 flex flex-wrap gap-2">
           {offer.capacityLabel ? (
