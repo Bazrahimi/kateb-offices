@@ -32,6 +32,7 @@ export const ORG_PROFILE = {
   otherLangKeys: [] as OtherLanguageKey[],
   domain: ORG_DOMAIN,
   email: "reception@kateboffices.com",
+  // email: "bazrahimi@hotmail.com",
   phone: "+61 401 922 760",
   address: "Level 2/311 Lonsdale St, Dandenong VIC 3175",
   abn: "40 663 656 095",

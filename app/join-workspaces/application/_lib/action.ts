@@ -4,6 +4,7 @@
 import { ApplicationSchema, BooleanFields, Application,  type ApplicationState } from "./schema";
 import { toBoolean } from "@/app/_lib/utils/assets";
 import { toActionErrors } from "@/app/_lib/utils/actionHelper";
+import { handleApplicationEmails } from "./handleApplicationEmails";
 
 export async function submitApplication(
   _prevState: ApplicationState | undefined,
@@ -34,7 +35,7 @@ export async function submitApplication(
   console.log("Application submitted:", data);
 
   // Later:
-  // await handleApplicationEmails(data);
+  await handleApplicationEmails(data);
 
   return {
     ok: true,
