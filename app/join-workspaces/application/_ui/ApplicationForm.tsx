@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useState } from "react";
 
 import ActionButton from "@/app/_ui/button/ActionButton";
 import FormErrorsMessage from "@/app/_ui/form/FormErrorsMessage";
@@ -23,12 +23,8 @@ export default function ApplicationForm({ membership }: Props) {
   );
 
   const [useDifferentBillingAddress, setUseDifferentBillingAddress] = useState(
-    !(state?.data?.billingSameAsAbove ?? true),
+    () => !(state?.data?.billingSameAsAbove ?? true),
   );
-
-  useEffect(() => {
-    setUseDifferentBillingAddress(!(state?.data?.billingSameAsAbove ?? true));
-  }, [state?.data?.billingSameAsAbove]);
 
   const isSuccess = state?.ok === true;
 
@@ -109,7 +105,9 @@ export default function ApplicationForm({ membership }: Props) {
             stateId={F.state}
             postcodeId={F.postcode}
             data={state?.data as Record<string, unknown> | undefined}
-            errors={state?.errors as Record<string, string[] | undefined> | undefined}
+            errors={
+              state?.errors as Record<string, string[] | undefined> | undefined
+            }
             required
           />
         </div>
@@ -183,7 +181,11 @@ export default function ApplicationForm({ membership }: Props) {
               stateLabel="Billing State"
               postcodeLabel="Billing Postcode"
               data={state?.data as Record<string, unknown> | undefined}
-              errors={state?.errors as Record<string, string[] | undefined> | undefined}
+              errors={
+                state?.errors as
+                  | Record<string, string[] | undefined>
+                  | undefined
+              }
               required
             />
           )}
