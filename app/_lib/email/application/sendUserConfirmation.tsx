@@ -1,13 +1,13 @@
 // app/_lib/email/application/sendUserConfirmation.tsx
 "use server";
 
-import type { Application } from "@/app/join-workspaces/application/_lib/schema";
 import {
   emailClient,
   FROM_EMAIL,
   ORG_EMAIL,
 } from "@/app/_lib/email/emailClient";
 import NewApplication from "@/app/_ui/email/templates/NewApplication";
+import type { Application } from "@/app/join-workspaces/_lib/schema";
 
 export const sendUserConfirmationEmail = async (data: Application) => {
   return emailClient.emails.send({

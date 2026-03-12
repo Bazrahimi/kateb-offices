@@ -8,8 +8,8 @@ import Input from "@/app/_ui/form/Input";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 
-import { submitApplication } from "../_lib/action";
-import { APPLICATION_FIELDS as F } from "../_lib/constant";
+import { submitApplication } from "../../_lib/action";
+import { APPLICATION_FIELDS as F } from "../../_lib/constant";
 import AddressFields from "./AddressFields";
 
 type Props = {

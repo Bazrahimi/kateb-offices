@@ -1,6 +1,6 @@
 // app/_ui/email/templates/NewApplication.tsx
 import EmailLayout from "@/app/_ui/email/layout/EmailLayout";
-import type { Application } from "@/app/join-workspaces/application/_lib/schema";
+import type { Application } from "@/app/join-workspaces/_lib/schema";
 import { Hr, Text } from "@react-email/components";
 
 type Props = {
