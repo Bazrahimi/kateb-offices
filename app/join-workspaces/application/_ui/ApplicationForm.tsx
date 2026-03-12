@@ -1,17 +1,16 @@
 "use client";
 
+import { useActionState, useEffect, useState } from "react";
+
 import ActionButton from "@/app/_ui/button/ActionButton";
 import FormErrorsMessage from "@/app/_ui/form/FormErrorsMessage";
 import Input from "@/app/_ui/form/Input";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
-import { useActionState } from "react";
+
 import { submitApplication } from "../_lib/action";
 import { APPLICATION_FIELDS as F } from "../_lib/constant";
-
-import Select from "@/app/_ui/form/Select";
-
-import { AUS_STATES } from "@/app/_lib/utils/assets";
+import AddressFields from "./AddressFields";
 
 type Props = {
   membership: string;
@@ -22,6 +21,14 @@ export default function ApplicationForm({ membership }: Props) {
     submitApplication,
     undefined,
   );
+
+  const [useDifferentBillingAddress, setUseDifferentBillingAddress] = useState(
+    !(state?.data?.billingSameAsAbove ?? true),
+  );
+
+  useEffect(() => {
+    setUseDifferentBillingAddress(!(state?.data?.billingSameAsAbove ?? true));
+  }, [state?.data?.billingSameAsAbove]);
 
   const isSuccess = state?.ok === true;
 
@@ -54,6 +61,11 @@ export default function ApplicationForm({ membership }: Props) {
         </div>
 
         <input type="hidden" name={F.membership} value={membership} />
+        <input
+          type="hidden"
+          name={F.billingSameAsAbove}
+          value={useDifferentBillingAddress ? "false" : "true"}
+        />
 
         <div className="space-y-3">
           <Header as="h3" size="xs">
@@ -91,46 +103,14 @@ export default function ApplicationForm({ membership }: Props) {
             className="bg-white"
           />
 
-          <Input
-            id={F.address}
-            label="Address"
-            placeholder="Address"
-            error={state?.errors?.address}
-            defaultValue={state?.data?.address}
-            type="text"
+          <AddressFields
+            addressId={F.address}
+            cityId={F.city}
+            stateId={F.state}
+            postcodeId={F.postcode}
+            data={state?.data as Record<string, unknown> | undefined}
+            errors={state?.errors as Record<string, string[] | undefined> | undefined}
             required
-            className="bg-white"
-          />
-
-          <Input
-            id={F.city}
-            label="City"
-            placeholder="City"
-            error={state?.errors?.city}
-            defaultValue={state?.data?.city}
-            type="text"
-            required
-            className="bg-white"
-          />
-          <Select
-            id={F.state}
-            label="State"
-            options={AUS_STATES}
-            placeholder="Select State"
-            defaultValue={state?.data?.state}
-            error={state?.errors?.state}
-            required
-          />
-
-          <Input
-            id={F.postcode}
-            label="Postcode"
-            placeholder="Postcode"
-            error={state?.errors?.postcode}
-            defaultValue={state?.data?.postcode}
-            type="text"
-            required
-            className="bg-white"
           />
         </div>
 
@@ -186,51 +166,27 @@ export default function ApplicationForm({ membership }: Props) {
           <label className="flex items-center gap-3 text-sm text-slate-700">
             <input
               type="checkbox"
-              name={F.billingSameAsAbove}
-              value="true"
-              defaultChecked={state?.data?.billingSameAsAbove === "true"}
+              checked={useDifferentBillingAddress}
+              onChange={(e) => setUseDifferentBillingAddress(e.target.checked)}
             />
-            Same as above
+            Use a different billing address
           </label>
 
-          <Input
-            id={F.billingAddress}
-            label="Billing Address"
-            placeholder="Billing Address"
-            error={state?.errors?.billingAddress}
-            defaultValue={state?.data?.billingAddress}
-            type="text"
-            className="bg-white"
-          />
-
-          <Input
-            id={F.billingCity}
-            label="Billing City"
-            placeholder="Billing City"
-            error={state?.errors?.billingCity}
-            defaultValue={state?.data?.billingCity}
-            type="text"
-            className="bg-white"
-          />
-
-          <Select
-            id={F.billingState}
-            label="Billing State"
-            options={AU_STATE}
-            placeholder="Select State"
-            defaultValue={state?.data?.billingState ?? ""}
-            error={state?.errors?.billingState}
-          />
-
-          <Input
-            id={F.billingPostcode}
-            label="Billing Postcode"
-            placeholder="Billing Postcode"
-            error={state?.errors?.billingPostcode}
-            defaultValue={state?.data?.billingPostcode}
-            type="text"
-            className="bg-white"
-          />
+          {useDifferentBillingAddress && (
+            <AddressFields
+              addressId={F.billingAddress}
+              cityId={F.billingCity}
+              stateId={F.billingState}
+              postcodeId={F.billingPostcode}
+              addressLabel="Billing Address"
+              cityLabel="Billing City"
+              stateLabel="Billing State"
+              postcodeLabel="Billing Postcode"
+              data={state?.data as Record<string, unknown> | undefined}
+              errors={state?.errors as Record<string, string[] | undefined> | undefined}
+              required
+            />
+          )}
         </div>
 
         <FormErrorsMessage message={state?.message} />
