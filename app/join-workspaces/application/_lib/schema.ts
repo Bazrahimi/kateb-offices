@@ -1,8 +1,12 @@
 // app/join-workspaces/application/_lib/schema.ts
 
+import {
+  ActionState,
+  BooleanKeys,
+  BooleanSchema,
+} from "@/app/_lib/utils/actionHelper";
 import { z } from "zod";
 import { APPLICATION_FIELDS as F } from "./constant";
-import { ActionState } from "@/app/_lib/utils/actionHelper";
 
 export const ApplicationSchema = z
   .object({
@@ -22,7 +26,7 @@ export const ApplicationSchema = z
     [F.email]: z.email("Please enter a valid email address").trim(),
     [F.phoneNumber]: z.string().min(6, "Please enter your phone number"),
 
-    [F.billingSameAsAbove]: z.enum(["true", "false"]).optional(),
+    [F.billingSameAsAbove]: BooleanSchema,
 
     [F.billingAddress]: z.string().optional(),
     [F.billingCity]: z.string().optional(),
@@ -30,7 +34,7 @@ export const ApplicationSchema = z
     [F.billingPostcode]: z.string().optional(),
   })
   .superRefine((data, ctx) => {
-    const same = data[F.billingSameAsAbove] === "true";
+    const same = data[F.billingSameAsAbove];
 
     if (!same) {
       if (!data[F.billingAddress]?.trim()) {
@@ -70,3 +74,8 @@ export const ApplicationSchema = z
 export type Application = z.output<typeof ApplicationSchema>;
 export type ApplicationFormData = z.infer<typeof ApplicationSchema>;
 export type ApplicationState = ActionState<ApplicationFormData>;
+export type ApplicationBooleanKeys = BooleanKeys<Application>;
+
+export const BooleanFields = [
+  F.billingSameAsAbove,
+] as const satisfies readonly ApplicationBooleanKeys[];

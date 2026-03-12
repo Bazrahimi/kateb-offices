@@ -11,7 +11,7 @@ import { APPLICATION_FIELDS as F } from "../_lib/constant";
 
 import Select from "@/app/_ui/form/Select";
 
-const AU_STATE = ["VIC", "NSW", "QLD", "SA", "WA", "TAS", "ACT", "NT"] as const;
+import { AUS_STATES } from "@/app/_lib/utils/assets";
 
 type Props = {
   membership: string;
@@ -115,7 +115,7 @@ export default function ApplicationForm({ membership }: Props) {
           <Select
             id={F.state}
             label="State"
-            options={AU_STATE}
+            options={AUS_STATES}
             placeholder="Select State"
             defaultValue={state?.data?.state}
             error={state?.errors?.state}

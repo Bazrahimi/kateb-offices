@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { toBoolean } from "./assets";
 
 export const toActionErrors = <TErrors>(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,10 +15,7 @@ export const toActionErrors = <TErrors>(
   };
 };
 
-
-
 export type FieldErrors<T> = Partial<Record<keyof T, string[]>>;
-
 
 export type BooleanKeys<T> = {
   [K in keyof T]-?: Exclude<T[K], undefined | null> extends boolean ? K : never;
@@ -32,3 +30,9 @@ export type ActionState<T> = {
   message?: string;
   ok?: boolean;
 };
+
+
+export const BooleanSchema = z
+  .preprocess((val) => toBoolean(val), z.boolean())
+  .optional()
+  .default(false);
