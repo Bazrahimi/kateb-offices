@@ -1,13 +1,13 @@
 // app/_lib/email/application/SendToAdmin.tsx
 "use server";
 
+import type { Application } from "@/app/(pages)/join-workspaces/_lib/schema";
 import {
   emailClient,
   ORG_EMAIL,
   WEB_ENQUIRY,
 } from "@/app/_lib/email/emailClient";
 import NewApplication from "@/app/_ui/email/templates/NewApplication";
-import type { Application } from "@/app/join-workspaces/_lib/schema";
 
 export const sendAdminEmail = async (data: Application) => {
   try {

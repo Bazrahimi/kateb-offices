@@ -1,10 +1,10 @@
+import ServiceLeafImage from "@/app/(pages)/services/[slug]/_ui/ServiceLeafImage";
 import type { ServicesPage } from "@/app/_lib/org/definitions";
 import { PublicRoutes } from "@/app/_lib/routes/publicRoutes";
 import { cn } from "@/app/_lib/utils/cn";
 import ServiceLeavesCarousel from "@/app/_ui/carousels/ServiceLeavesCarousel";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
-import ServiceLeafImage from "@/app/services/[slug]/_ui/ServiceLeafImage";
 import Button from "../button/Button";
 
 type Props = {

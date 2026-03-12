@@ -1,7 +1,7 @@
 "use server";
 
-import { Enquiry } from "@/app/contact-us/_lib/schema";
-import { sendAdminEmail } from "../../_lib/email/SendToAdmin";
+import { Enquiry } from "@/app/(pages)/contact-us/_lib/schema";
+import { sendAdminEmail } from "@/app/_lib/email/SendToAdmin";
 import { sendUserConfirmationEmail } from "@/app/_lib/email/sendUserConfirmation";
 
 export const handleEnquiryEmails = async (

@@ -1,8 +1,8 @@
+import ServiceLeafImage from "@/app/(pages)/services/[slug]/_ui/ServiceLeafImage";
 import type { ServiceLeaf } from "@/app/_lib/org/definitions";
 import List from "@/app/_ui/content/List";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
-import ServiceLeafImage from "@/app/services/[slug]/_ui/ServiceLeafImage";
 
 type Props = {
   leaf: ServiceLeaf;
