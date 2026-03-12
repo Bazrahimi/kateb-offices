@@ -1,4 +1,4 @@
-import { coworkingMembershipFee } from "@/app/_lib/org/category/workspaceFee";
+import { coworkingMembershipFee } from "@/app/(pages)/join-workspaces/_lib/assets/workspaceOffering";
 import { joinWorkspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
 import Button from "@/app/_ui/button/Button";
 import { Header } from "@/app/_ui/typography/Header";

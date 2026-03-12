@@ -1,11 +1,16 @@
 import type { ServicesPage } from "../definitions";
 
+import {
+  coworkingMembershipFee,
+  meetingRoomsFee,
+  privateOfficeFee,
+  virtualOfficeFee,
+} from "../../../(pages)/join-workspaces/_lib/assets/workspaceOffering";
 import { ORG_PROFILE as op } from "../profile";
 import { coworkingMembership } from "./subCategories/coworkingMembership";
 import { meetingRooms } from "./subCategories/meetingRooms";
 import { privateOffices } from "./subCategories/privateOffices";
 import { virtualOffices } from "./subCategories/virtualOffices";
-import { meetingRoomsFee, privateOfficeFee, coworkingMembershipFee, virtualOfficeFee } from "./workspaceFee";
 
 export const SERVICES_PAGE = {
   privateOffices: {
@@ -18,7 +23,7 @@ export const SERVICES_PAGE = {
       "Enjoy a 365 rated premium office experience, secure encrypted access, seamless accessibility with designated underground carpark",
     ] as const,
     subcategories: privateOffices,
-    workspaceFee: privateOfficeFee
+    workspaceFee: privateOfficeFee,
   },
 
   coworkingMembership: {
@@ -57,5 +62,4 @@ export const SERVICES_PAGE = {
     subcategories: virtualOffices,
     workspaceFee: virtualOfficeFee,
   },
-
 } as const satisfies Record<string, ServicesPage>;

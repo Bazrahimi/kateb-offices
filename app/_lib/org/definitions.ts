@@ -1,3 +1,4 @@
+import { WorkspaceFee } from "@/app/(pages)/join-workspaces/_lib/definitions";
 export type LeafImage =
   | { kind: "url"; src: string }
   | { kind: "svg"; text: string };
@@ -23,29 +24,6 @@ export type ServicesPage = {
   subcategories: ServiceSubCategory;
   workspaceFee: WorkspaceFee;
 };
-
-export type WorkspaceJoin = Record<string, unknown>;
-
-export type WorkspaceFee<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
-  image: string;
-  capacityLabel?: string;
-  priceLabel: string;
-  summary: string;
-  btnContent: string;
-  href: string;
-  join: TJoin;
-};
-
-export type CoworkingMembershipJoin = {
-  everydayMembership: {
-    label: string;
-    access: string;
-    price: string;
-    inclusions?: string[];
-  };
-};
-
-
 
 export type OrgRootSeo = {
   ogImagePath: string;

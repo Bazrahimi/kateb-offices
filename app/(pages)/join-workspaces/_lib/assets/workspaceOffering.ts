@@ -1,6 +1,6 @@
-import { joinWorkspacesRoutes as routes } from "../../routes/joinWorkspacesRoutes";
+import { publicAssets } from "../../../../_lib/org/publicAssets";
+import { joinWorkspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
 import type { CoworkingMembershipJoin, WorkspaceFee } from "../definitions";
-import { publicAssets } from "../publicAssets";
 const svg = publicAssets.offeringSvg;
 
 export const coworkingMembershipFee: WorkspaceFee<CoworkingMembershipJoin> = {

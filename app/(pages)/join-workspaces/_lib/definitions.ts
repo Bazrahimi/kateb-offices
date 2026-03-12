@@ -1,3 +1,14 @@
+export type WorkspaceJoin = Record<string, unknown>;
+export type WorkspaceFee<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
+  image: string;
+  capacityLabel?: string;
+  priceLabel: string;
+  summary: string;
+  btnContent: string;
+  href: string;
+  join: TJoin;
+};
+
 export type PrivateOfficeRoom = {
   id: string;
   slug: string;
@@ -18,4 +29,13 @@ export type PrivateOfficeRoom = {
   suitableFor?: readonly string[];
   ctaLabel?: string;
   href?: string;
+};
+
+export type CoworkingMembershipJoin = {
+  everydayMembership: {
+    label: string;
+    access: string;
+    price: string;
+    inclusions?: string[];
+  };
 };
