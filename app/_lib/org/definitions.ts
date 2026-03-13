@@ -1,4 +1,3 @@
-import { WorkspaceOffering } from "@/app/(pages)/join-workspaces/_lib/definitions";
 export type LeafImage =
   | { kind: "url"; src: string }
   | { kind: "svg"; text: string };
@@ -22,9 +21,4 @@ export type ServicesPage = {
   description: readonly string[];
   image: LeafImage;
   subcategories: ServiceSubCategory;
-  workspaceFee: WorkspaceOffering;
 };
-
-
-
-

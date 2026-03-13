@@ -1,4 +1,5 @@
 import { SERVICES_PAGE } from "@/app/_lib/org/category/services";
+import { OFFERINGS } from "@/app/(pages)/join-workspaces/_lib/assets/workspaceOffering";
 import { Header } from "../typography/Header";
 import { P } from "../typography/paragraph";
 import WorkspaceOfferCard from "./WorkspaceOfferCard";
@@ -16,12 +17,12 @@ export default function WorkspaceOffersSection() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-        {Object.entries(SERVICES_PAGE).map(([key, service]) => (
+        {Object.entries(OFFERINGS).map(([key, offer]) => (
           <WorkspaceOfferCard
             key={key}
   
-            offer={service.workspaceFee}
-            serviceLabel={service.label}
+            offer={offer.offering}
+            serviceLabel={offer.label}
           />
         ))}
       </div>

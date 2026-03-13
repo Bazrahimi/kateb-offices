@@ -1,23 +1,27 @@
-import { coworkingMembershipFee } from "@/app/(pages)/join-workspaces/_lib/assets/workspaceOffering";
+import { OFFERINGS } from "@/app/(pages)/join-workspaces/_lib/assets/workspaceOffering";
 import { joinWorkspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
 import Button from "@/app/_ui/button/Button";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
+import { CoworkingMembershipJoin } from "../_lib/definitions";
 
 export default function Page() {
-  const membership = coworkingMembershipFee.join?.everydayMembership;
+  const membership = (
+    OFFERINGS.coworkingMembership.offering.join as CoworkingMembershipJoin
+  ).everydayMembership;
 
   return (
     <main className="min-h-screen bg-slate-100 py-10">
       <div className="mx-auto max-w-md px-4">
         <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-          <Header as="h1" size="sm" className=" text-slate-900">
+          <Header as="h1" size="sm" className="text-slate-900">
             {membership.label}
           </Header>
+
           <div className="relative mb-8 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
             <Image
-              src={coworkingMembershipFee.image}
+              src={OFFERINGS.coworkingMembership.offering.image}
               alt={membership.label}
               fill
               className="object-contain p-6"
@@ -25,7 +29,7 @@ export default function Page() {
           </div>
 
           <div className="space-y-3">
-            <P className=" text-slate-600">{membership.access}</P>
+            <P className="text-slate-600">{membership.access}</P>
 
             <div className="pt-2">
               <P className="uppercase tracking-wide text-slate-500">Price</P>
@@ -60,7 +64,7 @@ export default function Page() {
             )}`}
             fullWidth
           >
-            {coworkingMembershipFee.btnContent}
+            {OFFERINGS.coworkingMembership.offering.btnContent}
           </Button>
         </div>
       </div>

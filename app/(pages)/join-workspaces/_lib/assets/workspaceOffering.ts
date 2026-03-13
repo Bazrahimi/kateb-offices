@@ -1,31 +1,36 @@
 import { publicAssets } from "../../../../_lib/org/publicAssets";
 import { joinWorkspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
-import type { CoworkingMembershipJoin, WorkspaceOffering } from "../definitions";
+import type {
+  CoworkingMembershipJoin,
+  WorkspaceOffering,
+} from "../definitions";
 const svg = publicAssets.offeringSvg;
+import type { Offering } from "../definitions";
 
-export const coworkingMembershipFee: WorkspaceOffering<CoworkingMembershipJoin> = {
-  image: svg.coworkingMembership,
-  capacityLabel: "1+",
-  priceLabel: "From $150/month",
-  summary:
-    "Flexible workspace access with shared amenities, ideal for freelancers, remote workers, and professionals who need a productive environment without a long-term lease.",
-  btnContent: "Sign Up",
-  href: routes.coworkingMembership(),
-  join: {
-    everydayMembership: {
-      label: "Everyday Membership",
-      access: "Monday to Friday",
-      price: "$150",
-      inclusions: [
-        "Access to shared amenities",
-        "24/7 access",
-        "Discount (50%) meetings rooms",
-      ],
+const coworkingMembershipOffering: WorkspaceOffering<CoworkingMembershipJoin> =
+  {
+    image: svg.coworkingMembership,
+    capacityLabel: "1+",
+    priceLabel: "From $150/month",
+    summary:
+      "Flexible workspace access with shared amenities, ideal for freelancers, remote workers, and professionals who need a productive environment without a long-term lease.",
+    btnContent: "Sign Up",
+    href: routes.coworkingMembership(),
+    join: {
+      everydayMembership: {
+        label: "Everyday Membership",
+        access: "Monday to Friday",
+        price: "$150",
+        inclusions: [
+          "Access to shared amenities",
+          "24/7 access",
+          "Discount (50%) meetings rooms",
+        ],
+      },
     },
-  },
-};
+  };
 
-export const dedicatedDeskFee: WorkspaceOffering = {
+const dedicatedDeskFee: WorkspaceOffering = {
   image: svg.dedicatedDesk,
   capacityLabel: "1",
   priceLabel: "From $195/month",
@@ -36,7 +41,7 @@ export const dedicatedDeskFee: WorkspaceOffering = {
   join: {},
 };
 
-export const virtualOfficeFee: WorkspaceOffering = {
+const virtualOfficeFee: WorkspaceOffering = {
   image: svg.virtualOffice,
   priceLabel: "From $30/month",
   summary:
@@ -46,7 +51,7 @@ export const virtualOfficeFee: WorkspaceOffering = {
   join: {},
 };
 
-export const privateOfficeFee: WorkspaceOffering = {
+const privateOfficeFee: WorkspaceOffering = {
   image: svg.privateOffice,
   capacityLabel: "1–12+",
   priceLabel: "From $1120/month",
@@ -57,7 +62,7 @@ export const privateOfficeFee: WorkspaceOffering = {
   join: {},
 };
 
-export const meetingRoomsFee: WorkspaceOffering = {
+const meetingRoomsFee: WorkspaceOffering = {
   image: svg.meetingRooms,
   capacityLabel: "2–25",
   priceLabel: "From $5/hr",
@@ -66,4 +71,30 @@ export const meetingRoomsFee: WorkspaceOffering = {
   btnContent: "Sign Up",
   href: routes.meetingRooms(),
   join: {},
+};
+
+export const OFFERINGS: Record<string, Offering> = {
+  privateOffices: {
+    label: "Private Offices",
+    offering: privateOfficeFee,
+  },
+
+  coworkingMembership: {
+    label: "Coworking Spaces",
+    offering: coworkingMembershipOffering,
+  },
+
+  dedicatedDesk: {
+    label: "Dedicated Desk",
+    offering: dedicatedDeskFee,
+  },
+
+  meetingRooms: {
+    label: "Meeting & Conference Rooms",
+    offering: meetingRoomsFee,
+  },
+  virtualOffices: {
+    label: "Virtual Offices",
+    offering: virtualOfficeFee,
+  },
 };

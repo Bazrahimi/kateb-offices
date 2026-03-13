@@ -1,3 +1,5 @@
+import { LeafImage } from "@/app/_lib/org/definitions";
+
 export type WorkspaceJoin = Record<string, unknown>;
 export type WorkspaceOffering<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
   image: string;
@@ -38,4 +40,10 @@ export type CoworkingMembershipJoin = {
     price: string;
     inclusions?: string[];
   };
+};
+
+export type Offering<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
+  label: string;
+  slug?: string;
+  offering: WorkspaceOffering<TJoin>;
 };
