@@ -1,34 +1,17 @@
 import { publicAssets } from "../../../../_lib/org/publicAssets";
 import { workspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
-import type {
-  CoworkingMembershipJoin,
-  WorkspaceOffering,
-} from "../definitions";
+import type { Offering, OfferingKey, WorkspaceOffering } from "../definitions";
 const svg = publicAssets.offeringSvg;
-import type { Offering } from "../definitions";
 
-const coworkingMembershipOffering: WorkspaceOffering<CoworkingMembershipJoin> =
-  {
-    image: svg.coworkingMembership,
-    capacityLabel: "1+",
-    priceLabel: "From $150/month",
-    summary:
-      "Flexible workspace access with shared amenities, ideal for freelancers, remote workers, and professionals who need a productive environment without a long-term lease.",
-    btnContent: "Sign Up",
-    href: routes.coworkingMembership(),
-    join: {
-      everydayMembership: {
-        label: "Everyday Membership",
-        access: "Monday to Friday",
-        price: "$150",
-        inclusions: [
-          "Access to shared amenities",
-          "24/7 access",
-          "Discount (50%) meetings rooms",
-        ],
-      },
-    },
-  };
+const coworkingMembershipOffering: WorkspaceOffering = {
+  image: svg.coworkingMembership,
+  capacityLabel: "1+",
+  priceLabel: "From $150/month",
+  summary:
+    "Flexible workspace access with shared amenities, ideal for freelancers, remote workers, and professionals who need a productive environment without a long-term lease.",
+  btnContent: "Sign Up",
+  href: routes.coworkingMembership(),
+};
 
 const dedicatedDeskFee: WorkspaceOffering = {
   image: svg.dedicatedDesk,
@@ -38,7 +21,6 @@ const dedicatedDeskFee: WorkspaceOffering = {
     "A permanent workstation within our coworking space, giving you a consistent desk, secure environment, and 24/7 access to shared facilities.",
   btnContent: "Sign Up",
   href: routes.dedicatedDesk(),
-  join: {},
 };
 
 const virtualOfficeFee: WorkspaceOffering = {
@@ -48,7 +30,6 @@ const virtualOfficeFee: WorkspaceOffering = {
     "Establish a professional business presence with a premium address, mail handling, and optional call answering services without renting a physical office.",
   btnContent: "Sign Up",
   href: routes.virtualOffice(),
-  join: {},
 };
 
 const privateOfficeFee: WorkspaceOffering = {
@@ -59,7 +40,6 @@ const privateOfficeFee: WorkspaceOffering = {
     "Fully furnished private office suites designed for businesses that need privacy, security, and a professional workspace with flexible terms.",
   btnContent: "See Availability",
   href: routes.privateOffice(),
-  join: {},
 };
 
 const meetingRoomsFee: WorkspaceOffering = {
@@ -70,10 +50,9 @@ const meetingRoomsFee: WorkspaceOffering = {
     "Professional meeting and conference rooms suitable for client meetings, team discussions, presentations, and workshops.",
   btnContent: "Sign Up",
   href: routes.meetingRooms(),
-  join: {},
 };
 
-export const offering: Record<string, Offering> = {
+export const offering: Record<OfferingKey, Offering> = {
   privateOffices: {
     label: "Private Offices",
     offering: privateOfficeFee,

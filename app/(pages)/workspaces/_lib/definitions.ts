@@ -1,14 +1,11 @@
-import { LeafImage } from "@/app/_lib/org/definitions";
-
 export type WorkspaceJoin = Record<string, unknown>;
-export type WorkspaceOffering<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
+export type WorkspaceOffering = {
   image: string;
   capacityLabel?: string;
   priceLabel: string;
   summary: string;
   btnContent: string;
   href: string;
-  join: TJoin;
 };
 
 export type PrivateOfficeRoom = {
@@ -33,18 +30,15 @@ export type PrivateOfficeRoom = {
   href?: string;
 };
 
-export type CoworkingMembershipJoin = {
-  everydayMembership: {
-    label: string;
-    access: string;
-    price: string;
-    inclusions?: string[];
-  };
-};
+export type OfferingKey =
+  | "privateOffices"
+  | "coworkingMembership"
+  | "dedicatedDesk"
+  | "meetingRooms"
+  | "virtualOffices";
 
-// TODO: i want improve the type for below nad put the key as well
-export type Offering<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
+
+export type Offering = {
   label: string;
-  slug?: string;
-  offering: WorkspaceOffering<TJoin>;
+  offering: WorkspaceOffering;
 };
