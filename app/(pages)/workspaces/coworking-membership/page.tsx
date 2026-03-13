@@ -1,5 +1,5 @@
-import { OFFERINGS } from "@/app/(pages)/join-workspaces/_lib/assets/workspaceOffering";
-import { joinWorkspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
+import { OFFERINGS } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
+import { workspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
 import Button from "@/app/_ui/button/Button";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
@@ -59,7 +59,7 @@ export default function Page() {
 
           <Button
             as="link"
-            href={`${joinWorkspacesRoutes.application()}?membership=${encodeURIComponent(
+            href={`${workspacesRoutes.application()}?membership=${encodeURIComponent(
               membership.label,
             )}`}
             fullWidth

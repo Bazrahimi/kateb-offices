@@ -1,8 +1,8 @@
-export const joinWorkspacesRoutes = {
-  coworkingMembership: () => "/join-workspaces/coworking-membership",
-  dedicatedDesk: () => "/join-workspaces/dedicated-desk",
-  virtualOffice: () => "/join-workspaces/virtual-offering",
-  privateOffice: () => "/join-workspaces/private-office",
-  meetingRooms: () => "/join-workspaces/book-meeting-rooms",
-  application: () => "/join-workspaces/application",
+export const workspacesRoutes = {
+  coworkingMembership: () => "/workspaces/coworking-membership",
+  dedicatedDesk: () => "/workspaces/dedicated-desk",
+  virtualOffice: () => "/workspaces/virtual-offering",
+  privateOffice: () => "/workspaces/private-office",
+  meetingRooms: () => "/workspaces/book-meeting-rooms",
+  application: () => "/workspaces/application",
 };

@@ -1,7 +1,7 @@
 // app/_lib/email/application/sendUserConfirmation.tsx
 "use server";
 
-import type { Application } from "@/app/(pages)/join-workspaces/_lib/schema";
+import type { Application } from "@/app/(pages)/workspaces/_lib/schema";
 import {
   emailClient,
   FROM_EMAIL,

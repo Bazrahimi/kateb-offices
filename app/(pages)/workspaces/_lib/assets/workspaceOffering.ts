@@ -1,5 +1,5 @@
 import { publicAssets } from "../../../../_lib/org/publicAssets";
-import { joinWorkspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
+import { workspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
 import type {
   CoworkingMembershipJoin,
   WorkspaceOffering,
