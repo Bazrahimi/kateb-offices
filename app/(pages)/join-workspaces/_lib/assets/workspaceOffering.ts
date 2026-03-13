@@ -1,9 +1,9 @@
 import { publicAssets } from "../../../../_lib/org/publicAssets";
 import { joinWorkspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
-import type { CoworkingMembershipJoin, WorkspaceFee } from "../definitions";
+import type { CoworkingMembershipJoin, WorkspaceOffering } from "../definitions";
 const svg = publicAssets.offeringSvg;
 
-export const coworkingMembershipFee: WorkspaceFee<CoworkingMembershipJoin> = {
+export const coworkingMembershipFee: WorkspaceOffering<CoworkingMembershipJoin> = {
   image: svg.coworkingMembership,
   capacityLabel: "1+",
   priceLabel: "From $150/month",
@@ -25,7 +25,7 @@ export const coworkingMembershipFee: WorkspaceFee<CoworkingMembershipJoin> = {
   },
 };
 
-export const dedicatedDeskFee: WorkspaceFee = {
+export const dedicatedDeskFee: WorkspaceOffering = {
   image: svg.dedicatedDesk,
   capacityLabel: "1",
   priceLabel: "From $195/month",
@@ -36,7 +36,7 @@ export const dedicatedDeskFee: WorkspaceFee = {
   join: {},
 };
 
-export const virtualOfficeFee: WorkspaceFee = {
+export const virtualOfficeFee: WorkspaceOffering = {
   image: svg.virtualOffice,
   priceLabel: "From $30/month",
   summary:
@@ -46,7 +46,7 @@ export const virtualOfficeFee: WorkspaceFee = {
   join: {},
 };
 
-export const privateOfficeFee: WorkspaceFee = {
+export const privateOfficeFee: WorkspaceOffering = {
   image: svg.privateOffice,
   capacityLabel: "1–12+",
   priceLabel: "From $1120/month",
@@ -57,7 +57,7 @@ export const privateOfficeFee: WorkspaceFee = {
   join: {},
 };
 
-export const meetingRoomsFee: WorkspaceFee = {
+export const meetingRoomsFee: WorkspaceOffering = {
   image: svg.meetingRooms,
   capacityLabel: "2–25",
   priceLabel: "From $5/hr",

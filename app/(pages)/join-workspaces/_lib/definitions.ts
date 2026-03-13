@@ -1,5 +1,5 @@
 export type WorkspaceJoin = Record<string, unknown>;
-export type WorkspaceFee<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
+export type WorkspaceOffering<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
   image: string;
   capacityLabel?: string;
   priceLabel: string;
