@@ -42,6 +42,7 @@ export type CoworkingMembershipJoin = {
   };
 };
 
+// TODO: i want improve the type for below nad put the key as well
 export type Offering<TJoin extends WorkspaceJoin = WorkspaceJoin> = {
   label: string;
   slug?: string;

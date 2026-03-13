@@ -1,9 +1,7 @@
-import React from 'react'
+import WorkspaceOffersSection from "@/app/_ui/workspace/WorkspaceOffersSection";
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+  return <WorkspaceOffersSection />;
+};
 
-export default page
+export default page;

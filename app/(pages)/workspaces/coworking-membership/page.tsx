@@ -1,14 +1,14 @@
-import { OFFERINGS } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
+import { offering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
 import { workspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
 import Button from "@/app/_ui/button/Button";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
-import { CoworkingMembershipJoin } from "../_lib/definitions";
+import type { CoworkingMembershipJoin } from "../_lib/definitions";
 
 export default function Page() {
-  const membership = (
-    OFFERINGS.coworkingMembership.offering.join as CoworkingMembershipJoin
+  const join = (
+    offering.coworkingMembership.offering.join as CoworkingMembershipJoin
   ).everydayMembership;
 
   return (
@@ -16,25 +16,25 @@ export default function Page() {
       <div className="mx-auto max-w-md px-4">
         <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
           <Header as="h1" size="sm" className="text-slate-900">
-            {membership.label}
+            {join.label}
           </Header>
 
           <div className="relative mb-8 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
             <Image
-              src={OFFERINGS.coworkingMembership.offering.image}
-              alt={membership.label}
+              src={offering.coworkingMembership.offering.image}
+              alt={join.label}
               fill
               className="object-contain p-6"
             />
           </div>
 
           <div className="space-y-3">
-            <P className="text-slate-600">{membership.access}</P>
+            <P className="text-slate-600">{join.access}</P>
 
             <div className="pt-2">
               <P className="uppercase tracking-wide text-slate-500">Price</P>
               <P className="text-5xl font-bold text-org-primary-main">
-                {membership.price}
+                {join.price}
                 <span className="ml-2 text-sm font-medium text-slate-600">
                   /month
                 </span>
@@ -42,10 +42,10 @@ export default function Page() {
             </div>
           </div>
 
-          {membership.inclusions?.length ? (
+          {join.inclusions?.length ? (
             <div className="mt-8">
               <ul className="mt-4 space-y-3">
-                {membership.inclusions.map((item) => (
+                {join.inclusions.map((item) => (
                   <li
                     key={item}
                     className="rounded-xl bg-slate-50 px-4 py-3 text-slate-700 ring-1 ring-slate-200"
@@ -60,11 +60,11 @@ export default function Page() {
           <Button
             as="link"
             href={`${workspacesRoutes.application()}?membership=${encodeURIComponent(
-              membership.label,
+              join.label,
             )}`}
             fullWidth
           >
-            {OFFERINGS.coworkingMembership.offering.btnContent}
+            {offering.coworkingMembership.offering.btnContent}
           </Button>
         </div>
       </div>

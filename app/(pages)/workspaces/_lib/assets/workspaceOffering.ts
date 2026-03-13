@@ -73,7 +73,7 @@ const meetingRoomsFee: WorkspaceOffering = {
   join: {},
 };
 
-export const OFFERINGS: Record<string, Offering> = {
+export const offering: Record<string, Offering> = {
   privateOffices: {
     label: "Private Offices",
     offering: privateOfficeFee,
