@@ -64,7 +64,7 @@ export default function ApplicationForm({ application }: Props) {
         />
 
         <div className="space-y-3">
-          <Header as="h3" size="xs">
+          <Header as="h3" size="xs" align="left">
             Organisation / Customer Details
           </Header>
 
@@ -113,7 +113,7 @@ export default function ApplicationForm({ application }: Props) {
         </div>
 
         <div className="space-y-3">
-          <Header as="h3" size="xs">
+          <Header as="h3" size="xs" align="left">
             Billing Information
           </Header>
 

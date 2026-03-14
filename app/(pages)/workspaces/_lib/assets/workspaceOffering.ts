@@ -25,7 +25,7 @@ const dedicatedDeskFee: WorkspaceOffering = {
 
 const virtualOfficeFee: WorkspaceOffering = {
   image: svg.virtualOffice,
-  priceLabel: "From $30/month",
+  priceLabel: "From $40/month",
   summary:
     "Establish a professional business presence with a premium address, mail handling, and optional call answering services without renting a physical office.",
   btnContent: "Sign Up",

@@ -79,7 +79,7 @@ const WorkspacePlanListPage = ({ plans, offering }: Props) => {
             <div className="mt-8">
               <Button
                 as="link"
-                href={`${workspacesRoutes.application()}?membership=${encodeURIComponent(
+                href={`${workspacesRoutes.application()}?application=${encodeURIComponent(
                   plan.label,
                 )}`}
                 fullWidth
