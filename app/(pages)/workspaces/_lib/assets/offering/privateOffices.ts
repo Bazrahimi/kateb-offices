@@ -1,10 +1,15 @@
 export type PrivateOfficeStatus = "available" | "reserved" | "leased";
 
+export type PrivateOfficeImage = {
+  url: string;
+  alt: string;
+};
+
 export type PrivateOffice = {
   id: string;
   slug: string;
   label: string;
-  images: string[];
+  images: PrivateOfficeImage[];
   description: string[];
   priceLabel: string;
   availableFrom: string;
@@ -38,8 +43,14 @@ export const privateOfficeRooms: PrivateOffice[] = [
     slug: "private-internal-office-suite-1",
     label: "Internal Office Suite 1",
     images: [
-      "vacancy/internal-office/internal-office12_yil5dz.png",
-      "vacancy/internal-office/private-office_lahust.png",
+      {
+        url: "vacancy/internal-office/internal-office12_yil5dz.png",
+        alt: "Internal office suite 1 main view",
+      },
+      {
+        url: "vacancy/internal-office/private-office_lahust.png",
+        alt: "Private office lounge space",
+      },
     ],
     description: [
       "Professional furnished private office suitable for a team of up to 4 people.",
@@ -63,8 +74,14 @@ export const privateOfficeRooms: PrivateOffice[] = [
     slug: "private-internal-office-suite-2",
     label: "Internal Office Suite 2",
     images: [
-      "vacancy/internal-office/internal-office-12.png",
-      "vacancy/internal-office/private-office_lahust.png",
+      {
+        url: "vacancy/internal-office/internal-office-12.png",
+        alt: "Internal office suite 2 interior",
+      },
+      {
+        url: "vacancy/internal-office/private-office_lahust.png",
+        alt: "Private office lounge space",
+      },
     ],
     description: [
       "Professional furnished private office suitable for a team of up to 4 people.",
@@ -89,8 +106,14 @@ export const privateOfficeRooms: PrivateOffice[] = [
     slug: "private-external-office-suite-3",
     label: "external Office Suite 3",
     images: [
-      "vacancy/internal-office/external-office123_qr0thb.png",
-         "vacancy/internal-office/external-office1233_aqit9e.png",
+      {
+        url: "vacancy/internal-office/external-office123_qr0thb.png",
+        alt: "External office suite 3 desk area",
+      },
+      {
+        url: "vacancy/internal-office/external-office1233_aqit9e.png",
+        alt: "External office suite 3 meeting corner",
+      },
     ],
     description: [
       "Professional furnished private office suitable for a team of up to 4 people.",

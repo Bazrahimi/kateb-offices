@@ -90,10 +90,10 @@ const ImageGalleryClient = ({
             className="rounded-2xl"
           >
             {images.map((img, index) => {
-              const src = cldGalleryImage(img);
+              const src = cldGalleryImage(img.url);
 
               return (
-                <SwiperSlide key={`${img}-${index}`}>
+                <SwiperSlide key={`${img.url}-${index}`}>
                   <button
                     type="button"
                     onClick={() => {
@@ -101,12 +101,14 @@ const ImageGalleryClient = ({
                       setIsFullscreen(true);
                     }}
                     className="block w-full text-left"
-                    aria-label={`Open ${alt} image ${index + 1} in fullscreen`}
+                    aria-label={`Open ${
+                      img.alt ?? `${alt} ${index + 1}`
+                    } in fullscreen`}
                   >
                     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
                       <Image
                         src={src}
-                        alt={`${alt} ${index + 1}`}
+                        alt={img.alt ?? `${alt} ${index + 1}`}
                         fill
                         className="object-cover object-center"
                         priority={priorityFirstImage && index === 0}
@@ -138,11 +140,11 @@ const ImageGalleryClient = ({
             className="rounded-2xl"
           >
             {images.map((img, index) => {
-              const src = cldThumbImage(img);
+              const src = cldThumbImage(img.url);
               const isActive = activeIndex === index;
 
               return (
-                <SwiperSlide key={`${img}-thumb-${index}`}>
+                <SwiperSlide key={`${img.url}-thumb-${index}`}>
                   <button
                     type="button"
                     onClick={() => goToImage(index)}
@@ -156,7 +158,7 @@ const ImageGalleryClient = ({
                     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-50">
                       <Image
                         src={src}
-                        alt={`${alt} thumbnail ${index + 1}`}
+                        alt={`${img.alt ?? `${alt} ${index + 1}`} thumbnail`}
                         fill
                         className="object-cover object-center"
                         sizes="(min-width: 1024px) 20vw, 30vw"
@@ -205,9 +207,9 @@ const ImageGalleryClient = ({
 
           <div className="flex h-full w-full items-center justify-center p-4 sm:p-8">
             <div className="relative h-full w-full max-w-7xl">
-              <Image
-                src={cldFullscreenImage(images[activeIndex])}
-                alt={`${alt} ${activeIndex + 1}`}
+                <Image
+                src={cldFullscreenImage(images[activeIndex].url)}
+                alt={images[activeIndex].alt ?? `${alt} ${activeIndex + 1}`}
                 fill
                 className="object-contain"
                 sizes="100vw"

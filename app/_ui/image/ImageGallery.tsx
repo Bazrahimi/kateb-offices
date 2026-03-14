@@ -1,8 +1,13 @@
 import { Suspense } from "react";
 import ImageGalleryClient from "./ImageGalleryClient";
 
+export type ImageMeta = {
+  url: string;
+  alt: string;
+};
+
 export type ImageGalleryProps = {
-  images: string[];
+  images: ImageMeta[];
   alt: string;
   priorityFirstImage?: boolean;
 };

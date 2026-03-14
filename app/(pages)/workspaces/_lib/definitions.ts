@@ -12,7 +12,7 @@ export type PrivateOfficeRoom = {
   id: string;
   slug: string;
   label: string;
-  images: string[];
+  images: { url: string; alt: string }[];
   description: string[];
   priceLabel: string;
   availableFrom: string;

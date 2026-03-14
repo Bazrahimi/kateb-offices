@@ -14,13 +14,14 @@ type Props = {
 
 export default function PrivateOfficeCard({ room }: Props) {
   const href = `${workspacesRoutes.privateOffice()}/${room.slug}`;
+  const firstImage = room.images[0];
   return (
     <Link href={href} className="block">
       <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
         <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-50">
           <Image
-            src={cldLeafAuto(room.images[0])}
-            alt={room.label}
+            src={cldLeafAuto(firstImage?.url ?? "")}
+            alt={firstImage?.alt ?? room.label}
             fill
             className="object-contain object-center"
             placeholder="blur"
