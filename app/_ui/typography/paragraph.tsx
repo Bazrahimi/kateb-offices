@@ -2,16 +2,16 @@ import { bodyFont } from "@/app/_lib/org/font";
 import { cn } from "@/app/_lib/utils/cn";
 import * as React from "react";
 
-type ParaSize = "sm" | "md" | "lg" | "xl";
+export type PSize = "sm" | "md" | "lg" | "xl";
 
-const SIZE: Record<ParaSize, string> = {
+const SIZE: Record<PSize, string> = {
   sm: "text-sm sm:text-base",
   md: "text-base sm:text-lg",
   lg: "text-lg sm:text-xl",
   xl: "text-xl sm:text-2xl md:text-3xl", // 🚀 Extra-large responsive text
 };
 
-const LEADING: Record<ParaSize, string> = {
+const LEADING: Record<PSize, string> = {
   sm: "leading-6 sm:leading-7",
   md: "leading-7 sm:leading-8",
   lg: "leading-8 sm:leading-9",
@@ -19,7 +19,7 @@ const LEADING: Record<ParaSize, string> = {
 };
 
 type PProps = React.ComponentPropsWithoutRef<"p"> & {
-  size?: ParaSize;
+  size?: PSize;
 };
 
 export function P({ size = "md", className, children, ...rest }: PProps) {

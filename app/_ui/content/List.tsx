@@ -1,6 +1,7 @@
 import { cn } from "@/app/_lib/utils/cn";
 import { FaCheck } from "react-icons/fa6";
 import { P } from "../typography/paragraph";
+import type { PSize } from "../typography/paragraph";
 
 type Props = {
   items: readonly string[];
@@ -14,6 +15,7 @@ type Props = {
 
   layout?: "stack" | "grid"; // ✅ NEW: choose list layout
   columns?: 1 | 2 | 3 | 4; // ✅ NEW: grid columns on sm+
+  size?: PSize
 };
 
 const List = ({
@@ -25,6 +27,7 @@ const List = ({
   showIcon = true,
   layout = "stack",
   columns = 2,
+  size,
 }: Props) => {
   if (!items.length) return null;
 
@@ -69,6 +72,7 @@ const List = ({
               "text-gray-600 rounded-xl px-1 ",
               textClassName,
             )}
+            size={size}
           >
             {item}
           </P>
