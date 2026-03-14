@@ -16,7 +16,6 @@ type Props = {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
   const office = getPrivateOfficeBySlug(slug);
-  console.log("office___________", office);
 
   if (!office) notFound();
 

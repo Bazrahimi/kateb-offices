@@ -13,17 +13,16 @@ type Props = {
 
 export default function WorkspaceOfferCard({ offer, serviceLabel }: Props) {
   return (
-    <div className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+    <div className="flex h-full flex-col rounded-3xl bg-white p-2 shadow-sm ring-1 ring-slate-200">
       <Header as="h3" className="text-base font-semibold text-slate-900">
         {serviceLabel}
       </Header>
-
-      <div className="mb-5 overflow-hidden rounded-2xl aspect-[16/10] relative">
+      <div className="overflow-hidden rounded-2xl aspect-[16/10] relative">
         <Image
           src={offer.image}
           alt={offer.summary}
           fill
-          className="object-contain p-4"
+          className="object-cover"
         />
       </div>
 
