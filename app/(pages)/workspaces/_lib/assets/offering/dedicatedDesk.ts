@@ -1,7 +1,7 @@
 export type DedicatedDesk = {
   id: string;
   label: string;
-  access: string;
+  access?: string;
   price: string;
   inclusions?: string[];
 };

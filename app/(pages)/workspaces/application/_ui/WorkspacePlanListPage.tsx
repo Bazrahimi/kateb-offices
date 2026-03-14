@@ -8,7 +8,7 @@ import Image from "next/image";
 export type WorkspacePlan = {
   id: string;
   label: string;
-  access: string;
+  access?: string;
   price: string;
   inclusions?: string[];
 };
@@ -46,7 +46,8 @@ const WorkspacePlanListPage = ({ plans, offering }: Props) => {
             </div>
 
             <div className="space-y-3">
-              <P className="text-slate-600">{plan.access}</P>
+              {plan.access ? <P className="text-slate-600">{plan.access}</P> : null}
+              
 
               <div className="pt-2">
                 <P className="uppercase tracking-wide text-slate-500">Price</P>
