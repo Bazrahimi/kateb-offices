@@ -52,7 +52,7 @@ export default function WorkspaceCtaPanel({
         </Button>
 
         <Button variant="secondary" onClick={onOpenTour} fullWidth>
-          Book inspection / tour
+          Book Inspection / Tour
         </Button>
       </div>
     </div>

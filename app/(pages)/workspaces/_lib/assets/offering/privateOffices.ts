@@ -104,7 +104,7 @@ export const privateOfficeRooms: PrivateOffice[] = [
   {
     id: "private-office-3",
     slug: "private-external-office-suite-3",
-    label: "external Office Suite 3",
+    label: "External Office Suite 3",
     images: [
       {
         url: "vacancy/internal-office/external-office123_qr0thb.png",
