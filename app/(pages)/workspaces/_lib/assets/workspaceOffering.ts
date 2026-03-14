@@ -48,7 +48,7 @@ const meetingRoomsFee: WorkspaceOffering = {
   priceLabel: "From $5/hr",
   summary:
     "Professional meeting and conference rooms suitable for client meetings, team discussions, presentations, and workshops.",
-  btnContent: "Sign Up",
+  btnContent: "Book Meeting Room",
   href: routes.meetingRooms(),
 };
 

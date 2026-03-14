@@ -1,3 +1,4 @@
+//app/(pages)/workspaces/_lib/assets/offering/dedicatedDesk.ts
 export type DedicatedDesk = {
   id: string;
   label: string;
