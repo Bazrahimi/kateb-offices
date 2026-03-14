@@ -11,6 +11,7 @@ export type PrivateOffice = {
   label: string;
   images: PrivateOfficeImage[];
   description: string[];
+  dimension: string;
   priceLabel: string;
   availableFrom: string;
   capacity: string;
@@ -22,7 +23,6 @@ export type PrivateOffice = {
   minimumTerm?: string;
   bondRequired?: string;
   sizeLabel?: string;
-  href?: string;
 };
 
 export type PrivateOfficeCard = Pick<
@@ -53,10 +53,11 @@ export const privateOfficeRooms: PrivateOffice[] = [
       },
     ],
     description: [
-      "Professional furnished private office suitable for a team of up to 4 people.",
+      "Professional furnished private office suitable for a team",
       "Includes desks, chairs, storage cabinets, and access to shared amenities.",
     ],
-    priceLabel: "From $1520/month",
+    dimension: "4.5 x 3.5 meters",
+    priceLabel: "$1520/month",
     availableFrom: "Available now",
     capacity: "Up to 4 people",
     status: "available",
@@ -67,7 +68,6 @@ export const privateOfficeRooms: PrivateOffice[] = [
     ],
     ctaLabel: "View office",
     officeType: "internal",
-    href: "/join-workspace/private-office/private-office-suite-1",
   },
   {
     id: "private-office-2",
@@ -84,9 +84,10 @@ export const privateOfficeRooms: PrivateOffice[] = [
       },
     ],
     description: [
-      "Professional furnished private office suitable for a team of up to 4 people.",
+      "Professional furnished private office suitable for a team",
       "Includes desks, chairs, storage cabinets, and access to shared amenities.",
     ],
+    dimension: "3.5 x 3.5 meters",
     priceLabel: "From $1520/month",
     availableFrom: "Available now",
     capacity: "Up to 4 people",
@@ -98,10 +99,9 @@ export const privateOfficeRooms: PrivateOffice[] = [
     ],
     ctaLabel: "View office",
     officeType: "internal",
-    href: "/join-workspace/private-office/private-office-suite-2",
   },
 
-    {
+  {
     id: "private-office-3",
     slug: "private-external-office-suite-3",
     label: "external Office Suite 3",
@@ -116,9 +116,10 @@ export const privateOfficeRooms: PrivateOffice[] = [
       },
     ],
     description: [
-      "Professional furnished private office suitable for a team of up to 4 people.",
+      "Professional furnished private office suitable for a team",
       "Includes desks, chairs, storage cabinets, and access to shared amenities.",
     ],
+    dimension: "3.5 x 3.5 meters",
     priceLabel: "From $1620/month",
     availableFrom: "Available now",
     capacity: "Up to 4 people",
@@ -130,7 +131,6 @@ export const privateOfficeRooms: PrivateOffice[] = [
     ],
     ctaLabel: "View office",
     officeType: "internal",
-    href: "/join-workspace/private-office/private-office-suite-3",
   },
 ];
 

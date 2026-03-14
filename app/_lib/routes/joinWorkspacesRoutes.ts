@@ -5,4 +5,5 @@ export const workspacesRoutes = {
   privateOffice: () => "/workspaces/private-office",
   meetingRooms: () => "/workspaces/book-meeting-rooms",
   application: () => "/workspaces/application",
+ 
 };

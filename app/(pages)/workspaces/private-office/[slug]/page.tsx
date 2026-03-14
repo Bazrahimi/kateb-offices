@@ -1,11 +1,11 @@
 // app/join-workspaces/private-offices/[slug]/page.tsx
 import { workspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
-import Button from "@/app/_ui/button/Button";
 import ImageGallery from "@/app/_ui/image/ImageGallery";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import { notFound } from "next/navigation";
 import { getPrivateOfficeBySlug } from "../../_lib/assets/offering/privateOffices";
+import WorkspaceActionsClient from "./_ui/WorkspaceActionsClient";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -22,10 +22,7 @@ export default async function Page({ params }: Props) {
       <div className="mx-auto max-w-5xl space-y-6 px-4">
         <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
           <div className="grid gap-6 p-6 lg:grid-cols-[1.2fr_0.8fr]">
-            <ImageGallery
-              images={office.images}
-              priorityFirstImage
-            />
+            <ImageGallery images={office.images} priorityFirstImage />
 
             <div className="space-y-5">
               <div>
@@ -39,7 +36,7 @@ export default async function Page({ params }: Props) {
                 <P className="text-4xl font-bold text-org-primary-main">
                   {office.priceLabel}
                 </P>
-                <P className="text-slate-700">{office.capacity}</P>
+
                 <P
                   className={`inline-flex rounded-full px-3 py-1 text-sm font-medium ${
                     office.status === "available"
@@ -50,6 +47,13 @@ export default async function Page({ params }: Props) {
                   {office.status}
                 </P>
               </div>
+
+              <P className="text-slate-700">{office.capacity}</P>
+              <P className="text-slate-700">
+                <span className="font-semibold">Private office size:</span>{" "}
+                {office.dimension} — a professional, tenant-ready workspace with
+                all key amenities for seamless business operations.
+              </P>
 
               <div className="space-y-2">
                 {office.description.map((item) => (
@@ -76,19 +80,15 @@ export default async function Page({ params }: Props) {
                   </ul>
                 </div>
               ) : null}
-
-              <Button
-                as="link"
-                href={`${workspacesRoutes.application()}?office=${encodeURIComponent(
-                  office.label,
-                )}`}
-                fullWidth
-              >
-                Enquire about this office
-              </Button>
             </div>
           </div>
         </article>
+        <WorkspaceActionsClient
+          officeLabel={office.label}
+          applicationHref={`${workspacesRoutes.application()}?membership=${encodeURIComponent(
+            office.label,
+          )}`}
+        />
       </div>
     </main>
   );
