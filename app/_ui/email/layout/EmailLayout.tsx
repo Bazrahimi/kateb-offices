@@ -40,8 +40,8 @@ export default function EmailLayout({
           {/* Header */}
           <Section style={styles.header}>
             <Img
-              src={`${getBaseUrl()}${publicAssets.icons.apple}`}
-              alt={`${ORG_PROFILE.orgName} logo`}
+              src={`${getBaseUrl()}${publicAssets.icons.icon}`}
+              alt={`${ORG_PROFILE.orgName} icon`}
               width={48}
               height={48}
               style={styles.logo}
@@ -52,14 +52,7 @@ export default function EmailLayout({
                 {ORG_PROFILE.orgName}
               </Heading>
 
-              {ORG_PROFILE.orgNameFarsi &&
-                ORG_PROFILE.otherLangKeys?.some(
-                  (k) => k === "HZ" || k === "FA",
-                ) && (
-                  <Text style={styles.brandFarsi}>
-                    {ORG_PROFILE.orgNameFarsi}
-                  </Text>
-                )}
+       
             </div>
           </Section>
 

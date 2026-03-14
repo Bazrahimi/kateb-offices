@@ -1,7 +1,7 @@
 // app/join-workspaces/application/_lib/constant.ts
 
 export const APPLICATION_FIELDS = {
-  membership: "membership",
+  application: "application",
   businessName: "businessName",
   abn: "abn",
   industry: "industry",

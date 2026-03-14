@@ -13,10 +13,10 @@ import { APPLICATION_FIELDS as F } from "../../_lib/constant";
 import AddressFields from "./AddressFields";
 
 type Props = {
-  membership: string;
+  application: string;
 };
 
-export default function ApplicationForm({ membership }: Props) {
+export default function ApplicationForm({ application }: Props) {
   const [state, formAction, isPending] = useActionState(
     submitApplication,
     undefined,
@@ -52,11 +52,11 @@ export default function ApplicationForm({ membership }: Props) {
         <div className="space-y-1">
           <P size="sm">
             You are applying for:{" "}
-            <strong>{membership || "No membership selected"}</strong>
+            <strong>{application || "No application selected"}</strong>
           </P>
         </div>
 
-        <input type="hidden" name={F.membership} value={membership} />
+        <input type="hidden" name={F.application} value={application} />
         <input
           type="hidden"
           name={F.billingSameAsAbove}

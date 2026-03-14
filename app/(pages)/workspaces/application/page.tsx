@@ -4,18 +4,18 @@ import ApplicationForm from "./_ui/ApplicationForm";
 
 type PageProps = {
   searchParams?: Promise<{
-    membership?: string;
+    application?: string;
   }>;
 };
 
 export default async function Page({ searchParams }: PageProps) {
   const params = await searchParams;
-  const membership = params?.membership ?? "";
+  const application = params?.application ?? "";
 
   return (
     <main className="min-h-screen bg-slate-50 py-10">
       <div className="mx-auto max-w-3xl px-4">
-        <ApplicationForm membership={membership} />
+        <ApplicationForm application={application} />
       </div>
     </main>
   );

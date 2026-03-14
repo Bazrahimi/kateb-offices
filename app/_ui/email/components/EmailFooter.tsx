@@ -24,8 +24,8 @@ export default function EmailFooter() {
       }}
     >
       <Img
-        src={`${getBaseUrl()}${publicAssets.icons.apple}`}
-        alt={`${ORG_PROFILE.orgName} logo`}
+        src={`${getBaseUrl()}${publicAssets.icons.icon}`}
+        alt={`${ORG_PROFILE.orgName} icon`}
         width={48}
         height={48}
         style={{

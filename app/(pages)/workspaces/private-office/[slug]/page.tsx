@@ -85,7 +85,7 @@ export default async function Page({ params }: Props) {
         </article>
         <WorkspaceActionsClient
           officeLabel={office.label}
-          applicationHref={`${workspacesRoutes.application()}?membership=${encodeURIComponent(
+          applicationHref={`${workspacesRoutes.application()}?application=${encodeURIComponent(
             office.label,
           )}`}
         />

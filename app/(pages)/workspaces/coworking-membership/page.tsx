@@ -62,7 +62,7 @@ export default function Page() {
 
             <Button
               as="link"
-              href={`${workspacesRoutes.application()}?membership=${encodeURIComponent(
+              href={`${workspacesRoutes.application()}?application=${encodeURIComponent(
                 plan.label,
               )}`}
               fullWidth

@@ -20,7 +20,7 @@ export default function NewApplication({
       title="New Workspace Application Received"
     >
       <Text>
-        <strong>Membership:</strong> {data.membership}
+        <strong>Application:</strong> {data.application}
       </Text>
 
       <Hr />

@@ -10,7 +10,7 @@ import { APPLICATION_FIELDS as F } from "./constant";
 
 export const ApplicationSchema = z
   .object({
-    [F.membership]: z.string().min(1, "Membership is required"),
+    [F.application]: z.string().min(1, "Membership is required"),
 
     [F.businessName]: z.string().min(2, "Please enter your business name"),
     [F.abn]: z.string().optional(),
