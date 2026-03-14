@@ -24,7 +24,6 @@ export default async function Page({ params }: Props) {
           <div className="grid gap-6 p-6 lg:grid-cols-[1.2fr_0.8fr]">
             <ImageGallery
               images={office.images}
-              alt={office.label}
               priorityFirstImage
             />
 

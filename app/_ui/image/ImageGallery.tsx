@@ -8,7 +8,6 @@ export type ImageMeta = {
 
 export type ImageGalleryProps = {
   images: ImageMeta[];
-  alt: string;
   priorityFirstImage?: boolean;
 };
 
@@ -25,7 +24,6 @@ const GalleryFallback = () => (
 
 const ImageGallery = ({
   images,
-  alt,
   priorityFirstImage,
 }: ImageGalleryProps) => {
   if (!images?.length) return null;
@@ -34,7 +32,6 @@ const ImageGallery = ({
     <Suspense fallback={<GalleryFallback />}>
       <ImageGalleryClient
         images={images}
-        alt={alt}
         priorityFirstImage={priorityFirstImage}
       />
     </Suspense>

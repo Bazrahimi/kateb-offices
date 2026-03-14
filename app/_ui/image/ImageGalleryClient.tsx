@@ -12,16 +12,12 @@ import { type Swiper as SwiperType } from "swiper";
 import { Keyboard, Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
 
 import type { ImageGalleryProps } from "./ImageGallery";
 import { IMAGE_DEFAULT_BLUR } from "./ImageShimer";
 
 const ImageGalleryClient = ({
   images,
-  alt,
   priorityFirstImage = false,
 }: ImageGalleryProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -101,14 +97,12 @@ const ImageGalleryClient = ({
                       setIsFullscreen(true);
                     }}
                     className="block w-full text-left"
-                    aria-label={`Open ${
-                      img.alt ?? `${alt} ${index + 1}`
-                    } in fullscreen`}
+                    aria-label={`Open ${img.alt} in fullscreen`}
                   >
                     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
                       <Image
                         src={src}
-                        alt={img.alt ?? `${alt} ${index + 1}`}
+                        alt={img.alt}
                         fill
                         className="object-cover object-center"
                         priority={priorityFirstImage && index === 0}
@@ -156,9 +150,9 @@ const ImageGalleryClient = ({
                     }`}
                   >
                     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-50">
-                      <Image
+                    <Image
                         src={src}
-                        alt={`${img.alt ?? `${alt} ${index + 1}`} thumbnail`}
+                        alt={`${img.alt} thumbnail`}
                         fill
                         className="object-cover object-center"
                         sizes="(min-width: 1024px) 20vw, 30vw"
@@ -207,9 +201,9 @@ const ImageGalleryClient = ({
 
           <div className="flex h-full w-full items-center justify-center p-4 sm:p-8">
             <div className="relative h-full w-full max-w-7xl">
-                <Image
+              <Image
                 src={cldFullscreenImage(images[activeIndex].url)}
-                alt={images[activeIndex].alt ?? `${alt} ${activeIndex + 1}`}
+                alt={images[activeIndex].alt}
                 fill
                 className="object-contain"
                 sizes="100vw"
