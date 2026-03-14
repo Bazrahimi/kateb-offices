@@ -1,4 +1,4 @@
-export type CoworkingMemberships = {
+export type DedicatedDesk = {
   id: string;
   label: string;
   access: string;
@@ -6,17 +6,20 @@ export type CoworkingMemberships = {
   inclusions?: string[];
 };
 
-export const coworkingMemberships: CoworkingMemberships[] = [
+export const dedicatedDesk: DedicatedDesk[] = [
   {
-    id: "everyday-membership",
-    label: "Everyday Membership",
+    id: "dedicated-desk",
+    label: "Dedicated Desk",
     access: "Every Day",
-    price: "$150",
+    price: "$250",
     inclusions: [
       "Access to shared amenities",
       "24/7 access",
+      "Lockable storage",
       "High-speed internet",
       "Discount (50%) meetings rooms",
+      "Reception Services",
+      "Business Address"
     ],
   },
 ];

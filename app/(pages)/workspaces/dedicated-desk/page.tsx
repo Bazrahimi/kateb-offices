@@ -1,18 +1,17 @@
-import { offering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
 import { workspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
 import Button from "@/app/_ui/button/Button";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
-import { coworkingMemberships } from "../_lib/assets/offering/coworkingMembership";
+import { dedicatedDesk } from "../_lib/assets/offering/dedicatedDesk";
+import { offering } from "../_lib/assets/workspaceOffering";
 
-export default function Page() {
-  const offeringData = offering.coworkingMembership.offering;
-
+const Page = () => {
+  const offeringData = offering.dedicatedDesk.offering;
   return (
     <main className="min-h-screen bg-slate-100 py-10">
       <div className="mx-auto max-w-md space-y-6 px-4">
-        {coworkingMemberships.map((plan) => (
+        {dedicatedDesk.map((plan) => (
           <div
             key={plan.id}
             className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200"
@@ -20,7 +19,6 @@ export default function Page() {
             <Header as="h1" size="sm" className="text-slate-900">
               {plan.label}
             </Header>
-
             <div className="relative mb-8 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
               <Image
                 src={offeringData.image}
@@ -44,7 +42,6 @@ export default function Page() {
                 </P>
               </div>
             </div>
-
             {plan.inclusions?.length ? (
               <div className="mt-8">
                 <ul className="mt-4 space-y-3">
@@ -74,4 +71,6 @@ export default function Page() {
       </div>
     </main>
   );
-}
+};
+
+export default Page;

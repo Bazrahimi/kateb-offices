@@ -65,6 +65,7 @@ export const privateOfficeRooms: PrivateOffice[] = [
       "Furnished office",
       "Shared amenities",
       "Professional business environment",
+      "High-speed internet"
     ],
     ctaLabel: "View office",
     officeType: "internal",
@@ -96,6 +97,7 @@ export const privateOfficeRooms: PrivateOffice[] = [
       "Furnished office",
       "Shared amenities",
       "Professional business environment",
+      "High-speed internet"
     ],
     ctaLabel: "View office",
     officeType: "internal",
@@ -128,6 +130,7 @@ export const privateOfficeRooms: PrivateOffice[] = [
       "Furnished office",
       "Shared amenities",
       "Professional business environment",
+      "High-speed internet"
     ],
     ctaLabel: "View office",
     officeType: "internal",
