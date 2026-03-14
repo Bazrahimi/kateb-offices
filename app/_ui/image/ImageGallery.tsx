@@ -1,0 +1,39 @@
+import { Suspense } from "react";
+import ImageGalleryClient from "./ImageGalleryClient";
+
+export type ImageGalleryProps = {
+  images: string[];
+  alt: string;
+  priorityFirstImage?: boolean;
+};
+
+const GalleryFallback = () => (
+  <div className="space-y-3 animate-pulse">
+    <div className="aspect-[16/10] w-full rounded-2xl bg-slate-200" />
+    <div className="grid grid-cols-3 gap-3">
+      <div className="aspect-[4/3] rounded-xl bg-slate-200" />
+      <div className="aspect-[4/3] rounded-xl bg-slate-200" />
+      <div className="aspect-[4/3] rounded-xl bg-slate-200" />
+    </div>
+  </div>
+);
+
+const ImageGallery = ({
+  images,
+  alt,
+  priorityFirstImage,
+}: ImageGalleryProps) => {
+  if (!images?.length) return null;
+
+  return (
+    <Suspense fallback={<GalleryFallback />}>
+      <ImageGalleryClient
+        images={images}
+        alt={alt}
+        priorityFirstImage={priorityFirstImage}
+      />
+    </Suspense>
+  );
+};
+
+export default ImageGallery;

@@ -1,11 +1,9 @@
 // app/join-workspaces/private-offices/[slug]/page.tsx
-import { cldLeafAuto } from "@/app/_lib/cloudinary/cloudinary";
 import { workspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
 import Button from "@/app/_ui/button/Button";
-import { IMAGE_DEFAULT_BLUR } from "@/app/_ui/image/ImageShimer";
+import ImageGallery from "@/app/_ui/image/ImageGallery";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPrivateOfficeBySlug } from "../../_lib/assets/offering/privateOffices";
 
@@ -24,38 +22,11 @@ export default async function Page({ params }: Props) {
       <div className="mx-auto max-w-5xl space-y-6 px-4">
         <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
           <div className="grid gap-6 p-6 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="space-y-3">
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
-                <Image
-                  src={cldLeafAuto(office.images[0])}
-                  alt={office.label}
-                  fill
-                  className="object-cover object-center"
-                  placeholder="blur"
-                  blurDataURL={IMAGE_DEFAULT_BLUR}
-                />
-              </div>
-
-              {office.images.length > 1 ? (
-                <div className="grid grid-cols-3 gap-3">
-                  {office.images.slice(1).map((img) => (
-                    <div
-                      key={img}
-                      className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-50"
-                    >
-                      <Image
-                        src={cldLeafAuto(img)}
-                        alt={office.label}
-                        fill
-                        className="object-cover object-center"
-                        placeholder="blur"
-                        blurDataURL={IMAGE_DEFAULT_BLUR}
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-            </div>
+            <ImageGallery
+              images={office.images}
+              alt={office.label}
+              priorityFirstImage
+            />
 
             <div className="space-y-5">
               <div>
