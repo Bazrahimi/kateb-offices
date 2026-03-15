@@ -1,18 +1,10 @@
 // app/(pages)/workspaces/book-meeting-rooms/page.tsx
 
+import { meetingRoomPlans } from "../_lib/assets/offering/meetingRooms";
 import MeetingRoomsBookingPage from "../application/_ui/MeetingRoomsBookingPage";
-import {
-  meetingRoomEligibility,
-  meetingRoomPlans,
-} from "../_lib/assets/offering/meetingRooms";
 
 const Page = () => {
-  return (
-    <MeetingRoomsBookingPage
-      rooms={meetingRoomPlans}
-      eligibility={meetingRoomEligibility}
-    />
-  );
+  return <MeetingRoomsBookingPage rooms={meetingRoomPlans} />;
 };
 
 export default Page;

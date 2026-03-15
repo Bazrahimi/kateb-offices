@@ -1,6 +1,4 @@
-// app/(pages)/workspaces/_lib/assets/offering/meetingRooms.ts
-
-export type MeetingRoomPlan = {
+export type MembersMeetingRoomPlan = {
   id: string;
   label: string;
   capacity: string;
@@ -12,32 +10,29 @@ export type MeetingRoomPlan = {
   eligibilityNotes?: string[];
 };
 
-
-
-export const meetingRoomPlans: MeetingRoomPlan[] = [
+export const memberMeetingRoom: MembersMeetingRoomPlan[] = [
   {
-    id: "day-office",
-    label: "Day Office",
+    id: "day-office-existing-workspace-tenant",
+    label: "Day Office existing tenant ",
     capacity: "Up to 4 people",
-    priceLabel: "$40",
+    priceLabel: "$20",
     durationLabel: "per hour",
     image: "meeting-room_lxqgem.png",
     description: [
-      "Ideal for professionals who need a quiet and professional workspace for a few hours or a full day.",
-      
+      "Ideal for  Existing Workspace Tenants who need a quiet and professional workspace for a few hours or a full day.",
     ],
     includedFeatures: [
       "Private furnished office",
       "High-speed internet",
-
       "Reception support available",
     ],
   },
+
   {
-    id: "hydra-meeting-room",
-    label: "Hydra Meeting Room",
+    id: "hydra-meeting-room-members",
+    label: "Hydra Meeting Room (Members only)",
     capacity: "Up to 8 people",
-    priceLabel: "$45",
+    priceLabel: "$25",
     durationLabel: "per hour",
     image: "meeting-room_lxqgem.png",
     description: [
@@ -50,11 +45,11 @@ export const meetingRoomPlans: MeetingRoomPlan[] = [
       "Reception support available",
     ],
   },
-  {
+    {
     id: "leo-conference-room",
     label: "Leo Conference Room",
     capacity: "Up to 25 people",
-    priceLabel: "$85",
+    priceLabel: "$42.5",
     durationLabel: "per hour",
     image: "conference-room_iphq8c.png",
     description: [
@@ -68,4 +63,3 @@ export const meetingRoomPlans: MeetingRoomPlan[] = [
     ],
   },
 ];
-

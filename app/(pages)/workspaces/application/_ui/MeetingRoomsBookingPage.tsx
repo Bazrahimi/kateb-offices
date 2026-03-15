@@ -12,21 +12,13 @@ import { useState } from "react";
 
 import { cldLeafAuto } from "@/app/_lib/cloudinary/cloudinary";
 import List from "@/app/_ui/content/List";
-import type {
-  MeetingRoomDiscountGroup,
-  MeetingRoomPlan,
-} from "../../_lib/assets/offering/meetingRooms";
+import type { MeetingRoomPlan } from "../../_lib/assets/offering/meetingRooms";
 
 type Props = {
   rooms: MeetingRoomPlan[];
-  eligibility: MeetingRoomDiscountGroup[];
-  pageTitle?: string;
-  pageIntro?: string;
-  isMemberView?: boolean;
-  memberLabel?: string;
 };
 
-const MeetingRoomsBookingPage = ({ rooms, eligibility }: Props) => {
+const MeetingRoomsBookingPage = ({ rooms }: Props) => {
   const [open, setOpen] = useState(false);
   const [ctaKey, setCtaKey] = useState<CtaKey>("bookMeetingRoom");
 
