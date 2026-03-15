@@ -13,6 +13,7 @@ export const publicAssets = {
     coworkingMembership: "/images/svg/Coworking-Membership-Icon.svg",
     dedicatedDesk: "/images/svg/Dedicated-Desk-Icon.svg",
     meetingRooms: "/images/svg/Meeting-Rooms-Icon.svg",
+      meetingRoomsMembers: "/images/svg/Meeting-Rooms-members-Icon.svg",
     privateOffice: "/images/svg/Private-Office-Icon.svg",
     virtualOffice: "/images/svg/Virtual-Office-Icon.svg",
   },

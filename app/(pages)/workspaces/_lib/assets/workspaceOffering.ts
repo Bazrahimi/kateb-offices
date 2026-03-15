@@ -45,11 +45,21 @@ const privateOfficeFee: WorkspaceOffering = {
 const meetingRoomsFee: WorkspaceOffering = {
   image: svg.meetingRooms,
   capacityLabel: "2–25",
-  priceLabel: "From $5/hr",
+  priceLabel: "From $40/hr",
   summary:
     "Professional meeting and conference rooms suitable for client meetings, team discussions, presentations, and workshops.",
   btnContent: "Book Meeting Rooms",
   href: routes.meetingRooms(),
+};
+
+const memberMeetingRoomsFee: WorkspaceOffering = {
+  image: svg.meetingRoomsMembers,
+  capacityLabel: "2–25",
+  priceLabel: "From $20/hr",
+  summary:
+    "Exclusive meeting and conference room access with member discounts for existing workspace tenants and members.",
+  btnContent: "Book Meeting Rooms",
+  href: routes.meetingRoomsMembers(),
 };
 
 export const offering: Record<OfferingKey, Offering> = {
@@ -71,6 +81,10 @@ export const offering: Record<OfferingKey, Offering> = {
   meetingRooms: {
     label: "Meeting Rooms",
     offering: meetingRoomsFee,
+  },
+  memberMeetingRooms: {
+    label: "workspace members Meeting Rooms",
+    offering: memberMeetingRoomsFee,
   },
   virtualOffices: {
     label: "Virtual Offices",

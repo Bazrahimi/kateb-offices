@@ -35,7 +35,9 @@ export type OfferingKey =
   | "coworkingMembership"
   | "dedicatedDesk"
   | "meetingRooms"
+  | "memberMeetingRooms"
   | "virtualOffices";
+
 
 
 export type Offering = {
