@@ -20,6 +20,10 @@ import type {
 type Props = {
   rooms: MeetingRoomPlan[];
   eligibility: MeetingRoomDiscountGroup[];
+  pageTitle?: string;
+  pageIntro?: string;
+  isMemberView?: boolean;
+  memberLabel?: string;
 };
 
 const MeetingRoomsBookingPage = ({ rooms, eligibility }: Props) => {
@@ -54,7 +58,7 @@ const MeetingRoomsBookingPage = ({ rooms, eligibility }: Props) => {
               {rooms.map((room) => (
                 <article
                   key={room.id}
-                  className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200"
+                  className="flex min-h-0 flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200"
                 >
                   <Header as="h3" size="xs" className="text-slate-900">
                     {room.label}
@@ -65,9 +69,25 @@ const MeetingRoomsBookingPage = ({ rooms, eligibility }: Props) => {
                       src={cldLeafAuto(room.image)}
                       alt={room.label}
                       fill
-                      className="object-contain p-4"
+                      className="object-contain"
                     />
                   </div>
+
+                  {room.eligibilityNotes?.length ? (
+                    <div className="mt-4">
+                      <P className="mb-3 uppercase tracking-wide text-slate-500">
+                        Member Notes
+                      </P>
+                      <List
+                        items={room.eligibilityNotes}
+                        showIcon={false}
+                        className="border-0 bg-transparent px-0 py-0"
+                        textClassName="px-0 text-slate-600"
+                        itemClassName="items-start"
+                        size="sm"
+                      />
+                    </div>
+                  ) : null}
 
                   <div className="mt-5 space-y-3">
                     <P className="text-slate-700">{room.capacity}</P>
@@ -98,8 +118,7 @@ const MeetingRoomsBookingPage = ({ rooms, eligibility }: Props) => {
                       <List items={room.includedFeatures} size="sm" />
                     </div>
                   ) : null}
-                  
-                  <div className="mt-6">
+                  <div className="mt-auto">
                     <Button
                       fullWidth
                       onClick={() => openModal("bookMeetingRoom")}

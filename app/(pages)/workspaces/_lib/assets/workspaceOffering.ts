@@ -48,7 +48,7 @@ const meetingRoomsFee: WorkspaceOffering = {
   priceLabel: "From $5/hr",
   summary:
     "Professional meeting and conference rooms suitable for client meetings, team discussions, presentations, and workshops.",
-  btnContent: "Book Meeting Room",
+  btnContent: "Book Meeting Rooms",
   href: routes.meetingRooms(),
 };
 
@@ -69,7 +69,7 @@ export const offering: Record<OfferingKey, Offering> = {
   },
 
   meetingRooms: {
-    label: "Meeting & Conference Rooms",
+    label: "Meeting Rooms",
     offering: meetingRoomsFee,
   },
   virtualOffices: {
