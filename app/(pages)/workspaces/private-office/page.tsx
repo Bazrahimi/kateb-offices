@@ -8,7 +8,7 @@ const Page = () => {
     <main className="min-h-screen bg-slate-100 py-10">
       <div className="mb-10">
         <Header as="h1" size="md" align="center">
-          Private offices vacancies apportunities for tenant
+          Private Offices Currently Available
         </Header>
       </div>
       <div className="mx-auto max-w-6xl space-y-6 px-4">

@@ -7,19 +7,26 @@ const privateOffices = {
     url: "private-offices_external.png",
     alt: "Street-level view of the private office building exterior and entrance in Dandenong",
   },
-  idealFor: {
+  internal1: {
     url: "internal-office_fkqz04.png",
     alt: "Warm-toned internal office with workspace layout for focused team use",
+  },
+
+  external1: {
+    url: "day-office_toaaan.png",
+    alt: "",
+  },
+
+    bigOffice: {
+    url: "open_area2_swc8ma.png",
+    alt: "Open office collaboration area with natural light and versatile meeting-style seating",
   },
  
   locationBenefits: {
     url: "location_w8lwt5.png",
     alt: "Urban streetscape around the workspace showing nearby shops and transport access",
   },
-  whyChooseUs: {
-    url: "open_area2_swc8ma.png",
-    alt: "Open office collaboration area with natural light and versatile meeting-style seating",
-  },
+
 };
 
 const coworkingMembership = {

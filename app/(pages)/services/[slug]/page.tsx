@@ -11,6 +11,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import ServiceDetails from "./_ui/ServiceDetails";
+import { Header } from "@/app/_ui/typography/Header";
 
 export const generateMetadata = async ({
   params,
@@ -54,6 +55,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <ServiceDetails subcategories={service.subcategories} />
         </Section>
       )}
+
+
 
       <Section>
         <Suspense fallback={null}>

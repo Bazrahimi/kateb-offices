@@ -6,7 +6,7 @@ export const privateOffices = {
   overview: {
     label: "External Offices, Corner Offices and Internal Offices ",
     labelFarsi: "معرفی دفاتر خصوصی",
-    image: [imgs.overview],
+    image: [imgs.overview,  imgs.external1, imgs.internal1,imgs.bigOffice],
     description: [
       "Our external window offices offer bright, fully equipped workspaces for teams of 4–8 people, professionally furnished and ready for immediate use. Tenants benefit from high-speed triple-redundant internet, phone and mail handling services, and fully configured meeting rooms for teleconferencing and videoconferencing, all within a modern, professional office environment designed for productivity.",
       "Private offices are ideal for businesses that need privacy, professionalism, and a ready-to-use workspace.",
@@ -16,22 +16,13 @@ export const privateOffices = {
       "Fully furnished office suites",
       "Flexible rental terms",
       "Reception Service Support",
+      "Internal Offices",
+      "External Offices",
+      "Corner Offices",
     ] as const,
   },
 
-  idealFor: {
-    label: "Internal Offices",
-    labelFarsi: "مناسب برای چه کسانی",
-    image: [imgs.idealFor],
-    description: [],
-    items: [
-      "Small businesses",
-      "Consultants and advisors",
-      "Growing teams",
-      "Client-facing service providers",
-      "Remote teams needing a base",
-    ] as const,
-  },
+
 
   includedFeatures: {
     label: "What's Included",
@@ -78,21 +69,4 @@ export const privateOffices = {
     ] as const,
   },
 
-  whyChooseUs: {
-    label: "Why Choose Kateb Offices",
-    labelFarsi: "چرا کاتب آفس",
-    image: [imgs.whyChooseUs],
-    description: [
-      "Kateb Offices combines convenience, presentation, and flexibility for businesses looking for a practical and polished workspace.",
-    ],
-    items: [
-      "Natural light throughout the workspace",
-      "Professional image for clients and visitors",
-      "Flexible lease options",
-      "Modern and welcoming environment",
-      "Cost-effective workspace solution",
-      "Suitable for teams from 1 to 23 desks",
-      "Designated underground car-park",
-    ] as const,
-  },
 } as const satisfies ServiceSubCategory;
