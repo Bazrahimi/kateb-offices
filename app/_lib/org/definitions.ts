@@ -1,6 +1,8 @@
-export type LeafImage =
-  | { kind: "url"; src: string }
-  | { kind: "svg"; text: string };
+
+export type LeafImage = readonly {
+  url: string;
+  alt: string;
+}[];
 
 export type ServiceLeaf = {
   label: string;

@@ -3,7 +3,7 @@ export const coworkingMembership = {
   overview: {
     label: "Coworking  Overview",
     labelFarsi: "معرفی فضای کار اشتراکی",
-    image: { kind: "url", src: "hardesk_srxh6j.png" },
+    image: [{ url: "hardesk_srxh6j.png", alt: "Coworking Overview" }],
     description: [
       "Kateb Offices provides shared work environments that support productivity, flexibility, and professional networking.",
     ],
@@ -18,7 +18,7 @@ export const coworkingMembership = {
   idealFor: {
     label: "Who Coworking Suits",
     labelFarsi: "مناسب برای چه کسانی",
-     image: { kind: "url", src: "hard-desk-3_h827mg.png" },
+    image: [{ url: "hard-desk-3_h827mg.png", alt: "Who Coworking Suits" }],
     description: [
       "Coworking is ideal for individuals and small teams that want flexibility without the cost of a dedicated office.",
     ],
@@ -34,7 +34,7 @@ export const coworkingMembership = {
   benefits: {
     label: "Coworking Benefits",
     labelFarsi: "مزایای فضای کار اشتراکی",
-    image: { kind: "url", src: "open-area_q4cdaa.png" },
+    image: [{ url: "open-area_q4cdaa.png", alt: "Coworking Benefits" }],
     description: [
       "Coworking gives businesses access to professional facilities while keeping costs and commitments lower.",
     ],
@@ -50,7 +50,7 @@ export const coworkingMembership = {
   amenities: {
     label: "Shared Amenities",
     labelFarsi: "امکانات مشترک",
-    image: { kind: "url", src: "kitechn_duvydk.png" },
+    image: [{ url: "kitechn_duvydk.png", alt: "Shared Amenities" }],
     description: [
       "Members benefit from practical day-to-day amenities that support a productive work routine.",
     ],

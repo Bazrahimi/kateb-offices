@@ -4,7 +4,7 @@ export const administrativeSupport = {
   overview: {
     label: "Administrative Support Overview",
     labelFarsi: "معرفی پشتیبانی اداری",
-    image: { kind: "url", src: "reception_yl183o.png" },
+    image: [{ url: "reception_yl183o.png", alt: "Administrative Support Overview" }],
     description: [
       "Kateb Offices offers practical office support services that help businesses operate professionally and efficiently.",
     ],
@@ -19,7 +19,7 @@ export const administrativeSupport = {
   servicesIncluded: {
     label: "Support Services Included",
     labelFarsi: "خدمات پشتیبانی شامل",
-    image: { kind: "url", src: "professional_acvgbm.png" },
+    image: [{ url: "professional_acvgbm.png", alt: "Support Services Included" }],
     description: [
       "Administrative support is designed to reduce the everyday burden of office management.",
     ],
@@ -36,7 +36,7 @@ export const administrativeSupport = {
   businessBenefits: {
     label: "Business Benefits",
     labelFarsi: "مزایای تجاری",
-    image: { kind: "url", src: "flower_mwqo1d.png" },
+    image: [{ url: "flower_mwqo1d.png", alt: "Business Benefits" }],
     description: [
       "Support services help businesses focus on clients and growth rather than office administration.",
     ],
@@ -51,7 +51,7 @@ export const administrativeSupport = {
   whyItMatters: {
     label: "Why Administrative Support Matters",
     labelFarsi: "چرا پشتیبانی اداری مهم است",
-    image: { kind: "url", src: "open-aria_e2bjax.png" },
+    image: [{ url: "open-aria_e2bjax.png", alt: "Why Administrative Support Matters" }],
     description: [
       "Strong support services can make a flexible office feel more like a complete professional headquarters.",
     ],

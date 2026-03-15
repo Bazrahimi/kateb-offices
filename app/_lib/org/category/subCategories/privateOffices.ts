@@ -3,7 +3,7 @@ export const privateOffices = {
   overview: {
     label: "External Offices",
     labelFarsi: "معرفی دفاتر خصوصی",
-    image: { kind: "url", src: "private-offices_external.png" },
+    image: [{ url: "private-offices_external.png", alt: "External Offices" }],
     description: [
       "Our external window offices offer bright, fully equipped workspaces for teams of 4–8 people, professionally furnished and ready for immediate use. Tenants benefit from high-speed triple-redundant internet, phone and mail handling services, and fully configured meeting rooms for teleconferencing and videoconferencing, all within a modern, professional office environment designed for productivity.",
     ],
@@ -19,7 +19,7 @@ export const privateOffices = {
   idealFor: {
     label: "Internal Offices",
     labelFarsi: "مناسب برای چه کسانی",
-    image: { kind: "url", src: "internal-office_fkqz04.png" },
+    image: [{ url: "internal-office_fkqz04.png", alt: "Internal Offices" }],
     description: [
       "Private offices are ideal for businesses that need privacy, professionalism, and a ready-to-use workspace.",
     ],
@@ -35,7 +35,7 @@ export const privateOffices = {
   includedFeatures: {
     label: "What's Included",
     labelFarsi: "امکانات شامل",
-    image: { kind: "url", src: "kitchen_nn6ttg.png" },
+    image: [{ url: "kitchen_nn6ttg.png", alt: "What's Included" }],
     description: [
       "Our offices are designed to reduce setup hassle and provide a complete business-ready environment.",
     ],
@@ -57,7 +57,7 @@ export const privateOffices = {
     label: "Location Benefits",
     labelFarsi: "مزایای موقعیت مکانی",
 
-    image: { kind: "url", src: "location_w8lwt5.png" },
+    image: [{ url: "location_w8lwt5.png", alt: "Location Benefits" }],
     description: [
       "The workspace is positioned for convenience, with strong transport access and nearby retail and dining options.",
     ],
@@ -73,7 +73,7 @@ export const privateOffices = {
   whyChooseUs: {
     label: "Why Choose Kateb Offices",
     labelFarsi: "چرا کاتب آفس",
-    image: { kind: "url", src: "open_area2_swc8ma.png" },
+    image: [{ url: "open_area2_swc8ma.png", alt: "Why Choose Kateb Offices" }],
     description: [
       "Kateb Offices combines convenience, presentation, and flexibility for businesses looking for a practical and polished workspace.",
     ],
