@@ -1,55 +1,96 @@
-
 const privateOffices = {
   services: {
     url: "private-office_u17uat.png",
-    alt: "Modern internal private office with glass walls, geometric frosted privacy film, and colorful abstract wall art",
+    alt: "Bright private office interior with glass partitioning, privacy film panels, and modern abstract wall art",
   },
-  overview: { url: "private-offices_external.png", alt: "External Offices" },
-  idealFor: { url: "internal-office_fkqz04.png", alt: "Internal Offices" },
-  includedFeatures: { url: "kitchen_nn6ttg.png", alt: "What's Included" },
-  locationBenefits: { url: "location_w8lwt5.png", alt: "Location Benefits" },
+  overview: {
+    url: "private-offices_external.png",
+    alt: "Street-level view of the private office building exterior and entrance in Dandenong",
+  },
+  idealFor: {
+    url: "internal-office_fkqz04.png",
+    alt: "Warm-toned internal office with workspace layout for focused team use",
+  },
+  includedFeatures: {
+    url: "kitchen_nn6ttg.png",
+    alt: "Shared office kitchen area with island counter, appliances, and shared lounge seating",
+  },
+  locationBenefits: {
+    url: "location_w8lwt5.png",
+    alt: "Urban streetscape around the workspace showing nearby shops and transport access",
+  },
   whyChooseUs: {
     url: "open_area2_swc8ma.png",
-    alt: "Why Choose Kateb Offices",
+    alt: "Open office collaboration area with natural light and versatile meeting-style seating",
   },
 };
 
 const coworkingMembership = {
-  services: { url: "co-working_uv5zcp.png", alt: "Coworking Spaces" },
-  overview: { url: "hardesk_srxh6j.png", alt: "Coworking Overview" },
-  idealFor: { url: "hard-desk-3_h827mg.png", alt: "Who Coworking Suits" },
-  benefits: { url: "open-area_q4cdaa.png", alt: "Coworking Benefits" },
-  amenities: { url: "kitechn_duvydk.png", alt: "Shared Amenities" },
+  services: {
+    url: "co-working_uv5zcp.png",
+    alt: "Coworking floor with shared desks and collaborative modern office ambiance",
+  },
+  overview: {
+    url: "hardesk_srxh6j.png",
+    alt: "Focused coworking workstation area with ergonomic desk and storage",
+  },
+  idealFor: {
+    url: "hard-desk-3_h827mg.png",
+    alt: "Freelancer and startup team members working at adjustable coworking desks",
+  },
+  benefits: {
+    url: "open-area_q4cdaa.png",
+    alt: "Open collaborative workspace zone with natural light and social interaction points",
+  },
+  amenities: {
+    url: "kitechn_duvydk.png",
+    alt: "Workspace technology and shared amenity area with office equipment and lounge design",
+  },
 };
 
 const meetingRooms = {
   services: {
-    url: "meeting-room_lxqgem.png",
-    alt: "Meeting and Conference Rooms",
+    url: "conference_room_k6cmkn.png",
+    alt: "Clean modern meeting room with conference table and formal business setup",
   },
-  overview: { url: "meeting-room_lxqgem.png", alt: "Meeting Rooms Overview" },
-  suitableFor: { url: "conference-room_iphq8c.png", alt: "Suitable Uses" },
+  overview: {
+    url: "private-office2_z91feb.png",
+    alt: "Formal conference room with presenter area and contemporary business decor",
+  },
+  suitableFor: {
+    url: "conference-room_iphq8c.png",
+    alt: "Conference space designed for client meetings with whiteboard-ready wall and table setup",
+  },
   supportServices: {
     url: "professional_acvgbm.png",
-    alt: "Meeting Support Services",
+    alt: "Professional team running meeting-room support services in a contemporary office",
   },
   whyChooseOurRooms: {
-    url: "open-area_q4cdaa.png",
-    alt: "Why Use Our Meeting Rooms",
+    url: "day-office_toaaan.png",
+    alt: "Open office environment surrounding meeting areas with flexible workspace seating",
   },
 };
 
 const virtualOffices = {
-  services: { url: "waiting_area_cnsymo.png", alt: "Virtual Offices" },
-  overview: { url: "virtual_vi9jum.png", alt: "Virtual Office Overview" },
+  services: {
+    url: "waiting_area_cnsymo.png",
+    alt: "Welcoming office waiting area with reception desk and professional branding",
+  },
+  overview: {
+    url: "virtual_vi9jum.png",
+    alt: "Bright virtual-office lounge area showing reception-focused workspace",
+  },
   idealFor: {
     url: "coworking-space_khioi8.png",
-    alt: "Who Virtual Offices Suit",
+    alt: "Shared coworking space suitable for remote teams and mobile professionals",
   },
-  keyBenefits: { url: "private-room_amp7ny.png", alt: "Key Benefits" },
+  keyBenefits: {
+    url: "private-room_amp7ny.png",
+    alt: "Private office room with seating and worktable, suitable for focused virtual operations",
+  },
   whyKateb: {
     url: "reception_yl183o.png",
-    alt: "Why Choose Kateb Offices for Virtual Office Services",
+    alt: "Reception desk and seating area representing front-of-house virtual office support",
   },
 };
 

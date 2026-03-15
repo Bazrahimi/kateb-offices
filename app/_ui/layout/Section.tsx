@@ -18,7 +18,7 @@ export default function Section({
       id={id}
       aria-labelledby={labelledBy}
       className={cn(
-        "scroll-mt-24 rounded-b-3xl border border-slate-200 shadow-sm p-2 sm:p-4 bg-org-secondary-light",
+        "rounded-b-3xl border border-slate-200 shadow-sm p-2 sm:p-4 bg-org-primary-dark",
         className,
       )}
     >

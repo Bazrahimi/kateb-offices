@@ -1,20 +1,20 @@
+import { servicesCldImgs } from "../../assets";
 import { ServiceSubCategory } from "../../definitions";
-import { servicesCldImgs} from "../../assets";
-const imgs = servicesCldImgs.privateOffices
+const imgs = servicesCldImgs.privateOffices;
 export const privateOffices = {
   overview: {
-    label: "External Offices",
+    label: "External Offices, Corner Offices and Internal Offices ",
     labelFarsi: "معرفی دفاتر خصوصی",
     image: [imgs.overview],
     description: [
       "Our external window offices offer bright, fully equipped workspaces for teams of 4–8 people, professionally furnished and ready for immediate use. Tenants benefit from high-speed triple-redundant internet, phone and mail handling services, and fully configured meeting rooms for teleconferencing and videoconferencing, all within a modern, professional office environment designed for productivity.",
+      "Private offices are ideal for businesses that need privacy, professionalism, and a ready-to-use workspace.",
     ],
     items: [
       "Central Dandenong location",
       "Fully furnished office suites",
       "Flexible rental terms",
-      "Suitable for teams from 1 to 23 desks",
-      "Designated underground car-park"
+      "Reception Service Support",
     ] as const,
   },
 
@@ -22,9 +22,7 @@ export const privateOffices = {
     label: "Internal Offices",
     labelFarsi: "مناسب برای چه کسانی",
     image: [imgs.idealFor],
-    description: [
-      "Private offices are ideal for businesses that need privacy, professionalism, and a ready-to-use workspace.",
-    ],
+    description: [],
     items: [
       "Small businesses",
       "Consultants and advisors",
@@ -51,7 +49,7 @@ export const privateOffices = {
       "Mail handling",
       "Printing facilities",
       "sound proof privacy room",
-      "Zen Relaxation Room"
+      "Zen Relaxation Room",
     ] as const,
   },
 
@@ -85,6 +83,8 @@ export const privateOffices = {
       "Flexible lease options",
       "Modern and welcoming environment",
       "Cost-effective workspace solution",
+      "Suitable for teams from 1 to 23 desks",
+      "Designated underground car-park",
     ] as const,
   },
 } as const satisfies ServiceSubCategory;
