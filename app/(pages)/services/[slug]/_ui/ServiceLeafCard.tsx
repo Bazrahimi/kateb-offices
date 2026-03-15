@@ -5,6 +5,7 @@ import List from "@/app/_ui/content/List";
 import { P } from "@/app/_ui/typography/paragraph";
 import ServiceLeafImage from "./ServiceLeafImage";
 import { Header } from "@/app/_ui/typography/Header";
+import ImageGallery from "@/app/_ui/image/ImageGallery";
 
 type Props = {
   leaf: ServiceLeaf;
@@ -57,8 +58,9 @@ export default function ServiceLeafCard({ leaf, index, leafId }: Props) {
               hasItems ? "sm:col-span-6" : "sm:col-span-12",
               isEven ? "sm:order-2" : "sm:order-1",
             )}
-          >
-            <ServiceLeafImage image={leaf.image} alt={leaf.label} />
+          > 
+          <ImageGallery images={leaf.image} />
+      
   
           </aside>
         </div>

@@ -1,6 +1,7 @@
 import { servicesCldImgs } from "../../assets";
 import { ServiceSubCategory } from "../../definitions";
 const imgs = servicesCldImgs.privateOffices;
+const amenities = servicesCldImgs.amenities;
 export const privateOffices = {
   overview: {
     label: "External Offices, Corner Offices and Internal Offices ",
@@ -35,7 +36,14 @@ export const privateOffices = {
   includedFeatures: {
     label: "What's Included",
     labelFarsi: "امکانات شامل",
-    image: [imgs.includedFeatures],
+    image: [
+      amenities.kitchen,
+      amenities.meetingRoom1,
+      amenities.meetingRoom2,
+      amenities.reception,
+      amenities.telephone,
+      amenities.waitingArea,
+    ],
     description: [
       "Our offices are designed to reduce setup hassle and provide a complete business-ready environment.",
     ],

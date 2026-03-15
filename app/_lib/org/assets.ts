@@ -11,10 +11,7 @@ const privateOffices = {
     url: "internal-office_fkqz04.png",
     alt: "Warm-toned internal office with workspace layout for focused team use",
   },
-  includedFeatures: {
-    url: "kitchen_nn6ttg.png",
-    alt: "Shared office kitchen area with island counter, appliances, and shared lounge seating",
-  },
+ 
   locationBenefits: {
     url: "location_w8lwt5.png",
     alt: "Urban streetscape around the workspace showing nearby shops and transport access",
@@ -94,9 +91,37 @@ const virtualOffices = {
   },
 };
 
+export const amenities = {
+  kitchen: {
+    url: "kitchen_nn6ttg.png",
+    alt: "Shared office kitchen featuring a dark island bench, modern wood pendant lighting, and booth seating.",
+  },
+  waitingArea: {
+    url: "waiting_area_cnsymo.png",
+    alt: "Professional waiting area with black leather armchairs and a vibrant abstract mural on the wall.",
+  },
+  reception: {
+    url: "reception_yl183o.png",
+    alt: "Warmly lit reception desk with a backlit onyx-style counter and a professional staff member.",
+  },
+  meetingRoom1: {
+    url: "private-office2_z91feb.png",
+    alt: "Modern 8-person meeting room with ergonomic chairs, a wall-mounted TV, and abstract art.",
+  },
+  meetingRoom2: {
+    url: "meeting-room_lxqgem.png",
+    alt: "Large 25-capacity conference room with a black feature wall, wall-mounted display, and sunset landscape mural.",
+  },
+  telephone: {
+    url: "private-room_amp7ny.png", // Note: Changed to match image content provided
+    alt: "Quiet private phone booth or breakout room with a plush armchair and a side table with a desk phone.",
+  },
+};
+
 export const servicesCldImgs = {
   privateOffices: privateOffices,
   coworkingMembership: coworkingMembership,
   meetingRooms: meetingRooms,
   virtualOffices: virtualOffices,
+  amenities: amenities,
 };
