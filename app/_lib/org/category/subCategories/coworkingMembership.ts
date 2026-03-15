@@ -1,9 +1,11 @@
+import { servicesCldImgs } from "../../assets";
 import { ServiceSubCategory } from "../../definitions";
+const imgs = servicesCldImgs.coworkingMembership;
 export const coworkingMembership = {
   overview: {
     label: "Coworking  Overview",
     labelFarsi: "معرفی فضای کار اشتراکی",
-    image: [{ url: "hardesk_srxh6j.png", alt: "Coworking Overview" }],
+    image: [imgs.overview],
     description: [
       "Kateb Offices provides shared work environments that support productivity, flexibility, and professional networking.",
     ],
@@ -18,7 +20,7 @@ export const coworkingMembership = {
   idealFor: {
     label: "Who Coworking Suits",
     labelFarsi: "مناسب برای چه کسانی",
-    image: [{ url: "hard-desk-3_h827mg.png", alt: "Who Coworking Suits" }],
+    image: [imgs.idealFor],
     description: [
       "Coworking is ideal for individuals and small teams that want flexibility without the cost of a dedicated office.",
     ],
@@ -34,7 +36,7 @@ export const coworkingMembership = {
   benefits: {
     label: "Coworking Benefits",
     labelFarsi: "مزایای فضای کار اشتراکی",
-    image: [{ url: "open-area_q4cdaa.png", alt: "Coworking Benefits" }],
+    image: [imgs.benefits],
     description: [
       "Coworking gives businesses access to professional facilities while keeping costs and commitments lower.",
     ],
@@ -50,19 +52,18 @@ export const coworkingMembership = {
   amenities: {
     label: "Shared Amenities",
     labelFarsi: "امکانات مشترک",
-    image: [{ url: "kitechn_duvydk.png", alt: "Shared Amenities" }],
+    image: [imgs.amenities],
     description: [
       "Members benefit from practical day-to-day amenities that support a productive work routine.",
     ],
     items: [
-     
       "Shared kitchen",
       "Breakout areas",
       "Meeting room access",
       "Reception presence",
       "Office cleaning",
-       "triple redundant High Speed internet",
-       "Sound Proof Privacy Room"
+      "triple redundant High Speed internet",
+      "Sound Proof Privacy Room",
     ] as const,
   },
 } as const satisfies ServiceSubCategory;
