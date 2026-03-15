@@ -1,5 +1,5 @@
 
-export type LeafImage = readonly {
+export type ImagesArray = {
   url: string;
   alt: string;
 }[];
@@ -8,7 +8,7 @@ export type ServiceLeaf = {
   label: string;
   labelFarsi: string;
   description: string[];
-  image: LeafImage;
+  image: ImagesArray;
   items: readonly string[];
 };
 
@@ -21,6 +21,6 @@ export type ServicesPage = {
   labelFarsi: string; //
   slug: string;
   description: readonly string[];
-  image: LeafImage;
+  image: ImagesArray;
   subcategories: ServiceSubCategory;
 };

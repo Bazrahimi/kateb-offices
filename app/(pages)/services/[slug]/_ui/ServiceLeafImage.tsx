@@ -1,5 +1,6 @@
 import { cldLeafAuto } from "@/app/_lib/cloudinary/cloudinary";
-import type { LeafImage } from "@/app/_lib/org/definitions";
+import type { ImagesArray } from "@/app/_lib/org/definitions";
+
 import { cn } from "@/app/_lib/utils/cn";
 import { IMAGE_DEFAULT_BLUR } from "@/app/_ui/image/ImageShimer";
 import Image from "next/image";
@@ -9,7 +10,7 @@ export default function ServiceLeafImage({
   alt,
   aspect = "aspect-[2/1]", // default ratio
 }: {
-  image: LeafImage;
+  image: ImagesArray;
   alt: string;
   aspect?: string;
 }) {

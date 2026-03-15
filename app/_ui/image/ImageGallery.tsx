@@ -1,13 +1,10 @@
 import { Suspense } from "react";
 import ImageGalleryClient from "./ImageGalleryClient";
 
-export type ImageMeta = {
-  url: string;
-  alt: string;
-};
+import type { ImagesArray } from "@/app/_lib/org/definitions";
 
 export type ImageGalleryProps = {
-  images: ImageMeta[];
+  images: ImagesArray;
   priorityFirstImage?: boolean;
 };
 
@@ -22,10 +19,7 @@ const GalleryFallback = () => (
   </div>
 );
 
-const ImageGallery = ({
-  images,
-  priorityFirstImage,
-}: ImageGalleryProps) => {
+const ImageGallery = ({ images, priorityFirstImage }: ImageGalleryProps) => {
   if (!images?.length) return null;
 
   return (
