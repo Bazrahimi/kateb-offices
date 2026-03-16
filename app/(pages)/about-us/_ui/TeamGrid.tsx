@@ -53,7 +53,7 @@ export function TeamGrid({ team }: { team: TeamSection }) {
         {team.title}
       </Header>
 
-      <P className="mt-2 max-w-2xl text-sm text-slate-700">
+      <P className="mt-2 max-w-2xl text-sm text-gray-100">
         {team.intro}{" "}
         {team.professionalTitles?.length ? (
           <>

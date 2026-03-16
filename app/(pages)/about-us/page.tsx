@@ -41,12 +41,10 @@ export default function AboutUsPage() {
       </Section>
 
       <Section>
-        <TeamGrid team={ABOUT_TEAM} />
+        <TeamGrid  team={ABOUT_TEAM} />
       </Section>
 
-      {/* <div>
-        <ServiceArea />
-      </div> */}
+
 
       {op.otherLangKeys.length ? (
         <div className="bg-org-secondary-main/15">

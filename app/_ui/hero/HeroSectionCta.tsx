@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { CTA, type CtaKey } from "@/app/_lib/content/cta";
+import { PublicRoutes } from "@/app/_lib/routes/publicRoutes";
+import { useState } from "react";
 import Button from "../button/Button";
 import ContactModal from "../modals/contactModal/ContactModal";
 
@@ -21,8 +22,8 @@ export default function HeroSectionCta() {
           {CTA.freeTour.header}
         </Button>
 
-        <Button variant="secondary" onClick={() => openModal("bookMeetingRoom")}>
-          {CTA.bookMeetingRoom.header}
+        <Button as="link" variant="secondary" href={PublicRoutes.workspaces()}>
+          Sign up for Workspace
         </Button>
       </div>
 
@@ -30,11 +31,7 @@ export default function HeroSectionCta() {
         open={open}
         onClose={() => setOpen(false)}
         ctaKey={ctaKey}
-        serviceLabel={
-          ctaKey === "bookMeetingRoom"
-            ? "meeting and conference rooms"
-            : "services and shared amenities"
-        }
+        serviceLabel="services and shared amenities"
       />
     </>
   );

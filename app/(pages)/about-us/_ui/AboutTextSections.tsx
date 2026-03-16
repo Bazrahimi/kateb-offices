@@ -11,12 +11,12 @@ export default function AboutTextSections({
     <section className="space-y-5 md:space-y-10">
       {sections.map((s) => (
         <section key={s.id} aria-labelledby={s.id}>
-          <Header as="h2" size="sm">
+          <Header as="h2" size="sm" className="text-gray-50" align="left">
             {s.title}
           </Header>
 
           {s.items.map((t, i) => (
-            <P key={i} className="indent-6">
+            <P key={i} className="text-gray-100">
               {t}
             </P>
           ))}

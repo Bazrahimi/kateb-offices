@@ -8,11 +8,11 @@ export default function AboutValues({ section }: { section: ValuesSection }) {
 
   return (
     <section aria-labelledby={section.id}>
-      <Header as="h2" size="sm" className="mt-5">
+      <Header as="h2" size="sm" className="mt-5 text-gray-50"  align="left">
         {section.title}
       </Header>
 
-      <List items={section.items} className="mt-2 ml-5" />
+      <List items={section.items} className="mt-2 ml-5 text-gray-100" />
     </section>
   );
 }

@@ -1,6 +1,6 @@
 export const CTA = {
   freeTour: {
-    header: "Book a Tour Now",
+    header: "Book a Tour",
     steps: [
       "Simply fill out the form",
       "We will be in touch to book your tour",
