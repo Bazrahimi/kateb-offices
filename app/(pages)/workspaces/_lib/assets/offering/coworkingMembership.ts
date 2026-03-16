@@ -1,12 +1,5 @@
-export type CoworkingMemberships = {
-  id: string;
-  label: string;
-  access?: string;
-  price: string;
-  inclusions?: string[];
-};
-
-export const coworkingMemberships: CoworkingMemberships[] = [
+import { WorkspaceOfferingPlan } from "../../definitions";
+export const membershipOfferings: WorkspaceOfferingPlan[] = [
   {
     id: "everyday-membership",
     label: "Everyday Membership",

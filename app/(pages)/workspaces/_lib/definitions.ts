@@ -73,3 +73,12 @@ export type PrivateOfficeCard = Pick<
   | "status"
   | "availableFrom"
 >;
+
+
+export type WorkspaceOfferingPlan = {
+  id: string;
+  label: string;
+  access?: string;
+  price: string;
+  inclusions?: string[];
+};

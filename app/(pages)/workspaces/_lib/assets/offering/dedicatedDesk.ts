@@ -1,13 +1,7 @@
 //app/(pages)/workspaces/_lib/assets/offering/dedicatedDesk.ts
-export type DedicatedDesk = {
-  id: string;
-  label: string;
-  access?: string;
-  price: string;
-  inclusions?: string[];
-};
+import type { WorkspaceOfferingPlan } from "../../definitions";
 
-export const dedicatedDesk: DedicatedDesk[] = [
+export const dedicatedDeskOfferings: WorkspaceOfferingPlan[] = [
   {
     id: "dedicated-desk",
     label: "Dedicated Desk",

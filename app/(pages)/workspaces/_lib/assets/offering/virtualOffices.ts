@@ -1,12 +1,6 @@
-export type VirtualOffices = {
-  id: string;
-  label: string;
-  access?: string;
-  price: string;
-  inclusions?: string[];
-};
+import type { WorkspaceOfferingPlan } from "../../definitions";
 
-export const virtualOffices: VirtualOffices[] = [
+export const virtualOfficeOfferings: WorkspaceOfferingPlan[] = [
   {
     id: "virtual-Offices",
     label: "Virtual Offices",
