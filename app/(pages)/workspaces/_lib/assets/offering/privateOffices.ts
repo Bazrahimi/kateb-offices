@@ -1,15 +1,15 @@
-export type PrivateOfficeStatus = "available" | "reserved" | "leased";
+import type { ImageMeta } from "@/app/_lib/definitions";
 
-export type PrivateOfficeImage = {
-  url: string;
-  alt: string;
-};
+type PrivateOfficeStatus = "available" | "reserved" | "leased";
+type OfficeType = "Internal Office" | "External Office" | "Corner Office";
+
+
 
 export type PrivateOffice = {
   id: string;
   slug: string;
   label: string;
-  images: PrivateOfficeImage[];
+  images: ImageMeta[];
   description: string[];
   dimension: string;
   priceLabel: string;
@@ -18,7 +18,7 @@ export type PrivateOffice = {
   status: PrivateOfficeStatus;
   includedFeatures: string[];
   ctaLabel: string;
-  officeType?: "Internal Office" | "External Office" | "Corner Office";
+  officeType?: OfficeType;
   furnished?: boolean;
   minimumTerm?: string;
   bondRequired?: string;

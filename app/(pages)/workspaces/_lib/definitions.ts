@@ -9,27 +9,7 @@ export type WorkspaceOffering = {
   href: string;
 };
 
-export type PrivateOfficeRoom = {
-  id: string;
-  slug: string;
-  label: string;
-  images: { url: string; alt: string }[];
-  description: string[];
-  priceLabel: string;
-  availableFrom: string;
-  capacity: string;
-  status: "available" | "reserved" | "leased";
-  officeType?: "internal" | "external" | "corner";
-  furnished?: boolean;
-  windowOffice?: boolean;
-  minimumTerm?: string;
-  bondRequired?: string;
-  sizeLabel?: string;
-  includedFeatures?: readonly string[];
-  suitableFor?: readonly string[];
-  ctaLabel?: string;
-  href?: string;
-};
+
 
 export type OfferingKey =
   | "privateOffices"
