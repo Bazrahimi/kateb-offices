@@ -40,7 +40,7 @@ export default function ServicesMenuClient() {
         onKeyDown={onButtonKeyDown}
         className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/10 hover:text-white"
       >
-        Offices
+        Workspaces
         <HiChevronDown className="h-4 w-4 opacity-80" />
       </button>
 

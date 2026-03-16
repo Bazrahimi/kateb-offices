@@ -18,8 +18,8 @@ export default function NavLinks() {
       <Languages className={navLinksClasses} />
       <BookATour />
 
-      <Link href={PublicRoutes.contact()} className={navLinksClasses}>
-        Contact
+      <Link href={PublicRoutes.workspaces()} className={navLinksClasses}>
+        Sign-up
       </Link>
     </div>
   );
