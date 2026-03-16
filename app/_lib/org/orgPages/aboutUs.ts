@@ -1,4 +1,5 @@
 import { ORG_PROFILE } from "../profile";
+import { publicAssets } from "../publicAssets";
 
 export type TeamMember = {
   name: string;
@@ -26,15 +27,15 @@ export const ABOUT_TEAM: TeamSection = {
   intro: `${ORG_PROFILE.orgName} is supported by a professional team focused on creating a flexible, welcoming, and business-ready workspace in the heart of Dandenong.`,
   members: [
     {
-      name: "Team Member Placeholder",
+      name: "Ali Haidar",
       role: "Centre Manager",
-      image: "/images/team/placeholder.png",
+      image: publicAssets.team.placeholder,
       bio: "Oversees day-to-day operations and helps ensure members and guests enjoy a smooth and professional workspace experience.",
     },
     {
-      name: "Team Member Placeholder",
+      name: "Alex Danishyar",
       role: "Client Experience Coordinator",
-      image: "/images/team/placeholder.png",
+      image: publicAssets.team.placeholder,
       bio: "Supports enquiries, tours, and office setup while helping businesses find the right workspace solution.",
     },
   ],

@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#f1f5f9"/>
+
+  <!-- head -->
+  <circle cx="100" cy="70" r="35" fill="#94a3b8"/>
+
+  <!-- body -->
+  <path
+    d="M40 170c0-35 25-55 60-55s60 20 60 55"
+    fill="#cbd5f5"
+  />
+
+  <!-- shoulders -->
+  <ellipse cx="100" cy="150" rx="70" ry="35" fill="#94a3b8"/>
+</svg>

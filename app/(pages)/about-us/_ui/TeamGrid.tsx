@@ -49,7 +49,7 @@ export function TeamGrid({ team }: { team: TeamSection }) {
 
   return (
     <section aria-labelledby={`${team.id}-heading`}>
-      <Header as="h2" size="sm" id={`${team.id}-heading`}>
+      <Header as="h2" size="sm" id={`${team.id}-heading`} align="left" className="text-gray-50 ">
         {team.title}
       </Header>
 
@@ -73,10 +73,15 @@ export function TeamGrid({ team }: { team: TeamSection }) {
             <Header className="text-gray-900" as="h3" size="xs">
               {member.name}
             </Header>
-            <P className="mt-1 text-sm text-gray-600">{member.role}</P>
+            <Header className=" text-gray-600" as="h4" size="xs" >{member.role}</Header>
 
             {member.bio ? (
-              <P className="mt-3 text-sm text-gray-700">{member.bio}</P>
+              <P
+                className="mt-3  text-left leading-relaxed text-gray-700"
+                size="sm"
+              >
+                {member.bio}
+              </P>
             ) : null}
           </article>
         ))}

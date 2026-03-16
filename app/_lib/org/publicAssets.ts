@@ -17,6 +17,10 @@ export const publicAssets = {
     privateOffice: "/images/svg/Private-Office-Icon.svg",
     virtualOffice: "/images/svg/Virtual-Office-Icon.svg",
   },
+
+  team: {
+    placeholder: "images/team/avatar.svg"
+  }
 } as const;
 
 export const cldAssets = {
