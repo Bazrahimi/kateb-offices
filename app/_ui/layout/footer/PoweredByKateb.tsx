@@ -13,7 +13,7 @@ export default function PoweredByKateb({ className }: Props) {
   return (
     <div
       className={cn(
-        "flex flex-wrap items-center justify-center gap-2 text-xs text-slate-800",
+        "flex flex-wrap items-center justify-center gap-2 text-xs text-slate-800 mt-3",
         className,
       )}
     >

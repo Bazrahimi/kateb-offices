@@ -30,6 +30,10 @@ export const getServiceCategoryLinks = () => {
 export const QUICK_LINKS = [
   { href: PublicRoutes.home(), label: "Home" },
   { href: PublicRoutes.about(), label: "About Us" },
-  ...getServiceCategoryLinks().map(({ href, label }) => ({ href, label })),
   { href: PublicRoutes.contact(), label: "Contact us" },
 ] as const;
+
+export const SERVICES_LINKS = [
+  {href:PublicRoutes.workspaces(), label: "Sign-up for Workspace"},
+  ...getServiceCategoryLinks().map(({ href, label }) => ({ href, label })),
+];

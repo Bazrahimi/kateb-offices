@@ -1,16 +1,14 @@
-import type { OfferingKey } from "@/app/_lib/org/definitions";
-import { privateOfficeCards } from "@/app/(pages)/workspaces/_lib/assets/offering/privateOffices";
-import { dedicatedDeskOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/dedicatedDesk";
 import { membershipOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/coworkingMembership";
+import { dedicatedDeskOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/dedicatedDesk";
+import { privateOfficeCards } from "@/app/(pages)/workspaces/_lib/assets/offering/privateOffices";
 import { virtualOfficeOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/virtualOffices";
-import { meetingRoomPlans } from "@/app/(pages)/workspaces/_lib/assets/offering/meetingRooms";
-import { memberMeetingRoom } from "@/app/(pages)/workspaces/_lib/assets/offering/MeetingRoomMember";
 import { offering as workspaceOffering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
+import type { OfferingKey } from "@/app/_lib/org/definitions";
 
-import PrivateOfficeCard from "@/app/(pages)/workspaces/private-office/_ui/PrivateOfficeCard";
 import WorkspacePlanListPage from "@/app/(pages)/workspaces/application/_ui/WorkspacePlanListPage";
-import MeetingRoomsBookingPage from "@/app/(pages)/workspaces/application/_ui/MeetingRoomsBookingPage";
+import PrivateOfficeCard from "@/app/(pages)/workspaces/private-office/_ui/PrivateOfficeCard";
 import { Header } from "@/app/_ui/typography/Header";
+import ServiceMeetingRoomBlocks from "./ServiceMeetingRoomBlocks";
 
 type Props = {
   offering: OfferingKey[];
@@ -56,13 +54,7 @@ export default function ServiceOfferingBlocks({ offering }: Props) {
         />
       )}
 
-      {offering.includes("meetingRooms") && (
-        <MeetingRoomsBookingPage rooms={meetingRoomPlans} />
-      )}
-
-      {offering.includes("memberMeetingRooms") && (
-        <MeetingRoomsBookingPage rooms={memberMeetingRoom} />
-      )}
+      <ServiceMeetingRoomBlocks offering={offering} />
     </div>
   );
 }

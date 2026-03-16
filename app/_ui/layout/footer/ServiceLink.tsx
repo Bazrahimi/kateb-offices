@@ -1,16 +1,16 @@
-import { QUICK_LINKS } from "@/app/_lib/routes/publicRoutes";
+import { SERVICES_LINKS } from "@/app/_lib/routes/publicRoutes";
 import Link from "next/link";
 import { Header } from "../../typography/Header";
 import { CN } from "./Footer";
 
-const QuickLinks = () => {
+const ServiceLink = () => {
   return (
     <div>
       <Header as="h4" size="sm" align="left">
-        Quick Links
+        Services Links
       </Header>
-      <ul className={CN.list}>
-        {QUICK_LINKS.map((item) => (
+          <ul className={CN.list}>
+        {SERVICES_LINKS.map((item) => (
           <li key={item.href}>
             <Link href={item.href} className={CN.link}>
               {item.label}
@@ -22,4 +22,4 @@ const QuickLinks = () => {
   );
 };
 
-export default QuickLinks;
+export default ServiceLink;
