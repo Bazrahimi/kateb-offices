@@ -1,4 +1,3 @@
-
 export type ImagesArray = {
   url: string;
   alt: string;

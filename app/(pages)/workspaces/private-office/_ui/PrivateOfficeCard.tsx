@@ -18,6 +18,11 @@ export default function PrivateOfficeCard({ room }: Props) {
   return (
     <Link href={href} className="block">
       <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
+        <div className="p-6">
+          <Header as="h2" >{room.label}</Header>
+          <P className="text-center font-bold">{room.officeType}</P>
+        </div>
+
         <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-50">
           <Image
             src={cldLeafAuto(firstImage?.url ?? "")}
@@ -30,13 +35,6 @@ export default function PrivateOfficeCard({ room }: Props) {
         </div>
 
         <div className="space-y-4 p-6">
-          <div>
-            <Header as="h2" size="xs" className="text-slate-900">
-              {room.label}
-            </Header>
-            <P className="mt-2 text-slate-600">{room.availableFrom}</P>
-          </div>
-
           <div className="space-y-2">
             <P className="text-3xl font-bold text-org-primary-main">
               {room.priceLabel}

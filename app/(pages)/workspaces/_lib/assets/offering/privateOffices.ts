@@ -18,7 +18,7 @@ export type PrivateOffice = {
   status: PrivateOfficeStatus;
   includedFeatures: string[];
   ctaLabel: string;
-  officeType?: "internal" | "external" | "corner";
+  officeType?: "Internal Office" | "External Office" | "Corner Office";
   furnished?: boolean;
   minimumTerm?: string;
   bondRequired?: string;
@@ -28,6 +28,7 @@ export type PrivateOffice = {
 export type PrivateOfficeCard = Pick<
   PrivateOffice,
   | "id"
+  | "officeType"
   | "slug"
   | "label"
   | "images"
@@ -65,10 +66,10 @@ export const privateOfficeRooms: PrivateOffice[] = [
       "Furnished office",
       "Shared amenities",
       "Professional business environment",
-      "High-speed internet"
+      "High-speed internet",
     ],
     ctaLabel: "View office",
-    officeType: "internal",
+    officeType: "Internal Office",
   },
   {
     id: "private-office-2",
@@ -97,10 +98,10 @@ export const privateOfficeRooms: PrivateOffice[] = [
       "Furnished office",
       "Shared amenities",
       "Professional business environment",
-      "High-speed internet"
+      "High-speed internet",
     ],
     ctaLabel: "View office",
-    officeType: "internal",
+    officeType: "Internal Office",
   },
 
   {
@@ -130,16 +131,17 @@ export const privateOfficeRooms: PrivateOffice[] = [
       "Furnished office",
       "Shared amenities",
       "Professional business environment",
-      "High-speed internet"
+      "High-speed internet",
     ],
     ctaLabel: "View office",
-    officeType: "internal",
+    officeType: "External Office",
   },
 ];
 
 export const privateOfficeCards: PrivateOfficeCard[] = privateOfficeRooms.map(
   ({
     id,
+    officeType,
     slug,
     label,
     images,
@@ -149,6 +151,7 @@ export const privateOfficeCards: PrivateOfficeCard[] = privateOfficeRooms.map(
     availableFrom,
   }) => ({
     id,
+    officeType,
     slug,
     label,
     images,
