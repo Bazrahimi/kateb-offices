@@ -58,8 +58,8 @@ const MeetingRoomsBookingPage = ({ rooms }: Props) => {
 
                   <div className="relative mt-4 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50">
                     <Image
-                      src={cldLeafAuto(room.image)}
-                      alt={room.label}
+                      src={cldLeafAuto(room.images[0].url)}
+                      alt={room.images[0].alt}
                       fill
                       className="object-contain"
                     />

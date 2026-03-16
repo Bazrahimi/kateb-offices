@@ -6,7 +6,8 @@ import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
 import Link from "next/link";
-import type { PrivateOfficeCard as PrivateOfficeCardType } from "../../_lib/assets/offering/privateOffices";
+
+import type { PrivateOfficeCard as PrivateOfficeCardType } from "../../_lib/definitions";
 
 type Props = {
   room: PrivateOfficeCardType;

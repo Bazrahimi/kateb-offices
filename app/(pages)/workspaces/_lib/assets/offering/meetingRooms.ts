@@ -1,5 +1,6 @@
 // app/(pages)/workspaces/_lib/assets/offering/meetingRooms.ts
 
+import { servicesCldImgs as imgs } from "@/app/_lib/org/assets";
 import type { MeetingRoomOfferings } from "../../definitions";
 
 export const meetingRoomPlans: MeetingRoomOfferings[] = [
@@ -9,7 +10,7 @@ export const meetingRoomPlans: MeetingRoomOfferings[] = [
     capacity: "Up to 4 people",
     priceLabel: "$40",
     durationLabel: "per hour",
-    image: "meeting-room_lxqgem.png",
+    images: [imgs.meetingRooms.whyChooseOurRooms],
     description: [
       "Ideal for professionals who need a quiet and professional workspace for a few hours or a full day.",
     ],
@@ -26,7 +27,7 @@ export const meetingRoomPlans: MeetingRoomOfferings[] = [
     capacity: "Up to 8 people",
     priceLabel: "$45",
     durationLabel: "per hour",
-    image: "meeting-room_lxqgem.png",
+    images: [imgs.amenities.meetingRoom1],
     description: [
       "A practical meeting room for interviews, private discussions, and small client meetings.",
     ],
@@ -43,7 +44,7 @@ export const meetingRoomPlans: MeetingRoomOfferings[] = [
     capacity: "Up to 25 people",
     priceLabel: "$85",
     durationLabel: "per hour",
-    image: "conference-room_iphq8c.png",
+    images: [imgs.amenities.meetingRoom2],
     description: [
       "A larger conference room suited for team meetings, presentations, workshops, and training sessions.",
     ],

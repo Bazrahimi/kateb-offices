@@ -1,43 +1,4 @@
-import type { ImageMeta } from "@/app/_lib/definitions";
-
-type PrivateOfficeStatus = "available" | "reserved" | "leased";
-type OfficeType = "Internal Office" | "External Office" | "Corner Office";
-
-
-
-export type PrivateOffice = {
-  id: string;
-  slug: string;
-  label: string;
-  images: ImageMeta[];
-  description: string[];
-  dimension: string;
-  priceLabel: string;
-  availableFrom: string;
-  capacity: string;
-  status: PrivateOfficeStatus;
-  includedFeatures: string[];
-  ctaLabel: string;
-  officeType?: OfficeType;
-  furnished?: boolean;
-  minimumTerm?: string;
-  bondRequired?: string;
-  sizeLabel?: string;
-};
-
-export type PrivateOfficeCard = Pick<
-  PrivateOffice,
-  | "id"
-  | "officeType"
-  | "slug"
-  | "label"
-  | "images"
-  | "priceLabel"
-  | "capacity"
-  | "status"
-  | "availableFrom"
->;
-
+import type { PrivateOffice, PrivateOfficeCard } from "../../definitions";
 export const privateOfficeRooms: PrivateOffice[] = [
   {
     id: "private-office-1",

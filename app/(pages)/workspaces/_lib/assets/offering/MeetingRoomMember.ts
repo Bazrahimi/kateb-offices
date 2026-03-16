@@ -1,4 +1,5 @@
 import type { MeetingRoomOfferings } from "../../definitions";
+import { servicesCldImgs as imgs } from "@/app/_lib/org/assets";
 
 export const memberMeetingRoom: MeetingRoomOfferings[] = [
   {
@@ -7,7 +8,7 @@ export const memberMeetingRoom: MeetingRoomOfferings[] = [
     capacity: "Up to 4 people",
     priceLabel: "$20",
     durationLabel: "per hour",
-    image: "meeting-room_lxqgem.png",
+    images: [imgs.meetingRooms.whyChooseOurRooms],
     description: [
       "Ideal for  Existing Workspace Tenants who need a quiet and professional workspace for a few hours or a full day.",
     ],
@@ -24,7 +25,7 @@ export const memberMeetingRoom: MeetingRoomOfferings[] = [
     capacity: "Up to 8 people",
     priceLabel: "$25",
     durationLabel: "per hour",
-    image: "meeting-room_lxqgem.png",
+    images: [imgs.amenities.meetingRoom1],
     description: [
       "A practical meeting room for interviews, private discussions, and small client meetings.",
     ],
@@ -41,7 +42,7 @@ export const memberMeetingRoom: MeetingRoomOfferings[] = [
     capacity: "Up to 25 people",
     priceLabel: "$42.5",
     durationLabel: "per hour",
-    image: "conference-room_iphq8c.png",
+    images: [imgs.amenities.meetingRoom2],
     description: [
       "A larger conference room suited for team meetings, presentations, workshops, and training sessions.",
     ],
