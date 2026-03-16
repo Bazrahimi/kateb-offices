@@ -60,7 +60,7 @@ export const privateOfficeRooms: PrivateOffice[] = [
     dimension: "4.5 x 3.5 meters",
     priceLabel: "$1520/month",
     availableFrom: "Available now",
-    capacity: "Up to 4 people",
+    capacity: "4 Person Capacity",
     status: "available",
     includedFeatures: [
       "Furnished office",
@@ -90,9 +90,9 @@ export const privateOfficeRooms: PrivateOffice[] = [
       "Includes desks, chairs, storage cabinets, and access to shared amenities.",
     ],
     dimension: "3.5 x 3.5 meters",
-    priceLabel: "From $1520/month",
+    priceLabel: "$1520/month",
     availableFrom: "Available now",
-    capacity: "Up to 4 people",
+    capacity: "4 Person Capacity",
     status: "available",
     includedFeatures: [
       "Furnished office",
@@ -123,9 +123,9 @@ export const privateOfficeRooms: PrivateOffice[] = [
       "Includes desks, chairs, storage cabinets, and access to shared amenities.",
     ],
     dimension: "3.5 x 3.5 meters",
-    priceLabel: "From $1620/month",
+    priceLabel: "$1620/month",
     availableFrom: "Available now",
-    capacity: "Up to 4 people",
+    capacity: "4 Person Capacity",
     status: "available",
     includedFeatures: [
       "Furnished office",
