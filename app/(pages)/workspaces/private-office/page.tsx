@@ -12,7 +12,7 @@ const Page = () => {
         </Header>
       </div>
       <div className="mx-auto max-w-6xl space-y-6 px-4">
-        <section className="grid gap-3 md:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <section className="grid gap-3 md:gap-6 sm:grid-cols-2  xl:grid-cols-3">
           {privateOfficeCards.map((room) => (
             <PrivateOfficeCard key={room.id} room={room} />
           ))}
