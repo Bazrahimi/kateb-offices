@@ -38,9 +38,19 @@ export type OfferingKey =
   | "memberMeetingRooms"
   | "virtualOffices";
 
-
-
 export type Offering = {
   label: string;
   offering: WorkspaceOffering;
+};
+
+export type MeetingRoomOfferings = {
+  id: string;
+  label: string;
+  capacity: string;
+  priceLabel: string;
+  durationLabel?: string;
+  image: string;
+  description: string[];
+  includedFeatures: string[];
+  eligibilityNotes?: string[];
 };

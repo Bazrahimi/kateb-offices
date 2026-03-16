@@ -12,7 +12,7 @@ import { useState } from "react";
 
 import { cldLeafAuto } from "@/app/_lib/cloudinary/cloudinary";
 import List from "@/app/_ui/content/List";
-import type { MeetingRoomOfferings } from "../../_lib/assets/offering/MeetingRoomMember";
+import type { MeetingRoomOfferings } from "../../_lib/definitions";
 
 type Props = {
   rooms: MeetingRoomOfferings[];

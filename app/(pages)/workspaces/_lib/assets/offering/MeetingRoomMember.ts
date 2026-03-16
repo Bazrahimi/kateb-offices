@@ -1,14 +1,4 @@
-export type MeetingRoomOfferings = {
-  id: string;
-  label: string;
-  capacity: string;
-  priceLabel: string;
-  durationLabel?: string;
-  image: string;
-  description: string[];
-  includedFeatures: string[];
-  eligibilityNotes?: string[];
-};
+import type { MeetingRoomOfferings } from "../../definitions";
 
 export const memberMeetingRoom: MeetingRoomOfferings[] = [
   {

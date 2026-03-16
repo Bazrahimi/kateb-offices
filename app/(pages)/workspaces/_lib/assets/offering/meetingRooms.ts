@@ -1,8 +1,6 @@
 // app/(pages)/workspaces/_lib/assets/offering/meetingRooms.ts
 
-import type { MeetingRoomOfferings } from "./MeetingRoomMember";
-
-
+import type { MeetingRoomOfferings } from "../../definitions";
 
 export const meetingRoomPlans: MeetingRoomOfferings[] = [
   {
@@ -14,7 +12,6 @@ export const meetingRoomPlans: MeetingRoomOfferings[] = [
     image: "meeting-room_lxqgem.png",
     description: [
       "Ideal for professionals who need a quiet and professional workspace for a few hours or a full day.",
-      
     ],
     includedFeatures: [
       "Private furnished office",
@@ -58,4 +55,3 @@ export const meetingRoomPlans: MeetingRoomOfferings[] = [
     ],
   },
 ];
-
