@@ -28,23 +28,15 @@ export default function HomePage() {
         <HomeHero className="w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]" />
       </Suspense>
 
-      <WorkspaceOffersSection />
+
 
       {Object.entries(SERVICES_PAGE).map(([key, service]) => (
         <Suspense key={key} fallback={<ServiceSectionSkeleton />}>
           <ServiceSection service={service} />
         </Suspense>
       ))}
-
-      {op.otherLangKeys.length ? (
-        <div>
-          <MultiLanguageCapacity
-            otherLangKeys={op.otherLangKeys}
-            orgNameFarsi={op.orgNameFarsi}
-          />
-          <OtherLanguagesSnapshot />
-        </div>
-      ) : null}
+      <WorkspaceOffersSection />
+   
 
       {/* <ContactFormLazy /> */}
       <ServiceCtaLazy ctaKey="generalContact" serviceLabel="Services"  />

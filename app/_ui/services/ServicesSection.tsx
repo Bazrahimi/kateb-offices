@@ -58,7 +58,7 @@ export default function ServiceSection({ service, className }: Props) {
         as="link"
         href={PublicRoutes.service(service.slug)}
         fullWidth
-        variant="secondary"
+     
       >
         View all {service.label}
       </Button>
