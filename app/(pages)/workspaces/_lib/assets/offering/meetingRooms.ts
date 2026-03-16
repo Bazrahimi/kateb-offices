@@ -1,20 +1,10 @@
 // app/(pages)/workspaces/_lib/assets/offering/meetingRooms.ts
 
-export type MeetingRoomPlan = {
-  id: string;
-  label: string;
-  capacity: string;
-  priceLabel: string;
-  durationLabel?: string;
-  image: string;
-  description: string[];
-  includedFeatures: string[];
-  eligibilityNotes?: string[];
-};
+import type { MeetingRoomOfferings } from "./MeetingRoomMember";
 
 
 
-export const meetingRoomPlans: MeetingRoomPlan[] = [
+export const meetingRoomPlans: MeetingRoomOfferings[] = [
   {
     id: "day-office",
     label: "Day Office",

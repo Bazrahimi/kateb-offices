@@ -12,10 +12,10 @@ import { useState } from "react";
 
 import { cldLeafAuto } from "@/app/_lib/cloudinary/cloudinary";
 import List from "@/app/_ui/content/List";
-import type { MeetingRoomPlan } from "../../_lib/assets/offering/meetingRooms";
+import type { MeetingRoomOfferings } from "../../_lib/assets/offering/MeetingRoomMember";
 
 type Props = {
-  rooms: MeetingRoomPlan[];
+  rooms: MeetingRoomOfferings[];
 };
 
 const MeetingRoomsBookingPage = ({ rooms }: Props) => {

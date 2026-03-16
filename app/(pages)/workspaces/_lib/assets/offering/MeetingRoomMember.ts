@@ -1,4 +1,4 @@
-export type MembersMeetingRoomPlan = {
+export type MeetingRoomOfferings = {
   id: string;
   label: string;
   capacity: string;
@@ -10,7 +10,7 @@ export type MembersMeetingRoomPlan = {
   eligibilityNotes?: string[];
 };
 
-export const memberMeetingRoom: MembersMeetingRoomPlan[] = [
+export const memberMeetingRoom: MeetingRoomOfferings[] = [
   {
     id: "day-office-existing-workspace-tenant",
     label: "Day Office existing tenant ",
