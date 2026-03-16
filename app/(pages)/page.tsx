@@ -1,12 +1,9 @@
 import { SERVICES_PAGE } from "@/app/_lib/org/category/services";
-import { ORG_PROFILE as op } from "../_lib/org/profile";
-import MultiLanguageCapacity from "../_ui/content/MultiLanguageCapacity";
 
 import dynamic from "next/dynamic";
 import ServiceSection from "../_ui/services/ServicesSection";
 
 import { Suspense } from "react";
-import OtherLanguagesSnapshot from "../_ui/content/OtherLanguagesSnapshot";
 
 import { buildMetadata, SEO_PAGES } from "../_lib/org/layoutAndSeo";
 import HomeHero from "../_ui/hero/HomeHero";
@@ -28,18 +25,15 @@ export default function HomePage() {
         <HomeHero className="w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]" />
       </Suspense>
 
-
-
       {Object.entries(SERVICES_PAGE).map(([key, service]) => (
         <Suspense key={key} fallback={<ServiceSectionSkeleton />}>
           <ServiceSection service={service} />
         </Suspense>
       ))}
       <WorkspaceOffersSection />
-   
 
       {/* <ContactFormLazy /> */}
-      <ServiceCtaLazy ctaKey="generalContact" serviceLabel="Services"  />
+      <ServiceCtaLazy ctaKey="generalContact" serviceLabel="Services" />
     </main>
   );
 }

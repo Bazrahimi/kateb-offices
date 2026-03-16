@@ -6,7 +6,7 @@ import { offering as workspaceOffering } from "@/app/(pages)/workspaces/_lib/ass
 import type { OfferingKey } from "@/app/_lib/org/definitions";
 
 import WorkspacePlanListPage from "@/app/(pages)/workspaces/application/_ui/WorkspacePlanListPage";
-import PrivateOfficeCard from "@/app/(pages)/workspaces/private-office/_ui/PrivateOfficeCard";
+import PrivateOfficeCard from "@/app/(pages)/workspaces/private-offices/_ui/PrivateOfficeCard";
 import { Header } from "@/app/_ui/typography/Header";
 import ServiceMeetingRoomBlocks from "./ServiceMeetingRoomBlocks";
 
