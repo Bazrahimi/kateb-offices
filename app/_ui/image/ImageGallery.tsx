@@ -1,10 +1,10 @@
 import { Suspense } from "react";
 import ImageGalleryClient from "./ImageGalleryClient";
 
-import type { ImagesArray } from "@/app/_lib/org/definitions";
+import type { ImageMeta } from "@/app/_lib/definitions";
 
 export type ImageGalleryProps = {
-  images: ImagesArray;
+  images: ImageMeta[];
   priorityFirstImage?: boolean;
 };
 

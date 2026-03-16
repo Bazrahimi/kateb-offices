@@ -1,4 +1,5 @@
 export type WorkspaceJoin = Record<string, unknown>;
+
 export type WorkspaceOffering = {
   image: string;
   capacityLabel?: string;

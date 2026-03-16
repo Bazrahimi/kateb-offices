@@ -34,3 +34,9 @@ export type PageSeo = {
    */
   noindex?: boolean;
 };
+
+
+export type ImageMeta = {
+  url: string;
+  alt: string;
+}
