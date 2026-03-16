@@ -8,13 +8,11 @@ import { ORG_PROFILE as op } from "@/app/_lib/org/profile";
 import ServiceCTA from "@/app/_ui/content/ServiceCTA";
 import PageHeading from "@/app/_ui/layout/PageIntro";
 import Section from "@/app/_ui/layout/Section";
-import { Header } from "@/app/_ui/typography/Header";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { privateOfficeCards } from "../../workspaces/_lib/assets/offering/privateOffices";
-import PrivateOfficeCard from "../../workspaces/private-office/_ui/PrivateOfficeCard";
 import ServiceDetails from "./_ui/ServiceDetails";
+import ServiceOfferingBlocks from "./_ui/ServiceOfferingBlocks";
 
 export const generateMetadata = async ({
   params,
@@ -58,7 +56,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <ServiceDetails subcategories={service.subcategories} />
         </Section>
       )}
-
+      <Section>
+        <ServiceOfferingBlocks offering={service.offering} />
+      </Section>
 
       <Section>
         <Suspense fallback={null}>

@@ -13,7 +13,6 @@ export type ServiceLeaf = {
   description: string[];
   image: ImageMeta[];
   items: readonly string[];
-
 };
 
 export type ServiceSubCategory = {
@@ -27,4 +26,5 @@ export type ServicesPage = {
   description: readonly string[];
   image: ImageMeta[];
   subcategories: ServiceSubCategory;
+  offering: OfferingKey[]
 };
