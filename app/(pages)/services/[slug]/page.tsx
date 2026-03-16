@@ -1,3 +1,4 @@
+//app/(pages)/services/[slug]/page.tsx
 import {
   getServiceLabelBySlug,
   getServiceSubcategoryKeywordsBySlug,
@@ -58,18 +59,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         </Section>
       )}
 
-      <div className="bg-slate-100 my-5 mt-10 py-10">
-        <Header as="h1" size="md" align="center">
-          Private Offices Currently Available
-        </Header>
-        <div className="mx-auto max-w-6xl space-y-6 px-4">
-          <section className="grid gap-3 md:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {privateOfficeCards.map((room) => (
-              <PrivateOfficeCard key={room.id} room={room} />
-            ))}
-          </section>
-        </div>
-      </div>
 
       <Section>
         <Suspense fallback={null}>

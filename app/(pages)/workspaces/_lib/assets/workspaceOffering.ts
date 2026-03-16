@@ -1,6 +1,7 @@
 import { publicAssets } from "../../../../_lib/org/publicAssets";
 import { workspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
-import type { Offering, OfferingKey, WorkspaceOffering } from "../definitions";
+import type { Offering,  WorkspaceOffering } from "../definitions";
+import type { OfferingKey } from "@/app/_lib/org/definitions";
 const svg = publicAssets.offeringSvg;
 
 const coworkingMembershipOffering: WorkspaceOffering = {

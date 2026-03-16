@@ -13,13 +13,7 @@ export type WorkspaceOffering = {
   href: string;
 };
 
-export type OfferingKey =
-  | "privateOffices"
-  | "coworkingMembership"
-  | "dedicatedDesk"
-  | "meetingRooms"
-  | "memberMeetingRooms"
-  | "virtualOffices";
+
 
 export type Offering = {
   label: string;

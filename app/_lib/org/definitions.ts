@@ -1,4 +1,11 @@
 import type { ImageMeta } from "../definitions";
+export type OfferingKey =
+  | "privateOffices"
+  | "coworkingMembership"
+  | "dedicatedDesk"
+  | "meetingRooms"
+  | "memberMeetingRooms"
+  | "virtualOffices";
 
 export type ServiceLeaf = {
   label: string;
@@ -6,6 +13,7 @@ export type ServiceLeaf = {
   description: string[];
   image: ImageMeta[];
   items: readonly string[];
+
 };
 
 export type ServiceSubCategory = {
