@@ -1,10 +1,10 @@
 import { publicAssets } from "../../../../_lib/org/publicAssets";
 import { workspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
-import type { Offering,  WorkspaceSignupPlan } from "../definitions";
+import type { Offering, WorkspaceSignupInfo } from "../definitions";
 import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 const svg = publicAssets.offeringSvg;
 
-const coworkingMembershipOffering: WorkspaceSignupPlan = {
+const coworkingMembershipOffering: WorkspaceSignupInfo = {
   image: svg.coworkingMembership,
   capacityLabel: "1+",
   priceLabel: "From $150/month",
@@ -14,7 +14,7 @@ const coworkingMembershipOffering: WorkspaceSignupPlan = {
   href: routes.coworkingMembership(),
 };
 
-const dedicatedDeskFee: WorkspaceSignupPlan = {
+const dedicatedDeskFee: WorkspaceSignupInfo = {
   image: svg.dedicatedDesk,
   capacityLabel: "1",
   priceLabel: "From $195/month",
@@ -24,7 +24,7 @@ const dedicatedDeskFee: WorkspaceSignupPlan = {
   href: routes.dedicatedDesk(),
 };
 
-const virtualOfficeFee: WorkspaceSignupPlan = {
+const virtualOfficeFee: WorkspaceSignupInfo = {
   image: svg.virtualOffice,
   priceLabel: "From $40/month",
   summary:
@@ -33,7 +33,7 @@ const virtualOfficeFee: WorkspaceSignupPlan = {
   href: routes.virtualOffice(),
 };
 
-const privateOfficeFee: WorkspaceSignupPlan = {
+const privateOfficeFee: WorkspaceSignupInfo = {
   image: svg.privateOffice,
   capacityLabel: "1–12+",
   priceLabel: "From $1120/month",
@@ -43,7 +43,7 @@ const privateOfficeFee: WorkspaceSignupPlan = {
   href: routes.privateOffice(),
 };
 
-const meetingRoomsFee: WorkspaceSignupPlan = {
+const meetingRoomsFee: WorkspaceSignupInfo = {
   image: svg.meetingRooms,
   capacityLabel: "2–25",
   priceLabel: "From $40/hr",
@@ -53,7 +53,7 @@ const meetingRoomsFee: WorkspaceSignupPlan = {
   href: routes.meetingRooms(),
 };
 
-const memberMeetingRoomsFee: WorkspaceSignupPlan = {
+const memberMeetingRoomsFee: WorkspaceSignupInfo = {
   image: svg.meetingRoomsMembers,
   capacityLabel: "2–25",
   priceLabel: "From $20/hr",

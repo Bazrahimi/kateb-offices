@@ -1,5 +1,5 @@
-import { WorkspaceOfferingPlan } from "../../definitions";
-export const membershipOfferings: WorkspaceOfferingPlan[] = [
+import type { WorkspaceSignupPlan } from "../../definitions";
+export const membershipOfferings: WorkspaceSignupPlan[] = [
   {
     id: "everyday-membership",
     label: "Everyday Membership",

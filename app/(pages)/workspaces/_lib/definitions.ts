@@ -2,21 +2,9 @@ import { ImageMeta } from "@/app/_lib/definitions";
 type PrivateOfficeStatus = "available" | "reserved" | "leased";
 type OfficeType = "Internal Office" | "External Office" | "Corner Office";
 
-export type WorkspaceJoin = Record<string, unknown>;
 
-export type WorkspaceSignupPlan = {
-  image: string;
-  capacityLabel?: string;
-  priceLabel: string;
-  summary: string;
-  btnContent: string;
-  href: string;
-};
 
-export type Offering = {
-  label: string;
-  offering: WorkspaceSignupPlan;
-};
+
 
 export type PrivateOfficeAds = {
   id: string;
@@ -66,12 +54,26 @@ export type PrivateOfficeAdsCard = Pick<
   | "availableFrom"
 >;
 
-export type WorkspaceOfferingPlan = {
+export type WorkspaceSignupPlan = {
   id: string;
   label: string;
   access?: string;
   price: string;
   inclusions?: string[];
+};
+
+export type WorkspaceSignupInfo = {
+  image: string;
+  capacityLabel?: string;
+  priceLabel: string;
+  summary: string;
+  btnContent: string;
+  href: string;
+};
+
+export type Offering = {
+  label: string;
+  offering: WorkspaceSignupInfo;
 };
 
 export type WorkspaceOfferingMeta = {
@@ -86,8 +88,8 @@ type PrivateOfficePageConfig = {
 
 type PlanListPageConfig = {
   kind: "workspacePlanList";
-  plans: WorkspaceOfferingPlan[];
-  offering: WorkspaceSignupPlan;
+  plans: WorkspaceSignupPlan[];
+  offering: WorkspaceSignupInfo;
 };
 
 type MeetingRoomsPageConfig = {

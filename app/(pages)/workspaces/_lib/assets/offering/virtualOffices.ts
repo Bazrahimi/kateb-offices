@@ -1,6 +1,6 @@
-import type { WorkspaceOfferingPlan } from "../../definitions";
+import type { WorkspaceSignupPlan } from "../../definitions";
 
-export const virtualOfficeOfferings: WorkspaceOfferingPlan[] = [
+export const virtualOfficeOfferings: WorkspaceSignupPlan[] = [
   {
     id: "virtual-Offices",
     label: "Virtual Offices",
