@@ -68,7 +68,7 @@ export type PrivateOfficeAdsCard = Pick<
   | "availableFrom"
 >;
 
-export type PrivateOfficeCard = PrivateOfficeAdsCard;
+
 
 
 export type WorkspaceOfferingPlan = {

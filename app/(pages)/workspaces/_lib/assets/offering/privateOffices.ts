@@ -1,4 +1,4 @@
-import type { PrivateOfficeAds, PrivateOfficeCard } from "../../definitions";
+import type { PrivateOfficeAds, PrivateOfficeAdsCard } from "../../definitions";
 export const privateOfficeAds: PrivateOfficeAds[] = [
   {
     id: "private-office-1",
@@ -99,7 +99,7 @@ export const privateOfficeAds: PrivateOfficeAds[] = [
   },
 ];
 
-export const privateOfficeCards: PrivateOfficeCard[] = privateOfficeAds.map(
+export const privateOfficeCards: PrivateOfficeAdsCard[] = privateOfficeAds.map(
   ({
     id,
     officeType,

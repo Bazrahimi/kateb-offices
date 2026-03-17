@@ -7,10 +7,10 @@ import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
 import Link from "next/link";
 
-import type { PrivateOfficeCard as PrivateOfficeCardType } from "../../_lib/definitions";
+import type {  PrivateOfficeAdsCard } from "../../_lib/definitions";
 
 type Props = {
-  room: PrivateOfficeCardType;
+  room: PrivateOfficeAdsCard;
 };
 
 export default function PrivateOfficeAdsCard({ room }: Props) {
