@@ -14,11 +14,11 @@ const offeringByRouteSlug: Record<string, OfferingKey> = {
 export default async function Page({
   params,
 }: {
-  params: Promise<{ offering: string }>;
+  params: Promise<{ workspaceKey: string }>;
 }) {
-  const { offering } = await params;
+  const { workspaceKey } = await params;
 
-  const offeringKey = offeringByRouteSlug[offering];
+  const offeringKey = offeringByRouteSlug[workspaceKey];
 
   if (!offeringKey) notFound();
 
