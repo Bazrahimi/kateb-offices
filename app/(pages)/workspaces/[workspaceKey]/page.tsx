@@ -1,24 +1,16 @@
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
+import { offeringByRouteSlug } from "@/app/_lib/routes/workspacesRoutes";
 import { notFound } from "next/navigation";
 import WorkspaceOfferingRenderer from "../_ui/WorkspaceOfferingRenderer";
-import type { WorkspaceKey } from "@/app/_lib/org/definitions";
-
-const offeringByRouteSlug: Record<string, WorkspaceKey> = {
-  "private-offices": "privateOffices",
-  "coworking-membership": "coworkingMembership",
-  "dedicated-desk": "dedicatedDesk",
-  "book-meeting-rooms": "meetingRooms",
-  "book-meeting-rooms-members": "memberMeetingRooms",
-  "virtual-offices": "virtualOffices",
-};
 
 export default async function Page({
   params,
 }: {
-  params: Promise<{ workspaceKey: string }>;
+  params: Promise<{ workspaceKey: WorkspaceKey }>;
 }) {
   const { workspaceKey } = await params;
 
-  const offeringKey = offeringByRouteSlug[workspaceKey];
+  const offeringKey: WorkspaceKey = offeringByRouteSlug[workspaceKey];
 
   if (!offeringKey) notFound();
 

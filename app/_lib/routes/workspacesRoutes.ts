@@ -9,6 +9,13 @@ export const workspaceRouteSlugByOffering: Record<WorkspaceKey, string> = {
   virtualOffices: "virtual-offices",
 };
 
+export const offeringByRouteSlug = Object.fromEntries(
+  Object.entries(workspaceRouteSlugByOffering).map(([key, slug]) => [
+    slug,
+    key,
+  ]),
+) as Record<(typeof workspaceRouteSlugByOffering)[WorkspaceKey], WorkspaceKey>;
+
 export const workspacesRoutes = {
   offering: (key: WorkspaceKey) =>
     `/workspaces/${workspaceRouteSlugByOffering[key]}`,
