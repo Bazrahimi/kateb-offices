@@ -1,13 +1,13 @@
 import { HiOutlineUserGroup } from "react-icons/hi2";
 
-import type { WorkspaceOffering } from "@/app/(pages)/workspaces/_lib/definitions";
+import type { WorkspaceSignupPlan } from "@/app/(pages)/workspaces/_lib/definitions";
 import Image from "next/image";
 import Button from "../button/Button";
 import { Header } from "../typography/Header";
 import { P } from "../typography/paragraph";
 
 type Props = {
-  offer: WorkspaceOffering;
+  offer: WorkspaceSignupPlan;
   serviceLabel: string;
 };
 

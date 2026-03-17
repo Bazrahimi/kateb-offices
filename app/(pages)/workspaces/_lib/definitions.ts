@@ -4,7 +4,7 @@ type OfficeType = "Internal Office" | "External Office" | "Corner Office";
 
 export type WorkspaceJoin = Record<string, unknown>;
 
-export type WorkspaceOffering = {
+export type WorkspaceSignupPlan = {
   image: string;
   capacityLabel?: string;
   priceLabel: string;
@@ -13,11 +13,9 @@ export type WorkspaceOffering = {
   href: string;
 };
 
-
-
 export type Offering = {
   label: string;
-  offering: WorkspaceOffering;
+  offering: WorkspaceSignupPlan;
 };
 
 export type PrivateOfficeAds = {
@@ -68,9 +66,6 @@ export type PrivateOfficeAdsCard = Pick<
   | "availableFrom"
 >;
 
-
-
-
 export type WorkspaceOfferingPlan = {
   id: string;
   label: string;
@@ -78,8 +73,6 @@ export type WorkspaceOfferingPlan = {
   price: string;
   inclusions?: string[];
 };
-
-
 
 export type WorkspaceOfferingMeta = {
   image: string;
@@ -94,7 +87,7 @@ type PrivateOfficePageConfig = {
 type PlanListPageConfig = {
   kind: "workspacePlanList";
   plans: WorkspaceOfferingPlan[];
-  offering: WorkspaceOffering;
+  offering: WorkspaceSignupPlan;
 };
 
 type MeetingRoomsPageConfig = {

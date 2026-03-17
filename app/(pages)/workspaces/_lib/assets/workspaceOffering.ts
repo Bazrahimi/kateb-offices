@@ -1,10 +1,10 @@
 import { publicAssets } from "../../../../_lib/org/publicAssets";
 import { workspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
-import type { Offering,  WorkspaceOffering } from "../definitions";
+import type { Offering,  WorkspaceSignupPlan } from "../definitions";
 import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 const svg = publicAssets.offeringSvg;
 
-const coworkingMembershipOffering: WorkspaceOffering = {
+const coworkingMembershipOffering: WorkspaceSignupPlan = {
   image: svg.coworkingMembership,
   capacityLabel: "1+",
   priceLabel: "From $150/month",
@@ -14,7 +14,7 @@ const coworkingMembershipOffering: WorkspaceOffering = {
   href: routes.coworkingMembership(),
 };
 
-const dedicatedDeskFee: WorkspaceOffering = {
+const dedicatedDeskFee: WorkspaceSignupPlan = {
   image: svg.dedicatedDesk,
   capacityLabel: "1",
   priceLabel: "From $195/month",
@@ -24,7 +24,7 @@ const dedicatedDeskFee: WorkspaceOffering = {
   href: routes.dedicatedDesk(),
 };
 
-const virtualOfficeFee: WorkspaceOffering = {
+const virtualOfficeFee: WorkspaceSignupPlan = {
   image: svg.virtualOffice,
   priceLabel: "From $40/month",
   summary:
@@ -33,7 +33,7 @@ const virtualOfficeFee: WorkspaceOffering = {
   href: routes.virtualOffice(),
 };
 
-const privateOfficeFee: WorkspaceOffering = {
+const privateOfficeFee: WorkspaceSignupPlan = {
   image: svg.privateOffice,
   capacityLabel: "1–12+",
   priceLabel: "From $1120/month",
@@ -43,7 +43,7 @@ const privateOfficeFee: WorkspaceOffering = {
   href: routes.privateOffice(),
 };
 
-const meetingRoomsFee: WorkspaceOffering = {
+const meetingRoomsFee: WorkspaceSignupPlan = {
   image: svg.meetingRooms,
   capacityLabel: "2–25",
   priceLabel: "From $40/hr",
@@ -53,7 +53,7 @@ const meetingRoomsFee: WorkspaceOffering = {
   href: routes.meetingRooms(),
 };
 
-const memberMeetingRoomsFee: WorkspaceOffering = {
+const memberMeetingRoomsFee: WorkspaceSignupPlan = {
   image: svg.meetingRoomsMembers,
   capacityLabel: "2–25",
   priceLabel: "From $20/hr",
