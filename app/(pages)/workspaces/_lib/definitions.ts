@@ -79,13 +79,7 @@ export type WorkspaceOfferingPlan = {
   inclusions?: string[];
 };
 
-export type WorkspacePlan = {
-  id: string;
-  label: string;
-  access?: string;
-  price: string;
-  inclusions?: string[];
-};
+
 
 export type WorkspaceOfferingMeta = {
   image: string;
@@ -99,7 +93,7 @@ type PrivateOfficePageConfig = {
 
 type PlanListPageConfig = {
   kind: "workspacePlanList";
-  plans: WorkspacePlan[];
+  plans: WorkspaceOfferingPlan[];
   offering: WorkspaceOffering;
 };
 

@@ -1,11 +1,11 @@
-import type { OfferingKey } from "@/app/_lib/org/definitions";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 import { meetingRoomPlans } from "@/app/(pages)/workspaces/_lib/assets/offering/meetingRooms";
 import { memberMeetingRoom } from "@/app/(pages)/workspaces/_lib/assets/offering/MeetingRoomMember";
 import MeetingRoomsBookingPage from "@/app/(pages)/workspaces/application/_ui/MeetingRoomsBookingPage";
 import { Header } from "@/app/_ui/typography/Header";
 
 type Props = {
-  offering: OfferingKey[];
+  offering: WorkspaceKey[];
 };
 
 export default function ServiceMeetingRoomBlocks({ offering }: Props) {

@@ -6,11 +6,11 @@ import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
 import type {
   WorkspaceOfferingMeta,
-  WorkspacePlan,
+  WorkspaceOfferingPlan,
 } from "../../_lib/definitions";
 
 type Props = {
-  plans: WorkspacePlan[];
+  plans: WorkspaceOfferingPlan[];
   offering: WorkspaceOfferingMeta;
 };
 

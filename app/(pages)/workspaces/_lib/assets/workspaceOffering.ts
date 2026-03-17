@@ -1,7 +1,7 @@
 import { publicAssets } from "../../../../_lib/org/publicAssets";
 import { workspacesRoutes as routes } from "../../../../_lib/routes/joinWorkspacesRoutes";
 import type { Offering,  WorkspaceOffering } from "../definitions";
-import type { OfferingKey } from "@/app/_lib/org/definitions";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 const svg = publicAssets.offeringSvg;
 
 const coworkingMembershipOffering: WorkspaceOffering = {
@@ -63,7 +63,7 @@ const memberMeetingRoomsFee: WorkspaceOffering = {
   href: routes.meetingRoomsMembers(),
 };
 
-export const workspaceOffering: Record<OfferingKey, Offering> = {
+export const workspaceOffering: Record<WorkspaceKey, Offering> = {
   privateOffices: {
     label: "Private Offices",
     offering: privateOfficeFee,

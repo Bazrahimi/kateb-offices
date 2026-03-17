@@ -1,4 +1,4 @@
-import type { OfferingKey } from "@/app/_lib/org/definitions";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 import { Header } from "@/app/_ui/typography/Header";
 import { privateOfficeCards } from "../_lib/assets/offering/privateOffices";
 import { workspacePageConfig } from "../_lib/assets/workspacePageConfig";
@@ -7,7 +7,7 @@ import WorkspacePlanListPage from "../application/_ui/WorkspacePlanListPage";
 import PrivateOfficeAdsCard from "../private-offices/_ui/PrivateOfficeAdsCard";
 
 type Props = {
-  offeringKey: OfferingKey;
+  offeringKey: WorkspaceKey;
 };
 
 export default function WorkspaceOfferingRenderer({ offeringKey }: Props) {

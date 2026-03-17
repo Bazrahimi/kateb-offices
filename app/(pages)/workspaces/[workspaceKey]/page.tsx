@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import WorkspaceOfferingRenderer from "../_ui/WorkspaceOfferingRenderer";
-import type { OfferingKey } from "@/app/_lib/org/definitions";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 
-const offeringByRouteSlug: Record<string, OfferingKey> = {
+const offeringByRouteSlug: Record<string, WorkspaceKey> = {
   "private-offices": "privateOffices",
   "coworking-membership": "coworkingMembership",
   "dedicated-desk": "dedicatedDesk",

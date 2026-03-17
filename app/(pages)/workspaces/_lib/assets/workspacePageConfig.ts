@@ -5,9 +5,9 @@ import { memberMeetingRoom } from "./offering/MeetingRoomMember";
 import { meetingRoomPlans } from "./offering/meetingRooms";
 import { virtualOfficeOfferings } from "./offering/virtualOffices";
 
-import type { OfferingKey } from "@/app/_lib/org/definitions";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 import { workspaceOffering } from "./workspaceOffering";
-export const workspacePageConfig: Record<OfferingKey, WorkspacePageConfigItem> =
+export const workspacePageConfig: Record<WorkspaceKey, WorkspacePageConfigItem> =
   {
     privateOffices: {
       kind: "privateOfficeGrid",

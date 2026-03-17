@@ -1,5 +1,5 @@
 import type { ImageMeta } from "../definitions";
-export type OfferingKey =
+export type WorkspaceKey =
   | "privateOffices"
   | "coworkingMembership"
   | "dedicatedDesk"
@@ -26,5 +26,5 @@ export type ServicesPage = {
   description: readonly string[];
   image: ImageMeta[];
   subcategories: ServiceSubCategory;
-  offering: OfferingKey[]
+  offering: WorkspaceKey[]
 };

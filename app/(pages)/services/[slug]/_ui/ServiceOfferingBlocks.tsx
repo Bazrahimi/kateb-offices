@@ -3,7 +3,7 @@ import { dedicatedDeskOfferings } from "@/app/(pages)/workspaces/_lib/assets/off
 import { privateOfficeCards } from "@/app/(pages)/workspaces/_lib/assets/offering/privateOffices";
 import { virtualOfficeOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/virtualOffices";
 import { workspaceOffering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
-import type { OfferingKey } from "@/app/_lib/org/definitions";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 
 import WorkspacePlanListPage from "@/app/(pages)/workspaces/application/_ui/WorkspacePlanListPage";
 import { Header } from "@/app/_ui/typography/Header";
@@ -11,7 +11,7 @@ import ServiceMeetingRoomBlocks from "./ServiceMeetingRoomBlocks";
 import PrivateOfficeAdsCard from "@/app/(pages)/workspaces/private-offices/_ui/PrivateOfficeAdsCard";
 
 type Props = {
-  offering: OfferingKey[];
+  offering: WorkspaceKey[];
 };
 
 export default function ServiceOfferingBlocks({ offering }: Props) {

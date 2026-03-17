@@ -1,6 +1,6 @@
-import type { OfferingKey } from "@/app/_lib/org/definitions";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 
-export const workspaceRouteSlugByOffering: Record<OfferingKey, string> = {
+export const workspaceRouteSlugByOffering: Record<WorkspaceKey, string> = {
   privateOffices: "private-offices",
   coworkingMembership: "coworking-membership",
   dedicatedDesk: "dedicated-desk",
@@ -10,7 +10,7 @@ export const workspaceRouteSlugByOffering: Record<OfferingKey, string> = {
 };
 
 export const workspacesRoutes = {
-  offering: (key: OfferingKey) =>
+  offering: (key: WorkspaceKey) =>
     `/workspaces/${workspaceRouteSlugByOffering[key]}`,
 
   coworkingMembership: () => "/workspaces/coworking-membership",
