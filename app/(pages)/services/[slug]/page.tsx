@@ -57,7 +57,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         </Section>
       )}
       <Section>
-        <ServiceOfferingBlocks offering={service.offering} />
+        <ServiceOfferingBlocks offerings={service.offering} />
       </Section>
 
       <Section>

@@ -1,24 +1,25 @@
 import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 import { Header } from "@/app/_ui/typography/Header";
-import { privateOfficeCards } from "../_lib/assets/offering/privateOffices";
-import { workspacePageConfig } from "../_lib/assets/workspacePageConfig";
+import { privateOfficeCards } from "../_lib/workspaces/signup/privateOffices";
+import { workspaceRegistry } from "../_lib/workspaces/workspaceRegistry";
 import MeetingRoomsBookingPage from "../application/_ui/MeetingRoomsBookingPage";
 import WorkspacePlanListPage from "../application/_ui/WorkspacePlanListPage";
-import PrivateOfficeAdsCard from "../private-offices/_ui/PrivateOfficeAdsCard";
+import PrivateOfficeAdsCard from "../single-office/_ui/PrivateOfficeAdsCard";
 
 type Props = {
   offeringKey: WorkspaceKey;
 };
 
 export default function WorkspaceOfferingRenderer({ offeringKey }: Props) {
-  const config = workspacePageConfig[offeringKey];
+  const config = workspaceRegistry[offeringKey];
+  const page = config.page;
 
-  if (config.kind === "privateOfficeGrid") {
+  if (page.kind === "privateOfficeGrid") {
     return (
       <main className="min-h-screen bg-slate-100 py-10">
         <div className="mb-10">
           <Header as="h1" size="md" align="center">
-            {config.title}
+            {page.title}
           </Header>
         </div>
 
@@ -33,14 +34,14 @@ export default function WorkspaceOfferingRenderer({ offeringKey }: Props) {
     );
   }
 
-  if (config.kind === "workspacePlanList") {
+  if (page.kind === "workspacePlanList") {
     return (
-      <WorkspacePlanListPage plans={config.plans} offering={config.offering} />
+      <WorkspacePlanListPage plans={page.plans} offering={config.signupInfo} />
     );
   }
 
-  if (config.kind === "meetingRoomsBooking") {
-    return <MeetingRoomsBookingPage rooms={config.rooms} />;
+  if (page.kind === "meetingRoomsBooking") {
+    return <MeetingRoomsBookingPage rooms={page.rooms} />;
   }
 
   return null;

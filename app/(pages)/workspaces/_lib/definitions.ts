@@ -1,10 +1,7 @@
 import { ImageMeta } from "@/app/_lib/definitions";
+
 type PrivateOfficeStatus = "available" | "reserved" | "leased";
 type OfficeType = "Internal Office" | "External Office" | "Corner Office";
-
-
-
-
 
 export type PrivateOfficeAds = {
   id: string;
@@ -71,25 +68,15 @@ export type WorkspaceSignupInfo = {
   href: string;
 };
 
-export type Offering = {
-  label: string;
-  offering: WorkspaceSignupInfo;
-};
-
-export type WorkspaceOfferingMeta = {
-  image: string;
-  btnContent: string;
-};
-
 type PrivateOfficePageConfig = {
   kind: "privateOfficeGrid";
   title: string;
+   cards: PrivateOfficeAdsCard[];
 };
 
 type PlanListPageConfig = {
   kind: "workspacePlanList";
   plans: WorkspaceSignupPlan[];
-  offering: WorkspaceSignupInfo;
 };
 
 type MeetingRoomsPageConfig = {
@@ -97,7 +84,8 @@ type MeetingRoomsPageConfig = {
   rooms: MeetingRoomOfferings[];
 };
 
-export type WorkspacePageConfigItem =
-  | PrivateOfficePageConfig
-  | PlanListPageConfig
-  | MeetingRoomsPageConfig;
+export type WorkspaceRegistryItem = {
+  label: string;
+  signupInfo: WorkspaceSignupInfo;
+  page: PrivateOfficePageConfig | PlanListPageConfig | MeetingRoomsPageConfig;
+};

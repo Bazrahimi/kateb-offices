@@ -13,11 +13,7 @@ export const workspacesRoutes = {
   offering: (key: WorkspaceKey) =>
     `/workspaces/${workspaceRouteSlugByOffering[key]}`,
 
-  coworkingMembership: () => "/workspaces/coworking-membership",
-  dedicatedDesk: () => "/workspaces/dedicated-desk",
-  virtualOffice: () => "/workspaces/virtual-offices",
-  privateOffice: () => "/workspaces/private-offices",
-  meetingRooms: () => "/workspaces/book-meeting-rooms",
-  meetingRoomsMembers: () => "/workspaces/book-meeting-rooms-members",
+  officeDetails: (slug: string) => `/workspaces/single-office/${slug}`,
+
   application: () => "/workspaces/application",
 };

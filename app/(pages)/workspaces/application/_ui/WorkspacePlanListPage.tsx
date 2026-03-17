@@ -1,17 +1,16 @@
-// app/(pages)/workspaces/_ui/WorkspacePlanListPage.tsx
-import { workspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
+import { workspacesRoutes } from "@/app/_lib/routes/workspacesRoutes";
 import Button from "@/app/_ui/button/Button";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
 import type {
-  WorkspaceOfferingMeta,
+  WorkspaceSignupInfo,
   WorkspaceSignupPlan,
 } from "../../_lib/definitions";
 
 type Props = {
   plans: WorkspaceSignupPlan[];
-  offering: WorkspaceOfferingMeta;
+  offering: WorkspaceSignupInfo;
 };
 
 const WorkspacePlanListPage = ({ plans, offering }: Props) => {

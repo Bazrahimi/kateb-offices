@@ -1,10 +1,10 @@
 // app/join-workspaces/private-offices/[slug]/page.tsx
-import { workspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
+import { workspacesRoutes } from "@/app/_lib/routes/workspacesRoutes";
 import ImageGallery from "@/app/_ui/image/ImageGallery";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import { notFound } from "next/navigation";
-import { getPrivateOfficeBySlug } from "../../_lib/assets/offering/privateOffices";
+import { getPrivateOfficeBySlug } from "../../_lib/workspaces/signup/privateOffices";
 import WorkspaceActionsClient from "./_ui/WorkspaceActionsClient";
 
 type Props = {

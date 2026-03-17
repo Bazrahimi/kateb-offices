@@ -1,26 +1,26 @@
 // app/join-workspaces/private-offices/_ui/PrivateOfficeCard.tsx
 import { cldLeafAuto } from "@/app/_lib/cloudinary/cloudinary";
-import { workspacesRoutes } from "@/app/_lib/routes/joinWorkspacesRoutes";
+import { workspacesRoutes } from "@/app/_lib/routes/workspacesRoutes";
 import { IMAGE_DEFAULT_BLUR } from "@/app/_ui/image/ImageShimer";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
 import Link from "next/link";
 
-import type {  PrivateOfficeAdsCard } from "../../_lib/definitions";
+import type { PrivateOfficeAdsCard } from "../../_lib/definitions";
 
 type Props = {
   room: PrivateOfficeAdsCard;
 };
 
 export default function PrivateOfficeAdsCard({ room }: Props) {
-  const href = `${workspacesRoutes.privateOffice()}/${room.slug}`;
+  const href = workspacesRoutes.officeDetails(room.slug);
   const firstImage = room.images[0];
   return (
     <Link href={href} className="block">
       <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
         <div className="p-6">
-          <Header as="h2" >{room.label}</Header>
+          <Header as="h2">{room.label}</Header>
           <P className="text-center font-bold">{room.officeType}</P>
         </div>
 

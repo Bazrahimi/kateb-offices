@@ -1,7 +1,7 @@
-import type { WorkspaceKey } from "@/app/_lib/org/definitions";
-import { meetingRoomPlans } from "@/app/(pages)/workspaces/_lib/assets/offering/meetingRooms";
-import { memberMeetingRoom } from "@/app/(pages)/workspaces/_lib/assets/offering/MeetingRoomMember";
+import { memberMeetingRoom } from "@/app/(pages)/workspaces/_lib/workspaces/signup/MeetingRoomMember";
+import { meetingRoomPlans } from "@/app/(pages)/workspaces/_lib/workspaces/signup/meetingRooms";
 import MeetingRoomsBookingPage from "@/app/(pages)/workspaces/application/_ui/MeetingRoomsBookingPage";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 import { Header } from "@/app/_ui/typography/Header";
 
 type Props = {

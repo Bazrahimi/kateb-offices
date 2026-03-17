@@ -1,60 +1,57 @@
-import { membershipOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/coworkingMembership";
-import { dedicatedDeskOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/dedicatedDesk";
-import { privateOfficeCards } from "@/app/(pages)/workspaces/_lib/assets/offering/privateOffices";
-import { virtualOfficeOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/virtualOffices";
-import { workspaceOffering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
-import type { WorkspaceKey } from "@/app/_lib/org/definitions";
-
+import { workspaceRegistry } from "@/app/(pages)/workspaces/_lib/workspaces/workspaceRegistry";
+import MeetingRoomsBookingPage from "@/app/(pages)/workspaces/application/_ui/MeetingRoomsBookingPage";
 import WorkspacePlanListPage from "@/app/(pages)/workspaces/application/_ui/WorkspacePlanListPage";
+import PrivateOfficeAdsCard from "@/app/(pages)/workspaces/single-office/_ui/PrivateOfficeAdsCard";
+import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 import { Header } from "@/app/_ui/typography/Header";
-import ServiceMeetingRoomBlocks from "./ServiceMeetingRoomBlocks";
-import PrivateOfficeAdsCard from "@/app/(pages)/workspaces/private-offices/_ui/PrivateOfficeAdsCard";
 
 type Props = {
-  offering: WorkspaceKey[];
+  offerings: WorkspaceKey[];
 };
 
-export default function ServiceOfferingBlocks({ offering }: Props) {
+export default function ServiceOfferingBlocks({ offerings }: Props) {
   return (
-    <div className="space-y-10 ">
-      {offering.includes("privateOffices") && (
-        <div className=" mt-10 py-10 bg-gray-600">
-          <Header as="h2" size="md" align="center">
-            Private Offices Currently Available
-          </Header>
+    <div className="space-y-10">
+      {offerings.map((workspaceKey) => {
+        const item = workspaceRegistry[workspaceKey];
+        const page = item.page;
 
-          <div className="mx-auto max-w-6xl space-y-6 px-4 bg-org-primary-main my-5">
-            <section className="grid gap-3 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
-              {privateOfficeCards.map((room) => (
-                <PrivateOfficeAdsCard key={room.id} room={room} />
-              ))}
-            </section>
-          </div>
-        </div>
-      )}
+        if (page.kind === "privateOfficeGrid") {
+          return (
+            <div key={workspaceKey} className="mt-10 bg-gray-600 py-10">
+              <Header as="h2" size="md" align="center">
+                {page.title}
+              </Header>
 
-      {offering.includes("dedicatedDesk") && (
-        <WorkspacePlanListPage
-          plans={dedicatedDeskOfferings}
-          offering={workspaceOffering.dedicatedDesk.offering}
-        />
-      )}
+              <div className="mx-auto my-5 max-w-6xl space-y-6 bg-org-primary-main px-4">
+                <section className="grid gap-3 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
+                  {page.cards.map((room) => (
+                    <PrivateOfficeAdsCard key={room.id} room={room} />
+                  ))}
+                </section>
+              </div>
+            </div>
+          );
+        }
 
-      {offering.includes("coworkingMembership") && (
-        <WorkspacePlanListPage
-          plans={membershipOfferings}
-          offering={workspaceOffering.coworkingMembership.offering}
-        />
-      )}
+        if (page.kind === "workspacePlanList") {
+          return (
+            <WorkspacePlanListPage
+              key={workspaceKey}
+              plans={page.plans}
+              offering={item.signupInfo}
+            />
+          );
+        }
 
-      {offering.includes("virtualOffices") && (
-        <WorkspacePlanListPage
-          plans={virtualOfficeOfferings}
-          offering={workspaceOffering.virtualOffices.offering}
-        />
-      )}
+        if (page.kind === "meetingRoomsBooking") {
+          return (
+            <MeetingRoomsBookingPage key={workspaceKey} rooms={page.rooms} />
+          );
+        }
 
-      <ServiceMeetingRoomBlocks offering={offering} />
+        return null;
+      })}
     </div>
   );
 }
