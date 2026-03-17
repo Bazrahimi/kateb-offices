@@ -13,7 +13,7 @@ type Props = {
   room: PrivateOfficeCardType;
 };
 
-export default function PrivateOfficeCard({ room }: Props) {
+export default function PrivateOfficeAdsCard({ room }: Props) {
   const href = `${workspacesRoutes.privateOffice()}/${room.slug}`;
   const firstImage = room.images[0];
   return (

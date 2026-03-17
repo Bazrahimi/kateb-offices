@@ -6,9 +6,9 @@ import { offering as workspaceOffering } from "@/app/(pages)/workspaces/_lib/ass
 import type { OfferingKey } from "@/app/_lib/org/definitions";
 
 import WorkspacePlanListPage from "@/app/(pages)/workspaces/application/_ui/WorkspacePlanListPage";
-import PrivateOfficeCard from "@/app/(pages)/workspaces/private-offices/_ui/PrivateOfficeCard";
 import { Header } from "@/app/_ui/typography/Header";
 import ServiceMeetingRoomBlocks from "./ServiceMeetingRoomBlocks";
+import PrivateOfficeAdsCard from "@/app/(pages)/workspaces/private-offices/_ui/PrivateOfficeAdsCard";
 
 type Props = {
   offering: OfferingKey[];
@@ -26,7 +26,7 @@ export default function ServiceOfferingBlocks({ offering }: Props) {
           <div className="mx-auto max-w-6xl space-y-6 px-4 bg-org-primary-main my-5">
             <section className="grid gap-3 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
               {privateOfficeCards.map((room) => (
-                <PrivateOfficeCard key={room.id} room={room} />
+                <PrivateOfficeAdsCard key={room.id} room={room} />
               ))}
             </section>
           </div>

@@ -13,7 +13,7 @@ import { virtualOfficeOfferings } from "../_lib/assets/offering/virtualOffices";
 import { Header } from "@/app/_ui/typography/Header";
 import MeetingRoomsBookingPage from "../application/_ui/MeetingRoomsBookingPage";
 import WorkspacePlanListPage from "../application/_ui/WorkspacePlanListPage";
-import PrivateOfficeCard from "../private-offices/_ui/PrivateOfficeCard";
+import PrivateOfficeAdsCard from "../private-offices/_ui/PrivateOfficeAdsCard";
 
 type Props = {
   offeringKey: OfferingKey;
@@ -33,7 +33,7 @@ export default function WorkspaceOfferingRenderer({ offeringKey }: Props) {
           <div className="mx-auto max-w-6xl space-y-6 px-4">
             <section className="grid gap-3 sm:grid-cols-2 md:gap-6 xl:grid-cols-3">
               {privateOfficeCards.map((room) => (
-                <PrivateOfficeCard key={room.id} room={room} />
+                <PrivateOfficeAdsCard key={room.id} room={room} />
               ))}
             </section>
           </div>
