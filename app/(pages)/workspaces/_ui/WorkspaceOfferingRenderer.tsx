@@ -4,7 +4,7 @@ import { privateOfficeCards } from "../_lib/workspaces/signup/privateOffices";
 import { workspaceRegistry } from "../_lib/workspaces/workspaceRegistry";
 import MeetingRoomsBookingPage from "../application/_ui/MeetingRoomsBookingPage";
 import WorkspacePlanListPage from "../application/_ui/WorkspacePlanListPage";
-import PrivateOfficeAdsCard from "../single-office/_ui/PrivateOfficeAdsCard";
+import PrivateOfficeAdsCard from "../private-office-rental/_ui/PrivateOfficeAdsCard";
 
 type Props = {
   offeringKey: WorkspaceKey;

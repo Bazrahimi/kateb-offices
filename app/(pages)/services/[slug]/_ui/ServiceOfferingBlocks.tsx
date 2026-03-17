@@ -1,7 +1,7 @@
 import { workspaceRegistry } from "@/app/(pages)/workspaces/_lib/workspaces/workspaceRegistry";
 import MeetingRoomsBookingPage from "@/app/(pages)/workspaces/application/_ui/MeetingRoomsBookingPage";
 import WorkspacePlanListPage from "@/app/(pages)/workspaces/application/_ui/WorkspacePlanListPage";
-import PrivateOfficeAdsCard from "@/app/(pages)/workspaces/single-office/_ui/PrivateOfficeAdsCard";
+import PrivateOfficeAdsCard from "@/app/(pages)/workspaces/private-office-rental/_ui/PrivateOfficeAdsCard";
 import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 import { Header } from "@/app/_ui/typography/Header";
 

@@ -13,7 +13,7 @@ export const workspacesRoutes = {
   offering: (key: WorkspaceKey) =>
     `/workspaces/${workspaceRouteSlugByOffering[key]}`,
 
-  officeDetails: (slug: string) => `/workspaces/single-office/${slug}`,
+  officeDetails: (slug: string) => `/workspaces/private-office-rental/${slug}`,
 
   application: () => "/workspaces/application",
 };
