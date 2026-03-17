@@ -78,3 +78,16 @@ export type WorkspaceOfferingPlan = {
   price: string;
   inclusions?: string[];
 };
+
+export type WorkspacePlan = {
+  id: string;
+  label: string;
+  access?: string;
+  price: string;
+  inclusions?: string[];
+};
+
+export type WorkspaceOfferingMeta = {
+  image: string;
+  btnContent: string;
+};

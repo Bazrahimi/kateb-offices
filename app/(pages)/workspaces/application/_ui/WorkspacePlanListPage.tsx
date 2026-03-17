@@ -4,19 +4,9 @@ import Button from "@/app/_ui/button/Button";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
+import type { WorkspacePlan, WorkspaceOfferingMeta } from "../../_lib/definitions";
 
-export type WorkspacePlan = {
-  id: string;
-  label: string;
-  access?: string;
-  price: string;
-  inclusions?: string[];
-};
 
-export type WorkspaceOfferingMeta = {
-  image: string;
-  btnContent: string;
-};
 
 type Props = {
   plans: WorkspacePlan[];
