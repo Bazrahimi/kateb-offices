@@ -8,12 +8,12 @@ import { getPrivateOfficeBySlug } from "../../_lib/assets/offering/privateOffice
 import WorkspaceActionsClient from "./_ui/WorkspaceActionsClient";
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ adsSlug: string }>;
 };
 
 export default async function Page({ params }: Props) {
-  const { slug } = await params;
-  const office = getPrivateOfficeBySlug(slug);
+  const { adsSlug } = await params;
+  const office = getPrivateOfficeBySlug(adsSlug);
 
   if (!office) notFound();
 

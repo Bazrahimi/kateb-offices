@@ -20,7 +20,7 @@ export type Offering = {
   offering: WorkspaceOffering;
 };
 
-export type PrivateOffice = {
+export type PrivateOfficeAds = {
   id: string;
   slug: string;
   label: string;
@@ -43,7 +43,7 @@ export type PrivateOffice = {
 };
 
 export type MeetingRoomOfferings = Pick<
-  PrivateOffice,
+  PrivateOfficeAds,
   | "id"
   | "label"
   | "capacity"
@@ -55,8 +55,8 @@ export type MeetingRoomOfferings = Pick<
   | "eligibilityNotes"
 >;
 
-export type PrivateOfficeCard = Pick<
-  PrivateOffice,
+export type PrivateOfficeAdsCard = Pick<
+  PrivateOfficeAds,
   | "id"
   | "officeType"
   | "slug"
@@ -67,6 +67,8 @@ export type PrivateOfficeCard = Pick<
   | "status"
   | "availableFrom"
 >;
+
+export type PrivateOfficeCard = PrivateOfficeAdsCard;
 
 
 export type WorkspaceOfferingPlan = {

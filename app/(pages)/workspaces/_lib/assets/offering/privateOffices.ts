@@ -1,5 +1,5 @@
-import type { PrivateOffice, PrivateOfficeCard } from "../../definitions";
-export const privateOfficeRooms: PrivateOffice[] = [
+import type { PrivateOfficeAds, PrivateOfficeCard } from "../../definitions";
+export const privateOfficeAds: PrivateOfficeAds[] = [
   {
     id: "private-office-1",
     slug: "private-internal-office-suite-1",
@@ -99,7 +99,7 @@ export const privateOfficeRooms: PrivateOffice[] = [
   },
 ];
 
-export const privateOfficeCards: PrivateOfficeCard[] = privateOfficeRooms.map(
+export const privateOfficeCards: PrivateOfficeCard[] = privateOfficeAds.map(
   ({
     id,
     officeType,
@@ -124,4 +124,4 @@ export const privateOfficeCards: PrivateOfficeCard[] = privateOfficeRooms.map(
 );
 
 export const getPrivateOfficeBySlug = (slug: string) =>
-  privateOfficeRooms.find((room) => room.slug === slug) ?? null;
+  privateOfficeAds.find((office) => office.slug === slug) ?? null;
