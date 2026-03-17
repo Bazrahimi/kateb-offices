@@ -91,3 +91,24 @@ export type WorkspaceOfferingMeta = {
   image: string;
   btnContent: string;
 };
+
+type PrivateOfficePageConfig = {
+  kind: "privateOfficeGrid";
+  title: string;
+};
+
+type PlanListPageConfig = {
+  kind: "workspacePlanList";
+  plans: WorkspacePlan[];
+  offering: WorkspaceOffering;
+};
+
+type MeetingRoomsPageConfig = {
+  kind: "meetingRoomsBooking";
+  rooms: MeetingRoomOfferings[];
+};
+
+export type WorkspacePageConfigItem =
+  | PrivateOfficePageConfig
+  | PlanListPageConfig
+  | MeetingRoomsPageConfig;

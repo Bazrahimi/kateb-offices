@@ -1,16 +1,7 @@
-import { notFound } from "next/navigation";
-
 import type { OfferingKey } from "@/app/_lib/org/definitions";
-import { workspaceOffering } from "../_lib/assets/workspaceOffering";
-
-import { membershipOfferings } from "../_lib/assets/offering/coworkingMembership";
-import { dedicatedDeskOfferings } from "../_lib/assets/offering/dedicatedDesk";
-import { memberMeetingRoom } from "../_lib/assets/offering/MeetingRoomMember";
-import { meetingRoomPlans } from "../_lib/assets/offering/meetingRooms";
-import { privateOfficeCards } from "../_lib/assets/offering/privateOffices";
-import { virtualOfficeOfferings } from "../_lib/assets/offering/virtualOffices";
-
 import { Header } from "@/app/_ui/typography/Header";
+import { privateOfficeCards } from "../_lib/assets/offering/privateOffices";
+import { workspacePageConfig } from "../_lib/assets/workspacePageConfig";
 import MeetingRoomsBookingPage from "../application/_ui/MeetingRoomsBookingPage";
 import WorkspacePlanListPage from "../application/_ui/WorkspacePlanListPage";
 import PrivateOfficeAdsCard from "../private-offices/_ui/PrivateOfficeAdsCard";
@@ -20,57 +11,37 @@ type Props = {
 };
 
 export default function WorkspaceOfferingRenderer({ offeringKey }: Props) {
-  switch (offeringKey) {
-    case "privateOffices":
-      return (
-        <main className="min-h-screen bg-slate-100 py-10">
-          <div className="mb-10">
-            <Header as="h1" size="md" align="center">
-              Private Offices Currently Available
-            </Header>
-          </div>
+  const config = workspacePageConfig[offeringKey];
 
-          <div className="mx-auto max-w-6xl space-y-6 px-4">
-            <section className="grid gap-3 sm:grid-cols-2 md:gap-6 xl:grid-cols-3">
-              {privateOfficeCards.map((room) => (
-                <PrivateOfficeAdsCard key={room.id} room={room} />
-              ))}
-            </section>
-          </div>
-        </main>
-      );
+  if (config.kind === "privateOfficeGrid") {
+    return (
+      <main className="min-h-screen bg-slate-100 py-10">
+        <div className="mb-10">
+          <Header as="h1" size="md" align="center">
+            {config.title}
+          </Header>
+        </div>
 
-    case "dedicatedDesk":
-      return (
-        <WorkspacePlanListPage
-          plans={dedicatedDeskOfferings}
-          offering={workspaceOffering.dedicatedDesk.offering}
-        />
-      );
-
-    case "coworkingMembership":
-      return (
-        <WorkspacePlanListPage
-          plans={membershipOfferings}
-          offering={workspaceOffering.coworkingMembership.offering}
-        />
-      );
-
-    case "virtualOffices":
-      return (
-        <WorkspacePlanListPage
-          plans={virtualOfficeOfferings}
-          offering={workspaceOffering.virtualOffices.offering}
-        />
-      );
-
-    case "meetingRooms":
-      return <MeetingRoomsBookingPage rooms={meetingRoomPlans} />;
-
-    case "memberMeetingRooms":
-      return <MeetingRoomsBookingPage rooms={memberMeetingRoom} />;
-
-    default:
-      notFound();
+        <div className="mx-auto max-w-6xl space-y-6 px-4">
+          <section className="grid gap-3 sm:grid-cols-2 md:gap-6 xl:grid-cols-3">
+            {privateOfficeCards.map((room) => (
+              <PrivateOfficeAdsCard key={room.id} room={room} />
+            ))}
+          </section>
+        </div>
+      </main>
+    );
   }
+
+  if (config.kind === "workspacePlanList") {
+    return (
+      <WorkspacePlanListPage plans={config.plans} offering={config.offering} />
+    );
+  }
+
+  if (config.kind === "meetingRoomsBooking") {
+    return <MeetingRoomsBookingPage rooms={config.rooms} />;
+  }
+
+  return null;
 }
