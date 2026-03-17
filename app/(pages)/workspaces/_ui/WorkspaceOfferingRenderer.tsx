@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import type { OfferingKey } from "@/app/_lib/org/definitions";
-import { offering as workspaceOffering } from "../_lib/assets/workspaceOffering";
+import { workspaceOffering } from "../_lib/assets/workspaceOffering";
 
 import { membershipOfferings } from "../_lib/assets/offering/coworkingMembership";
 import { dedicatedDeskOfferings } from "../_lib/assets/offering/dedicatedDesk";

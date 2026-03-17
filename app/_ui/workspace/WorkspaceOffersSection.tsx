@@ -1,4 +1,4 @@
-import { offering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
+import { workspaceOffering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
 import { Header } from "../typography/Header";
 import { P } from "../typography/paragraph";
 import WorkspaceOfferCard from "./WorkspaceOfferCard";
@@ -16,7 +16,7 @@ export default function WorkspaceOffersSection() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 ">
-        {Object.entries(offering).map(([key, offer]) => (
+        {Object.entries(workspaceOffering).map(([key, offer]) => (
           <WorkspaceOfferCard
             key={key}
             offer={offer.offering}

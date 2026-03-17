@@ -2,7 +2,7 @@ import { membershipOfferings } from "@/app/(pages)/workspaces/_lib/assets/offeri
 import { dedicatedDeskOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/dedicatedDesk";
 import { privateOfficeCards } from "@/app/(pages)/workspaces/_lib/assets/offering/privateOffices";
 import { virtualOfficeOfferings } from "@/app/(pages)/workspaces/_lib/assets/offering/virtualOffices";
-import { offering as workspaceOffering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
+import { workspaceOffering } from "@/app/(pages)/workspaces/_lib/assets/workspaceOffering";
 import type { OfferingKey } from "@/app/_lib/org/definitions";
 
 import WorkspacePlanListPage from "@/app/(pages)/workspaces/application/_ui/WorkspacePlanListPage";

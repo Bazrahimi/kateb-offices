@@ -63,7 +63,7 @@ const memberMeetingRoomsFee: WorkspaceOffering = {
   href: routes.meetingRoomsMembers(),
 };
 
-export const offering: Record<OfferingKey, Offering> = {
+export const workspaceOffering: Record<OfferingKey, Offering> = {
   privateOffices: {
     label: "Private Offices",
     offering: privateOfficeFee,

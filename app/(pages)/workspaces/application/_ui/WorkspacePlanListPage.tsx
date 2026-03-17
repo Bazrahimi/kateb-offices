@@ -4,9 +4,10 @@ import Button from "@/app/_ui/button/Button";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
 import Image from "next/image";
-import type { WorkspacePlan, WorkspaceOfferingMeta } from "../../_lib/definitions";
-
-
+import type {
+  WorkspaceOfferingMeta,
+  WorkspacePlan,
+} from "../../_lib/definitions";
 
 type Props = {
   plans: WorkspacePlan[];
@@ -36,8 +37,9 @@ const WorkspacePlanListPage = ({ plans, offering }: Props) => {
             </div>
 
             <div className="space-y-3">
-              {plan.access ? <P className="text-slate-600">{plan.access}</P> : null}
-              
+              {plan.access ? (
+                <P className="text-slate-600">{plan.access}</P>
+              ) : null}
 
               <div className="pt-2">
                 <P className="uppercase tracking-wide text-slate-500">Price</P>
