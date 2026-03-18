@@ -23,8 +23,8 @@ export default function WorkspaceActionsClient({
         applicationHref={applicationHref}
         onOpenTour={() => setOpen(true)}
         contacts={[
-          { name: "Baz Rahimi", phone: "0412515676" },
-          { name: "Alex Danishyar", phone: "0400000000" },
+          { name: "Baz Rahimi", phone: "+61 412 515 676" },
+          { name: "Alex Danishyar", phone: "+61 401 922 760" },
         ]}
       />
 
