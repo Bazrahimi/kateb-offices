@@ -14,11 +14,13 @@ import { Suspense } from "react";
 import ServiceDetails from "./_ui/ServiceDetails";
 import ServiceOfferingBlocks from "./_ui/ServiceOfferingBlocks";
 
+type ServicePageProps = {
+  params: Promise<{ slug: string }>;
+};
+
 export const generateMetadata = async ({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> => {
+}: ServicePageProps): Promise<Metadata> => {
   const { slug } = await params;
   const found = getServiceLabelBySlug(slug);
   if (!found) notFound();
@@ -34,7 +36,7 @@ export const generateMetadata = async ({
   );
 };
 
-const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+const page = async ({ params }: ServicePageProps) => {
   const { slug } = await params;
 
   const found = getServiceLabelBySlug(slug);

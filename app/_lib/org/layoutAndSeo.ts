@@ -1,13 +1,13 @@
 // app/_lib/org/layoutAndSeo.ts
 import type { Metadata, Viewport } from "next";
-import type { RootSeoConfig, PageSeo } from "../definitions";
+import type { PageSeo, RootSeoConfig } from "../definitions";
 import { PublicRoutes } from "../routes/publicRoutes";
+import { workspacesRoutes } from "../routes/workspacesRoutes";
 import { getHomeServiceKeywords } from "./category/serviceLookup";
+import { WorkspaceKey } from "./definitions";
 import { getBaseUrl, ORG_PROFILE as op } from "./profile";
 import { publicAssets } from "./publicAssets";
 import { SERVICE_AREA } from "./serviceArea";
-
-
 
 export const ROOT_SEO: RootSeoConfig = {
   siteName: op.orgName,
@@ -195,6 +195,26 @@ export const SEO_PAGES = {
     ogImagePath?: string;
   }): PageSeo => ({
     canonicalPathname: PublicRoutes.service(input.slug),
+    title: `${input.label} | ${op.orgName}`,
+    description: input.description,
+    keywords: [
+      op.orgName,
+      input.label,
+      SERVICE_AREA.primaryRegion,
+      ...(SERVICE_AREA.featuredSuburbs ?? []),
+      ...(input.keywords ?? []),
+    ],
+    ogImagePath: input.ogImagePath,
+  }),
+
+  workspace: (input: {
+    workspaceKey: WorkspaceKey;
+    label: string;
+    description: string;
+    keywords?: string[];
+    ogImagePath?: string;
+  }): PageSeo => ({
+    canonicalPathname: workspacesRoutes.offering(input.workspaceKey),
     title: `${input.label} | ${op.orgName}`,
     description: input.description,
     keywords: [
