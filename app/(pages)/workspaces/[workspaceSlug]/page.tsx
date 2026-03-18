@@ -7,11 +7,12 @@ import { workspaceRegistry } from "../_lib/workspaces/workspaceRegistry";
 
 import WorkspaceOfferingRenderer from "../_ui/WorkspaceOfferingRenderer";
 
+type Props = {
+  params: Promise<{ workspaceSlug: string }>;
+};
 export const generateMetadata = async ({
   params,
-}: {
-  params: Promise<{ workspaceSlug: string }>;
-}): Promise<Metadata> => {
+}: Props): Promise<Metadata> => {
   const { workspaceSlug } = await params;
 
   const workspaceKey = workspaceKeyBySlug[workspaceSlug];
@@ -33,11 +34,7 @@ export const generateMetadata = async ({
   );
 };
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ workspaceSlug: string }>;
-}) {
+export default async function Page({ params }: Props) {
   const { workspaceSlug } = await params;
 
   const workspaceKey = workspaceKeyBySlug[workspaceSlug];
