@@ -1,3 +1,4 @@
+//app/(pages)/[workspaceSlug]/page.tsx
 import { workspaceKeyBySlug } from "@/app/_lib/routes/workspacesRoutes";
 import { notFound } from "next/navigation";
 import WorkspaceOfferingRenderer from "../_ui/WorkspaceOfferingRenderer";
@@ -5,11 +6,11 @@ import WorkspaceOfferingRenderer from "../_ui/WorkspaceOfferingRenderer";
 export default async function Page({
   params,
 }: {
-  params: Promise<{ workspaceKey: string }>;
+  params: Promise<{ workspaceSlug: string }>;
 }) {
-  const { workspaceKey } = await params;
+  const { workspaceSlug } = await params;
 
-  const keyBySlug = workspaceKeyBySlug[workspaceKey];
+  const keyBySlug = workspaceKeyBySlug[workspaceSlug];
 
   if (!keyBySlug) notFound();
 
