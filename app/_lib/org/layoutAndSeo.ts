@@ -217,13 +217,7 @@ export const SEO_PAGES = {
     canonicalPathname: workspacesRoutes.offering(input.workspaceKey),
     title: `${input.label} | ${op.orgName}`,
     description: input.description,
-    keywords: [
-      op.orgName,
-      input.label,
-      SERVICE_AREA.primaryRegion,
-      ...(SERVICE_AREA.featuredSuburbs ?? []),
-      ...(input.keywords ?? []),
-    ],
+    keywords: [op.orgName, input.label, ...(input.keywords ?? [])],
     ogImagePath: input.ogImagePath,
   }),
 };

@@ -1,3 +1,5 @@
+import { WorkspaceKey } from "./definitions";
+
 export const publicAssets = {
   images: {
     hero: "/images/hero.png",
@@ -9,18 +11,18 @@ export const publicAssets = {
     apple: "/apple-touch-icon.png",
   },
 
-  offeringSvg: {
+  workspacesSvg: {
     coworkingMembership: "/images/svg/Coworking-Membership-Icon.svg",
     dedicatedDesk: "/images/svg/Dedicated-Desk-Icon.svg",
     meetingRooms: "/images/svg/Meeting-Rooms-Icon.svg",
-      meetingRoomsMembers: "/images/svg/Meeting-Rooms-members-Icon.svg",
-    privateOffice: "/images/svg/Private-Office-Icon.svg",
-    virtualOffice: "/images/svg/Virtual-Office-Icon.svg",
-  },
+    memberMeetingRooms: "/images/svg/Meeting-Rooms-members-Icon.svg",
+    privateOffices: "/images/svg/Private-Office-Icon.svg",
+    virtualOffices: "/images/svg/Virtual-Office-Icon.svg",
+  } satisfies Record<WorkspaceKey, string>,
 
   team: {
-    placeholder: "images/team/avatar.svg"
-  }
+    placeholder: "images/team/avatar.svg",
+  },
 } as const;
 
 export const cldAssets = {
@@ -28,8 +30,8 @@ export const cldAssets = {
     privateOffices: {
       main: {
         url: "/v1772864417/business-f/advanced/Kateb-offices/private-office_u17uat.png",
-        alt:""
-      }
-    }
-  }
-}
+        alt: "",
+      },
+    },
+  },
+};

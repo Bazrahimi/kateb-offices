@@ -10,13 +10,13 @@ import { meetingRoomPlans } from "./signup/meetingRooms";
 import { privateOfficeCards } from "./signup/privateOffices";
 import { virtualOfficeOfferings } from "./signup/virtualOffices";
 
-const svg = publicAssets.offeringSvg;
+const svg = publicAssets.workspacesSvg;
 
 export const workspaceRegistry: Record<WorkspaceKey, WorkspaceRegistryItem> = {
   privateOffices: {
     label: "Private Offices",
     signupInfo: {
-      image: svg.privateOffice,
+      image: svg.privateOffices,
       capacityLabel: "1–12+",
       priceLabel: "From $1120/month",
       summary:
@@ -85,7 +85,7 @@ export const workspaceRegistry: Record<WorkspaceKey, WorkspaceRegistryItem> = {
   memberMeetingRooms: {
     label: "Member Meeting Rooms",
     signupInfo: {
-      image: svg.meetingRoomsMembers,
+      image: svg.memberMeetingRooms,
       capacityLabel: "2–25",
       priceLabel: "From $20/hr",
       summary:
@@ -102,7 +102,7 @@ export const workspaceRegistry: Record<WorkspaceKey, WorkspaceRegistryItem> = {
   virtualOffices: {
     label: "Virtual Offices",
     signupInfo: {
-      image: svg.virtualOffice,
+      image: svg.virtualOffices,
       priceLabel: "From $40/month",
       summary:
         "Establish a professional business presence with a premium address, mail handling, and optional call answering services without renting a physical office.",
