@@ -1,6 +1,6 @@
 import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 
-export const workspaceRouteSlugByOffering: Record<WorkspaceKey, string> = {
+export const workspaceSlugByKey: Record<WorkspaceKey, string> = {
   privateOffices: "private-offices",
   coworkingMembership: "coworking-membership",
   dedicatedDesk: "dedicated-desk",
@@ -9,16 +9,16 @@ export const workspaceRouteSlugByOffering: Record<WorkspaceKey, string> = {
   virtualOffices: "virtual-offices",
 };
 
-export const offeringByRouteSlug = Object.fromEntries(
-  Object.entries(workspaceRouteSlugByOffering).map(([key, slug]) => [
+export const workspaceKeyBySlug = Object.fromEntries(
+  Object.entries(workspaceSlugByKey).map(([key, slug]) => [
     slug,
     key,
   ]),
-) as Record<(typeof workspaceRouteSlugByOffering)[WorkspaceKey], WorkspaceKey>;
+) as Record<(typeof workspaceSlugByKey)[WorkspaceKey], WorkspaceKey>;
 
 export const workspacesRoutes = {
   offering: (key: WorkspaceKey) =>
-    `/workspaces/${workspaceRouteSlugByOffering[key]}`,
+    `/workspaces/${workspaceSlugByKey[key]}`,
 
   officeDetails: (slug: string) => `/workspaces/private-office-rental/${slug}`,
 

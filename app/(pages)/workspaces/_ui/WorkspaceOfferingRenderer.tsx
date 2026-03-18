@@ -7,11 +7,11 @@ import WorkspacePlanListPage from "../application/_ui/WorkspacePlanListPage";
 import PrivateOfficeAdsCard from "../private-office-rental/_ui/PrivateOfficeAdsCard";
 
 type Props = {
-  offeringKey: WorkspaceKey;
+  workspaceKey: WorkspaceKey;
 };
 
-export default function WorkspaceOfferingRenderer({ offeringKey }: Props) {
-  const config = workspaceRegistry[offeringKey];
+export default function WorkspaceOfferingRenderer({ workspaceKey }: Props) {
+  const config = workspaceRegistry[workspaceKey];
   const page = config.page;
 
   if (page.kind === "privateOfficeGrid") {
