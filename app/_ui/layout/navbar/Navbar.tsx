@@ -1,15 +1,9 @@
+import { ORG_PROFILE } from "@/app/_lib/org/profile";
+import { publicAssets } from "@/app/_lib/org/publicAssets";
 import { PublicRoutes } from "@/app/_lib/routes/publicRoutes";
 import Image from "next/image";
 import Link from "next/link";
-// import AccountMenu from "./AccountMenu";
-import { ORG_PROFILE } from "@/app/_lib/org/profile";
-import { publicAssets } from "@/app/_lib/org/publicAssets";
 import NavLinks from "./NavLinks";
-
-// Reusable styles
-// const navLinkBase =
-//   "group flex flex-col items-center gap-1 text-white hover:text-org-secondary-main flex-1";
-// const navIcon = "text-2xl sm:text-xl opacity-80 group-hover:opacity-100"; // bigger on mobile
 
 const Navbar = () => {
   return (
@@ -45,9 +39,6 @@ const Navbar = () => {
       </div>
       <div className="flex items-start">
         <NavLinks />
-        {/* <div className="ml-2 flex items-start">
-          <AccountMenu navLinkBase={navLinkBase} navIcon={navIcon} />
-        </div> */}
       </div>
     </nav>
   );
