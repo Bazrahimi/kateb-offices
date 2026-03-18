@@ -1,14 +1,51 @@
 // app/join-workspaces/private-offices/[slug]/page.tsx
+import { cldGalleryImage } from "@/app/_lib/cloudinary/cloudinary";
+import { buildMetadata, SEO_PAGES } from "@/app/_lib/org/layoutAndSeo";
 import { workspacesRoutes } from "@/app/_lib/routes/workspacesRoutes";
 import ImageGallery from "@/app/_ui/image/ImageGallery";
 import { Header } from "@/app/_ui/typography/Header";
 import { P } from "@/app/_ui/typography/paragraph";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPrivateOfficeBySlug } from "../../_lib/workspaces/signup/privateOffices";
 import WorkspaceActionsClient from "./_ui/WorkspaceActionsClient";
 
 type Props = {
   params: Promise<{ adsSlug: string }>;
+};
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const { adsSlug } = await params;
+  const office = getPrivateOfficeBySlug(adsSlug);
+
+  if (!office) notFound();
+
+  return buildMetadata(
+    SEO_PAGES.privateOfficeDetails({
+      slug: office.slug,
+      label: office.label,
+      description: [
+        office.availableFrom,
+        office.capacity,
+        office.dimension ? `Office size: ${office.dimension}` : "",
+        office.description.join(" "),
+      ]
+        .filter(Boolean)
+        .join(" "),
+      keywords: [
+        office.label,
+        office.priceLabel,
+        office.capacity,
+        office.status,
+        office.dimension,
+        "private office",
+        "office rental",
+      ].filter(Boolean),
+      ogImagePath: cldGalleryImage(office.images[0].url),
+    }),
+  );
 };
 
 export default async function Page({ params }: Props) {

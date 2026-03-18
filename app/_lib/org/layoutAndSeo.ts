@@ -24,13 +24,16 @@ export const ROOT_SEO: RootSeoConfig = {
   },
 };
 
-/**
- * Convert a pathname or path into an absolute URL.
- * - "/images/og.png" => "https://site.com/images/og.png"
- * - "images/og.png"  => "https://site.com/images/og.png"
- */
+
+
 export function absoluteUrl(path: string): string {
-  return `${getBaseUrl()}${path}`;
+  // If already a full URL, return it unchanged
+  if (path.startsWith("http://") || path.startsWith("https://")) {
+    return path;
+  }
+
+  // Otherwise build absolute URL from your site base URL
+  return new URL(path, getBaseUrl()).toString();
 }
 
 /**
@@ -218,6 +221,26 @@ export const SEO_PAGES = {
     title: `${input.label} | ${op.orgName}`,
     description: input.description,
     keywords: [op.orgName, input.label, ...(input.keywords ?? [])],
+    ogImagePath: input.ogImagePath,
+  }),
+
+  privateOfficeDetails: (input: {
+    slug: string;
+    label: string;
+    description: string;
+    keywords?: string[];
+    ogImagePath?: string;
+  }): PageSeo => ({
+    canonicalPathname: workspacesRoutes.officeDetails(input.slug),
+    title: `${input.label} | ${op.orgName}`,
+    description: input.description,
+    keywords: [
+      op.orgName,
+      input.label,
+      SERVICE_AREA.primaryRegion,
+      ...(SERVICE_AREA.featuredSuburbs ?? []),
+      ...(input.keywords ?? []),
+    ],
     ogImagePath: input.ogImagePath,
   }),
 };
