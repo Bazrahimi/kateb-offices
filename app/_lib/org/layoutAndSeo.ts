@@ -251,4 +251,23 @@ export const SEO_PAGES = {
     ],
     ogImagePath: input.ogImagePath,
   }),
+
+  workspaces: (): PageSeo => ({
+    canonicalPathname: "/workspaces",
+    title: `Workspaces | ${op.orgName}`,
+    description:
+      "Explore flexible workspace solutions including coworking, private offices, meeting rooms, dedicated desks, and virtual office services.",
+    keywords: [
+      op.orgName,
+      "workspaces",
+      "coworking",
+      "private offices",
+      "dedicated desk",
+      "meeting rooms",
+      "virtual offices",
+      SERVICE_AREA.primaryRegion,
+      ...(SERVICE_AREA.featuredSuburbs ?? []),
+    ],
+    ogImagePath: ROOT_SEO.defaultOgImagePath,
+  }),
 };
