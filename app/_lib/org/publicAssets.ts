@@ -25,13 +25,4 @@ export const publicAssets = {
   },
 } as const;
 
-export const cldAssets = {
-  images: {
-    privateOffices: {
-      main: {
-        url: "/v1772864417/business-f/advanced/Kateb-offices/private-office_u17uat.png",
-        alt: "",
-      },
-    },
-  },
-};
+
