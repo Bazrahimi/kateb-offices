@@ -1,3 +1,5 @@
+import { WorkspaceKey } from "./definitions";
+
 const privateOffices = {
   services: {
     url: "private-office_u17uat.png",
@@ -17,16 +19,15 @@ const privateOffices = {
     alt: "",
   },
 
-    bigOffice: {
+  bigOffice: {
     url: "open_area2_swc8ma.png",
     alt: "Open office collaboration area with natural light and versatile meeting-style seating",
   },
- 
+
   locationBenefits: {
     url: "location_w8lwt5.png",
     alt: "Urban streetscape around the workspace showing nearby shops and transport access",
   },
-
 };
 
 const coworkingMembership = {
@@ -132,3 +133,4 @@ export const servicesCldImgs = {
   virtualOffices: virtualOffices,
   amenities: amenities,
 };
+

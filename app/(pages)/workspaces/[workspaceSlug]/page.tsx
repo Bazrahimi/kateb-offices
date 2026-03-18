@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { buildMetadata, SEO_PAGES } from "@/app/_lib/org/layoutAndSeo";
+import {
+  buildMetadata,
+  SEO_PAGES,
+  workspacesOgImages,
+} from "@/app/_lib/org/layoutAndSeo";
 import { workspaceKeyBySlug } from "@/app/_lib/routes/workspacesRoutes";
 import { workspaceRegistry } from "../_lib/workspaces/workspaceRegistry";
 
+import { cldGalleryImage } from "@/app/_lib/cloudinary/cloudinary";
 import WorkspaceOfferingRenderer from "../_ui/WorkspaceOfferingRenderer";
 
 type Props = {
@@ -30,6 +35,7 @@ export const generateMetadata = async ({
         workspace.signupInfo.priceLabel,
         workspace.signupInfo.capacityLabel ?? "",
       ].filter(Boolean),
+      ogImagePath: cldGalleryImage(workspacesOgImages[workspaceKey]),
     }),
   );
 };

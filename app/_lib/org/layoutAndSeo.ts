@@ -3,11 +3,21 @@ import type { Metadata, Viewport } from "next";
 import type { PageSeo, RootSeoConfig } from "../definitions";
 import { PublicRoutes } from "../routes/publicRoutes";
 import { workspacesRoutes } from "../routes/workspacesRoutes";
+import { servicesCldImgs as imgs } from "./assets";
 import { getHomeServiceKeywords } from "./category/serviceLookup";
 import { WorkspaceKey } from "./definitions";
 import { getBaseUrl, ORG_PROFILE as op } from "./profile";
 import { publicAssets } from "./publicAssets";
 import { SERVICE_AREA } from "./serviceArea";
+
+export const workspacesOgImages = {
+  privateOffices: imgs.privateOffices.services.url,
+  coworkingMembership: imgs.coworkingMembership.services.url,
+  meetingRooms: imgs.meetingRooms.services.url,
+  memberMeetingRooms: imgs.meetingRooms.services.url,
+  dedicatedDesk: imgs.virtualOffices.idealFor.url,
+  virtualOffices: imgs.virtualOffices.overview.url,
+} satisfies Record<WorkspaceKey, string>;
 
 export const ROOT_SEO: RootSeoConfig = {
   siteName: op.orgName,
@@ -23,8 +33,6 @@ export const ROOT_SEO: RootSeoConfig = {
     googleBot: { index: true, follow: true },
   },
 };
-
-
 
 export function absoluteUrl(path: string): string {
   // If already a full URL, return it unchanged
