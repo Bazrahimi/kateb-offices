@@ -1,3 +1,4 @@
+// app/(pages)/workspaces/[workspaceSlug]/page.txt
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 

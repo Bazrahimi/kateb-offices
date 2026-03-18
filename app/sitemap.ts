@@ -1,10 +1,13 @@
 // app/sitemap.ts
-import type { MetadataRoute } from "next";
-import { absoluteUrl } from "@/app/_lib/org/layoutAndSeo";
-import { ORG_PROFILE as op } from "@/app/_lib/org/profile";
 import { SERVICES_PAGE } from "@/app/_lib/org/category/services";
+import { absoluteUrl } from "@/app/_lib/org/layoutAndSeo";
 import { PublicRoutes } from "@/app/_lib/routes/publicRoutes";
-import type { OtherLanguageKey } from "./_lib/languages/multiculturalStatement";
+import type { MetadataRoute } from "next";
+import { privateOfficeAds } from "./(pages)/workspaces/_lib/workspaces/signup/privateOffices";
+import {
+  workspaceSlugByKey,
+  workspacesRoutes,
+} from "./_lib/routes/workspacesRoutes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -28,28 +31,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
-  ];
-
-  // ✅ Only include /languages if the org supports other languages
-  const otherLangKeys = (op.otherLangKeys ?? []) as OtherLanguageKey[];
-  if (otherLangKeys.length > 0) {
-    pages.push({
-      url: absoluteUrl(PublicRoutes.languages()),
+    {
+      url: absoluteUrl("/workspaces"),
       lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    });
-
-    // Optional: include each /languages/:lang page too
-    for (const lang of otherLangKeys) {
-      pages.push({
-        url: absoluteUrl(PublicRoutes.otherLanguages(lang)),
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.45,
-      });
-    }
-  }
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+  ];
 
   const servicePages: MetadataRoute.Sitemap = Object.values(SERVICES_PAGE).map(
     (service) => ({
@@ -60,5 +48,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  return [...pages, ...servicePages];
+  const workspacePages: MetadataRoute.Sitemap = Object.keys(
+    workspaceSlugByKey,
+  ).map((key) => ({
+    url: absoluteUrl(
+      workspacesRoutes.offering(key as keyof typeof workspaceSlugByKey),
+    ),
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  const privateOfficeRentalPages: MetadataRoute.Sitemap = privateOfficeAds.map(
+    (office) => ({
+      url: absoluteUrl(workspacesRoutes.officeDetails(office.slug)),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.75,
+    }),
+  );
+
+  return [
+    ...pages,
+    ...servicePages,
+    ...workspacePages,
+    ...privateOfficeRentalPages,
+  ];
 }

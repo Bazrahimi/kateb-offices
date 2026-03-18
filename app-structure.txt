@@ -1,12 +1,28 @@
 app
+├──
+
+│ 
+│       └── private-office-rental
+│           ├── [adsSlug]
+│           │   ├── _ui
+│           │   │   ├── WorkspaceActionsClient.tsx
+│           │   │   └── WorkspaceCtaPanel.tsx
+│           │   └── page.tsx
+│           └── _ui
+│               └── PrivateOfficeAdsCard.tsx
 ├── _lib
 │   ├── cloudinary
 │   │   └── cloudinary.ts
 │   ├── content
 │   │   └── cta.ts
+│   ├── definitions.ts
 │   ├── email
 │   │   ├── SendToAdmin.tsx
+│   │   ├── application
+│   │   │   ├── SendToAdmin.tsx
+│   │   │   └── sendUserConfirmation.tsx
 │   │   ├── emailClient.ts
+│   │   ├── get-intouch
 │   │   └── sendUserConfirmation.tsx
 │   ├── env
 │   │   ├── public.ts
@@ -14,17 +30,16 @@ app
 │   ├── languages
 │   │   └── multiculturalStatement.ts
 │   ├── org
+│   │   ├── assets.ts
 │   │   ├── category
-│   │   │   ├── assets.ts
 │   │   │   ├── serviceLookup.ts
 │   │   │   ├── services.ts
 │   │   │   └── subCategories
-│   │   │       ├── acrylicRendering.ts
-│   │   │       ├── cementRendering.ts
-│   │   │       ├── concreteRender.ts
-│   │   │       ├── crackRepairs.ts
-│   │   │       ├── hebelCladding.ts
-│   │   │       └── polystyreneCladding.ts
+│   │   │       ├── administrativeSupport.ts
+│   │   │       ├── coworkingMembership.ts
+│   │   │       ├── meetingRooms.ts
+│   │   │       ├── privateOffices.ts
+│   │   │       └── virtualOffices.ts
 │   │   ├── definitions.ts
 │   │   ├── font.ts
 │   │   ├── icons.ts
@@ -33,13 +48,16 @@ app
 │   │   │   ├── aboutUs.ts
 │   │   │   └── contactUs.ts
 │   │   ├── profile.ts
+│   │   ├── publicAssets.ts
 │   │   └── serviceArea.ts
 │   ├── routes
-│   │   └── publicRoutes.ts
+│   │   ├── publicRoutes.ts
+│   │   └── workspacesRoutes.ts
 │   └── utils
 │       ├── actionHelper.ts
 │       ├── assets.ts
 │       ├── cn.ts
+│       ├── date.ts
 │       └── slug.ts
 ├── _ui
 │   ├── MultiLanguageCapacity
@@ -58,7 +76,10 @@ app
 │   │   ├── hook
 │   │   │   ├── useCarouselNav.ts
 │   │   │   └── useMounted.ts
-│   │   └── index.ts
+│   │   ├── index.ts
+│   │   └── modal
+│   │       ├── ServiceLeafModal.tsx
+│   │       └── ServiceLeafModalContent.tsx
 │   ├── content
 │   │   ├── List.tsx
 │   │   ├── MultiLanguageCapacity.tsx
@@ -73,6 +94,7 @@ app
 │   │   ├── layout
 │   │   │   └── EmailLayout.tsx
 │   │   └── templates
+│   │       ├── NewApplication.tsx
 │   │       └── NewEnquiry.tsx
 │   ├── form
 │   │   ├── Checkbox.tsx
@@ -82,18 +104,19 @@ app
 │   │   ├── Select.tsx
 │   │   └── Textarea.tsx
 │   ├── hero
+│   │   ├── HeroSectionCta.tsx
 │   │   ├── HomeHero.tsx
 │   │   ├── HomeHeroSkeleton.tsx
 │   │   └── components
 │   │       ├── HeroBackground.tsx
-│   │       ├── HeroCta.tsx
 │   │       ├── HeroHeadAndDesc.tsx
 │   │       ├── HeroLink.tsx
 │   │       ├── HeroLogoVisualCard.tsx
 │   │       ├── HeroMicroNav.tsx
-│   │       ├── HeroServiceBadge.tsx
 │   │       └── MultilingualSupport.tsx
 │   ├── image
+│   │   ├── ImageGallery.tsx
+│   │   ├── ImageGalleryClient.tsx
 │   │   ├── ImageShimer.tsx
 │   │   └── svgFromText.ts
 │   ├── layout
@@ -106,70 +129,38 @@ app
 │   │   │   ├── OrganisationInfo.tsx
 │   │   │   ├── PoweredByKateb.tsx
 │   │   │   ├── QuickLinks.tsx
+│   │   │   ├── ServiceLink.tsx
 │   │   │   └── SocialLinks.tsx
 │   │   └── navbar
+│   │       ├── BookATour.tsx
 │   │       ├── NavLinks.tsx
 │   │       ├── Navbar.tsx
 │   │       ├── OtherLanguages.tsx
 │   │       ├── ServiceMenu.tsx
 │   │       └── useDropdownMenu.ts
+│   ├── modals
+│   │   └── contactModal
+│   │       ├── ContactModal.tsx
+│   │       └── ContactModalContent.tsx
 │   ├── services
 │   │   ├── ServiceSectionSkeleton.tsx
 │   │   └── ServicesSection.tsx
 │   ├── typography
 │   │   ├── Header.tsx
 │   │   └── paragraph.tsx
-│   └── utils
-│       └── Delayed.tsx
-├── about-us
-│   ├── _ui
-│   │   ├── AboutTextSections.tsx
-│   │   ├── AboutValues.tsx
-│   │   └── TeamGrid.tsx
-│   └── page.tsx
-├── contact-us
-│   ├── _lib
-│   │   ├── action.ts
-│   │   ├── constant.ts
-│   │   ├── handleEnquiryEmail.ts
-│   │   └── schema.ts
-│   ├── _ui
-│   │   ├── ContactDetails.tsx
-│   │   ├── ContactFAQ.tsx
-│   │   ├── ContactForm.tsx
-│   │   ├── ContactIntro.tsx
-│   │   ├── ContactMap.tsx
-│   │   ├── ContactSuccess.tsx
-│   │   ├── OpeningHours.tsx
-│   │   └── ServiceArea.tsx
-│   └── page.tsx
+│   ├── utils
+│   │   └── Delayed.tsx
+│   └── workspace
+│       ├── WorkspaceOfferCard.tsx
+│       └── WorkspaceOffersSection.tsx
 ├── error.tsx
 ├── favicon.ico
-├── free-consultation
-│   └── page.tsx
 ├── globals.css
-├── languages
-│   └── [otherLangs]
-│       ├── _ui
-│       │   └── SubcategoriesOtherLangs.tsx
-│       └── page.tsx
 ├── layout.tsx
 ├── loading.tsx
 ├── manifest.ts
 ├── not-found.tsx
-├── page.tsx
 ├── robots.ts
-├── services
-│   ├── [slug]
-│   │   ├── _ui
-│   │   │   ├── ServiceDetails.tsx
-│   │   │   ├── ServiceLeafCard.tsx
-│   │   │   ├── ServiceLeafCardSkeleton.tsx
-│   │   │   └── ServiceLeafImage.tsx
-│   │   └── page.tsx
-│   ├── _ui
-│   │   └── ServicesHero.tsx
-│   └── page.tsx
 └── sitemap.ts
 
-48 directories, 125 files
+66 directories, 165 files

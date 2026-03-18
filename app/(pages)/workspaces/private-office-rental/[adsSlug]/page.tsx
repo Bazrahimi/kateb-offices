@@ -1,4 +1,4 @@
-// app/join-workspaces/private-offices/[slug]/page.tsx
+// app/join-workspaces/private-offices/[adsSlug]/page.tsx
 import { cldGalleryImage } from "@/app/_lib/cloudinary/cloudinary";
 import { buildMetadata, SEO_PAGES } from "@/app/_lib/org/layoutAndSeo";
 import { workspacesRoutes } from "@/app/_lib/routes/workspacesRoutes";
