@@ -15,21 +15,15 @@ export default function ServiceLeafImage({
   const primaryImage = image[0];
   if (!primaryImage) return null;
 
-  const src = cldLeafAuto(primaryImage.url);
-  const resolvedAlt = primaryImage.alt;
-
-  const isDataUrl = src.startsWith("data:image/");
-
   return (
     <div className={cn("relative overflow-hidden rounded-2xl", aspect)}>
       <Image
-        src={src}
-        alt={resolvedAlt}
+        src={cldLeafAuto(primaryImage.url)}
+        alt={primaryImage.alt}
         fill
         sizes="(min-width: 640px) 50vw, 100vw"
         className="object-cover"
         loading="lazy"
-        unoptimized={isDataUrl}
         placeholder="blur"
         blurDataURL={IMAGE_DEFAULT_BLUR}
       />
