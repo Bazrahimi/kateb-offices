@@ -33,7 +33,7 @@ export default function ServiceLeafModalContent({ leaf, leafId }: Props) {
         )}
 
         <aside className={hasItems ? "sm:col-span-6" : "sm:col-span-12"}>
-          <ServiceLeafImage image={leaf.image} alt={leaf.label} />
+          <ServiceLeafImage image={leaf.image}  />
         </aside>
       </div>
     </article>

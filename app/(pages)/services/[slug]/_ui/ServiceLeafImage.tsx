@@ -7,18 +7,16 @@ import Image from "next/image";
 
 export default function ServiceLeafImage({
   image,
-  alt,
   aspect = "aspect-[2/1]", // default ratio
 }: {
   image: ImageMeta[];
-  alt: string;
   aspect?: string;
 }) {
   const primaryImage = image[0];
   if (!primaryImage) return null;
 
   const src = cldLeafAuto(primaryImage.url);
-  const resolvedAlt = primaryImage.alt || alt;
+  const resolvedAlt = primaryImage.alt;
 
   const isDataUrl = src.startsWith("data:image/");
 

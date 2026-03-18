@@ -32,7 +32,7 @@ export default function ServiceSection({ service, className }: Props) {
             {/* Bigger aspect ratio */}
             <ServiceLeafImage
               image={service.image}
-              alt={service.label}
+        
               aspect="aspect-[16/10]"
             />
           </div>
