@@ -21,7 +21,8 @@ export const publicAssets = {
   } satisfies Record<WorkspaceKey, string>,
 
   team: {
-    placeholder: "images/team/avatar.svg",
+    placeholder: "/images/team/avatar.svg",
+    baz: "/images/team/bazrahimi.jpg"
   },
 } as const;
 

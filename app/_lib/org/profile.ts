@@ -31,7 +31,7 @@ export const ORG_PROFILE = {
   // languages: ["EN", "HZ", "FA"] as const satisfies readonly LanguageKey[],
   otherLangKeys: [] as OtherLanguageKey[],
   domain: ORG_DOMAIN,
-  email: "reception@kateboffices.com",
+  email: "info@kateboffices.com.au",
   // email: "bazrahimi@hotmail.com",
   phone: "(03) 8904 8604",
   address: "Level 2/311 Lonsdale St, Dandenong VIC 3175",

@@ -4,7 +4,8 @@ import { publicAssets } from "../publicAssets";
 export type TeamMember = {
   name: string;
   role: string;
-  image?: string; // "/images/team/....png"
+  email: string;
+  image: string; // "/images/team/....png"
   bio?: string;
 };
 
@@ -27,16 +28,33 @@ export const ABOUT_TEAM: TeamSection = {
   intro: `${ORG_PROFILE.orgName} is supported by a professional team focused on creating a flexible, welcoming, and business-ready workspace in the heart of Dandenong.`,
   members: [
     {
-      name: "Ali Haidar",
-      role: "Centre Manager",
-      image: publicAssets.team.placeholder,
-      bio: "Oversees day-to-day operations and helps ensure members and guests enjoy a smooth and professional workspace experience.",
-    },
-    {
       name: "Alex Danishyar",
       role: "Client Experience Coordinator",
+      email: "alex@kateboffices.com.au",
       image: publicAssets.team.placeholder,
       bio: "Supports enquiries, tours, and office setup while helping businesses find the right workspace solution.",
+    },
+    {
+      name: "Baz Rahimi",
+      role: "Centre Manager",
+      email: "baz@kateboffices.com.au",
+      image: publicAssets.team.baz,
+      bio: "Oversees day-to-day operations and helps ensure members and guests enjoy a smooth and professional workspace experience.",
+    },
+
+    {
+      name: "S Ali",
+      role: "Facilities Coordinator",
+      email: "ali@kateboffices.com.au",
+      image: publicAssets.team.placeholder,
+      bio: "Helps maintain the office environment, supports day-to-day upkeep, and ensures shared spaces remain clean, functional, and welcoming for members and visitors.",
+    },
+    {
+      name: "Samina Askari",
+      role: "Reception and Client Support",
+      email: "reception@kateboffices.com.au",
+      image: publicAssets.team.placeholder,
+      bio: "Welcomes guests, manages front-desk enquiries, and helps ensure a friendly and professional experience for members, visitors, and prospective clients.",
     },
   ],
 } as const;

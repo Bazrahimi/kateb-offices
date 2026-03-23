@@ -70,7 +70,7 @@ export const workspaceRegistry: Record<WorkspaceKey, WorkspaceRegistryItem> = {
     signupInfo: {
       image: svg.meetingRooms,
       capacityLabel: "2–25",
-      priceLabel: "From $40/hr",
+      priceLabel: "From $42.50/hr",
       summary:
         "Professional meeting and conference rooms suitable for client meetings, team discussions, presentations, and workshops.",
       btnContent: "Book Meeting Rooms",
@@ -86,8 +86,8 @@ export const workspaceRegistry: Record<WorkspaceKey, WorkspaceRegistryItem> = {
     label: "Member Meeting Rooms",
     signupInfo: {
       image: svg.memberMeetingRooms,
-      capacityLabel: "2–25",
-      priceLabel: "From $20/hr",
+      capacityLabel: "2–8",
+      priceLabel: "From $25.00/hr",
       summary:
         "Exclusive meeting and conference room access with member discounts for existing workspace tenants and members.",
       btnContent: "Book Meeting Rooms",
@@ -103,7 +103,7 @@ export const workspaceRegistry: Record<WorkspaceKey, WorkspaceRegistryItem> = {
     label: "Virtual Offices",
     signupInfo: {
       image: svg.virtualOffices,
-      priceLabel: "From $40/month",
+      priceLabel: "From $40.00/month",
       summary:
         "Establish a professional business presence with a premium address, mail handling, and optional call answering services without renting a physical office.",
       btnContent: "Sign Up",

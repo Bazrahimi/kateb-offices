@@ -6,7 +6,7 @@ export const memberMeetingRoom: MeetingRoomOfferings[] = [
     id: "day-office-existing-workspace-tenant",
     label: "Day Office existing tenant ",
     capacity: "Up to 4 people",
-    priceLabel: "$20",
+    priceLabel: "$20.00",
     durationLabel: "per hour",
     images: [imgs.meetingRooms.whyChooseOurRooms],
     description: [
@@ -23,7 +23,7 @@ export const memberMeetingRoom: MeetingRoomOfferings[] = [
     id: "hydra-meeting-room-members",
     label: "Hydra Meeting Room (Members only)",
     capacity: "Up to 8 people",
-    priceLabel: "$25",
+    priceLabel: "$25.00",
     durationLabel: "per hour",
     images: [imgs.amenities.meetingRoom1],
     description: [
@@ -40,7 +40,7 @@ export const memberMeetingRoom: MeetingRoomOfferings[] = [
     id: "leo-conference-room",
     label: "Leo Conference Room",
     capacity: "Up to 25 people",
-    priceLabel: "$42.5",
+    priceLabel: "$42.50",
     durationLabel: "per hour",
     images: [imgs.amenities.meetingRoom2],
     description: [
