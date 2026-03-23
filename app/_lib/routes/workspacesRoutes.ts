@@ -1,12 +1,12 @@
 import type { WorkspaceKey } from "@/app/_lib/org/definitions";
 
 export const workspaceSlugByKey: Record<WorkspaceKey, string> = {
-  privateOffices: "private-offices",
-  coworkingMembership: "coworking-membership",
-  dedicatedDesk: "dedicated-desk",
-  meetingRooms: "book-meeting-rooms",
-  memberMeetingRooms: "book-meeting-rooms-members",
-  virtualOffices: "virtual-offices",
+  privateOffices: "private-offices-dandenong",
+  coworkingMembership: "coworking-space-dandenong",
+  dedicatedDesk: "dedicated-desk0-dandenong",
+  meetingRooms: "book-meeting-room-dandenong",
+  memberMeetingRooms: "book-meeting-room-members",
+  virtualOffices: "virtual-offices-dandenong",
 };
 
 export const workspaceKeyBySlug = Object.fromEntries(

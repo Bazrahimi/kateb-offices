@@ -2,12 +2,12 @@ import type { PrivateOfficeAds, PrivateOfficeAdsCard } from "../../definitions";
 export const privateOfficeAds: PrivateOfficeAds[] = [
   {
     id: "private-office-1",
-    slug: "private-internal-office-suite-1",
-    label: "Internal Office Suite 1",
+    slug: "private-internal-office-dandenong-1",
+    label: "Private Internal Office 1",
     images: [
       {
         url: "vacancy/internal-office/internal-office12_yil5dz.png",
-        alt: "Internal office suite 1 main view",
+        alt: "Private internal office in Dandenong main view",
       },
       {
         url: "vacancy/internal-office/private-office_lahust.png",
@@ -34,12 +34,12 @@ export const privateOfficeAds: PrivateOfficeAds[] = [
   },
   {
     id: "private-office-2",
-    slug: "private-internal-office-suite-2",
-    label: "Internal Office Suite 2",
+    slug: "private-internal-office-dandenong-2",
+    label: "Private internal Office 2",
     images: [
       {
         url: "vacancy/internal-office/internal-office-12.png",
-        alt: "Internal office suite 2 interior",
+        alt: "private internal office suite 2 interior",
       },
       {
         url: "vacancy/internal-office/private-office_lahust.png",
@@ -67,8 +67,8 @@ export const privateOfficeAds: PrivateOfficeAds[] = [
 
   {
     id: "private-office-3",
-    slug: "private-external-office-suite-3",
-    label: "External Office Suite 3",
+    slug: "private-external-office-dandenong-1",
+    label: "Private External Office 1",
     images: [
       {
         url: "vacancy/internal-office/external-office123_qr0thb.png",
